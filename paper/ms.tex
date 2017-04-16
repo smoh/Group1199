@@ -105,7 +105,7 @@
   their lithium abundances, favoring the idea that they were born together and
   are or were recently a bound, wide binary system.
   However, the metallicities and chemical abundances of refractory
-  elements of the two stars are very different, challenging this simple picture.
+  elements in the two stars are very different, challenging this simple picture.
   In order to reconcile the seemingly contradictory observations,
   we consider scenarios in which the pair is unrelated despite
   its current spatial and kinematic configuration, and
@@ -126,30 +126,133 @@
 \section{Data}
 \label{sec:data}
 
-In this section, we describe the data relevant to our discussion of the origin of the system.
-The co-moving pair was initially discovered in our recent search
-for co-moving pairs using the proper motions from Gaia DR1.
-We refer the readers to \citealt{2016arXiv161202440O} and briefly describe the method here.
-For a given pair, we performed a hypothesis test between the two hypotheses that
-the two stars share the same 3D velocity vector and that they have
-two independent 3D velocity vectors.
-In the catalog of co-moving pairs (\citealt{2016arXiv161202440O}),
-the pair that we present here was assigned a group id of 1199,
+Though previously recognized as a visual double star system
+(\citealt{2001AJ....122.3466M}), HD 240429 and HD 240430 were identified as a
+candidate co-moving star pair in our recent search for co-moving stars using the
+proper motions and parallaxes from the \tgas catalog, a component of \gaia\ \dr\
+(the astrometric measurements are listed in \tablename~\ref{tab:t2}).
+We refer the readers to this previous work (\citealt{2016arXiv161202440O}) for a
+full explanation of the methodology behind this search and only briefly describe
+the method here.
+For a given pair, we compute a marginalized likelihood ratio between the
+hypotheses (1) that a given pair of stars share the same 3D velocity vector, and
+(2) that they have independent 3D velocity vectors, both given only observations
+of two components of the velocities (proper motions).
+We then select a sample of high-confidence co-moving star pairs by making a
+conservative cut on this likelihood ratio.
+In the resulting catalog of co-moving pairs (\citealt{2016arXiv161202440O}),
+the pair presented in this paper was assigned a group id of 1199,
 and the marginalized likelihood ratio (Bayes factor)
 between the two hypotheses is $\ln{\mathcal{L}_1/\mathcal{L}_2} = 8.52$,
-well above a relatively conservative cut of 6 that we adopted.
-Additionally, we have checked that we do not find any possible additional co-moving companions
-to this pair even when we lower the selection threshold to less conservative but still reasonable values.
-The pair is in fact classified as a visual double star system independently
-in Washington Double Star Catalog (\cite{2001AJ....122.3466M}).
+well above the adopted cut value of 6.
+We have checked that we do not find any possible additional co-moving companions
+by lowering the likelihood ratio cut for the stars around this pair.
 
 In a separate effort to study detailed chemical abundances of
 potential planet-hosting stars, \citet{2016ApJS..225...32B}
-measured abundances of 15 different elements
-(C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y)
-of these two stars as well as high precision radial velocities
-with high resolution spectroscopy.
-We provide all measurements relevant to the present discussion in Table~\ref{tab:t2}.
+obtained high resolution spectroscopy for both HD 240429 and HD 240430.
+\todo{from where? mention briefly Keck HIRES}
+The resulting measurements from this effort include abundances measured for 15
+checmical species (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as
+well as high precision radial velocities.
+Other stellar parameters derived from these spectra are included in
+\tablename~\ref{tab:t2}.
+
+Combining these precise radial velocities with the \gaia\ astrometry, we can
+compare differences between the inferred 6D phase-space properties for the
+two stars.
+We start by generating posterior samples over the Heliocentric distance, $r$,
+tangential velocities, $(v_\alpha, v_\delta)$, and radial velocity, $\hat{v}_r$,
+given the observed parallax, $\pi$, and proper motion components,
+$(\mu_{\alpha^*}, \mu_\delta)$, and radial velocity, $v_r$.
+By defining the vectors
+\begin{eqnarray}
+  \vec{y} &=&
+      \transp{\left(
+        \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
+          \pi &
+          \mu_{\alpha^*} &
+          \mu_\delta &
+          v_r
+        \end{array}
+      \right)}\\
+  \hat{\vec{y}} &=&
+      \transp{\left(
+        \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
+          r^{-1} &
+          r^{-1}\,v_\alpha &
+          r^{-1}\,v_\delta &
+          \hat{v}_r
+        \end{array}
+      \right)}
+\end{eqnarray}
+and by considering the covariance matrix $\mat{C}$ between the observed
+quantities (provided by \tgas\ and extended to include the uncorrelated radial
+velocity uncertainty), the likelihood can be written
+\begin{eqnarray}
+p(\pi, \mu_{\alpha^*}, \mu_\delta \given r, v_\alpha, v_\delta) &=&
+  \left[\det\left(\frac{\mat{C}^{-1}}{2\pi}\right)\right]^{1/2} \,
+    \exp \left[ -\frac{1}{2} \transp{\left(\vec{y} - \hat{\vec{y}} \right)} \,
+    \mat{C}^{-1} \,
+    \left(\vec{y} - \hat{\vec{y}} \right) \right] \label{eq:likefn} \quad .
+\end{eqnarray}
+We adopt a uniform space density prior for the distance and an isotropic
+Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$
+\begin{eqnarray}
+p(r) &=&
+  \begin{cases}
+    \frac{3}{r_{\rm lim}^3} \, r^2 & \text{if } 0 < r < r_{\rm lim}\\
+    0              & \text{otherwise}
+  \end{cases}\\
+p(v) &=& \frac{1}{\sqrt{2\pi}\,\sigma_v} \,
+  \exp\left[-\frac{1}{2} \, \frac{v^2}{\sigma_v^2} \right] \quad .
+\end{eqnarray}
+For each of the two stars, we use \project{emcee}
+(\citealt{Foreman-Mackey:2013}) to generate posterior samples in $(r, v_\alpha,
+v_\delta, \hat{v}_r)$ by running 64 walkers for 4608 steps and discarding the
+first 512 steps as the burn-in period.
+For each sample, we convert the heliocentric phase-space coordinates into
+Galactocentric coordinates assuming the Sun's position and velocity are $x_\odot
+= (-8.3, 0, 0)~{\rm kpc}$ and $v_\odot = (10, 244, 7.17)~\kms$ (\citealt{bovy,
+etc.}).
+\figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
+Galactocentric phase-space coordinates for the two stars.
+In all components, the pair is consistent with being co-moving and close in
+separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
+but the median 3-space separation is $\approx$$0.6~\pc$.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\linewidth]{dx_dv_posterior.pdf}
+  \end{center}
+  \caption{%
+    Differences in posterior samples over Galactocentric phase-space coordinates
+    for the two stars HD 240429 and HD 240430.
+    \label{fig:dxdv}}
+\end{figure}
+
+\figurename~\ref{fig:orbit} shows an orbit computed from the median posterior
+sample over 6D phase-space coordinates for HD 240429 (black line), integrated
+in a Milky Way-like gravitational potential (\cite{Gala:2017}). \todo{APW:
+explain}
+The Sun's orbit in this same Milky Way model is under-plotted for comparison
+(grey line); the orbits of the stars in this pair have large scale-heights
+relative to the Sun's orbit despite being young.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\linewidth]{orbits.pdf}
+  \end{center}
+  \caption{%
+    Galactic orbits computed for HD 240429 (black) and the Sun (grey).
+    For HD 240429, the initial conditions are set to the median posterior
+    sample over the inferred 6D phase-space coordinates.
+    The orbits are computed by integrating backwards from the present-day
+    positions for $2.5~{\rm Gyr}$ with a time-step of $0.5~{\rm Myr}$ using the
+    Leapfrog integration scheme implemented in \project{Gala}
+    (\citealt{Gala:2017}). \todo{APW: citation...}
+\label{fig:orbit}}
+\end{figure}
 
 % ----------------
 % Horizontal table
@@ -190,10 +293,6 @@ $\mu_\delta$  & $-29.68 \pm 0.54$ & $-30.12 \pm 0.52$\\
 \hline\hline
 \end{tabular}
 \end{table*}
-
-We first confirm that the two stars are indeed co-moving with very similar
-velocities using the radial velocities.
-\todo{APW: discuss kinematics, posterior of separation/dV}
 
 \todo{Figure: posterior distributions of separation and delta V}
 
