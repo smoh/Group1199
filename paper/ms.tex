@@ -19,7 +19,6 @@
 \definecolor{cbblue}{HTML}{3182bd}
 \usepackage{microtype}  % ALWAYS!
 \usepackage{amsmath,amssymb,natbib}
-\usepackage{tikz}
 \hypersetup{backref,breaklinks,colorlinks,urlcolor=cbblue,linkcolor=cbblue,citecolor=black}
 \graphicspath{{figures/}}
 
@@ -38,8 +37,8 @@
 \newcommand{\tgas}{\acronym{TGAS}}
 \newcommand{\etal}{\textit{et al}.}
 \newcommand*\elem[1]{\ensuremath{\mathrm{#1}}}
-\newcommand{\sunanalog}{\ensuretext{HD HD 240429}}
-\newcommand{\bizarrone}{\ensuretext{HD 240430}}
+\newcommand{\sunanalog}{\text{HD 240429}}
+\newcommand{\bizarreone}{\text{HD 240430}}
 
 
 
@@ -154,7 +153,7 @@ by lowering the likelihood ratio cut for the stars around this pair.
 
 In a separate effort to study detailed chemical abundances of
 potential planet-hosting stars, \citet{2016ApJS..225...32B}
-obtained high resolution spectroscopy for both \sunanalog\ and \bizarreone\.
+obtained high resolution spectroscopy for both \sunanalog\ and \bizarreone.
 \todo{from where? mention briefly Keck HIRES}
 The resulting measurements from this effort include abundances measured for 15
 chemical species (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as
@@ -236,7 +235,7 @@ but the median 3-space separation is $\approx$$0.6~\pc$.
   \end{center}
   \caption{%
     Differences in posterior samples over Galactocentric phase-space coordinates
-    for the two stars \sunanalog\ and \bizarreone\.
+    for the two stars \sunanalog\ and \bizarreone.
     \label{fig:dxdv}}
 \end{figure}
 
@@ -380,14 +379,38 @@ the mean velocity of the two stars would have a companion within $\Delta v = XX$
 ...
 
 % binary-single and binary-binary exchange
-Another scenario that two unrelated stars may end up in a wide binary system
-is multi-body gravitational scattering.
-We consider the exchange probabilities in binary-single and binary-binary interactions.
-Given their low binding energy compared to incoming velocity of field stars,
-this is low.
-Two factors that make this even more unlikely are that both stars are very young given their large Li,
-and that if the pair is a result of scattering, one expect to end up with typical stars of the field,
-not HD30 with anomalous abundance patterns.
+Two stars unrelated at birth may end up in a binary system via binary-single scattering event
+that results in an exchange of binary member.
+In order to estimate the rate at which any binary-single
+event will produce a wide binary system such as \sunanalog\ and \bizarreone,
+we may consider the rate at which this wide binary will scatter with a field star to
+result in an exchange reaction.
+The exchange rate for a binary with semi-major axis $a$ is
+\begin{eqnarray}
+  \sigma_\mathrm{ex} = \frac{640}{81} \pi a^{2} \frac{1}{v^6}
+\end{eqnarray}
+where $v$ is the incoming velocity $v_i$ in units of critical velocity $v_c$ defined as
+\begin{eqnarray}
+  v_c^2 = G \frac{m_1 m_2 (m_1 + m_2 + m_3)}{m_3 (m_1 + m_2)} \frac{1}{a}
+\end{eqnarray}
+when $v \gg 1$ using the impulse approximation (\citealt{Hut:1983aa,Hut:1983ab}),
+which is appropriate for wide binaries scattering with field (disk) stars.
+If we assume that field stars are made of solar mass stars with constant $n=1$~pc$^{-3}$,
+and the incoming velocity is $10$~km\,s$^{-1}$, a lower limit to the velocity dispersions of disk
+stars in any direction, the rate of exchange scattering is
+\begin{eqnarray}
+  n \sigma_\mathrm{ex} v_i = 6.82\times 10^{-8}\,\mathrm{Gyr}^{-1}
+  \frac{n}{\mathrm{pc}^3} \frac{\mathrm{pc}}{a} \left(\frac{10~\mathrm{km}\,\mathrm{s}^{-1}}{v_i}\right)^5
+\end{eqnarray}
+low enough to be negligible.
+
+In regions where binarity fraction is high, binary-binary scattering may be more important
+than binary-single scattering (\todo{CITE})
+
+
+%Two factors that make this even more unlikely are that both stars are very young given their large Li,
+%and that if the pair is a result of scattering, one expect to end up with typical stars of the field,
+%not HD30 with anomalous abundance patterns.
 
 
 None of the above scenarios is quite satisfactory as it offers no
