@@ -19,6 +19,7 @@
 \definecolor{cbblue}{HTML}{3182bd}
 \usepackage{microtype}  % ALWAYS!
 \usepackage{amsmath,amssymb,natbib}
+\usepackage[flushleft]{threeparttable}
 \hypersetup{backref,breaklinks,colorlinks,urlcolor=cbblue,linkcolor=cbblue,citecolor=black}
 \graphicspath{{figures/}}
 
@@ -37,6 +38,7 @@
 \newcommand{\tgas}{\acronym{TGAS}}
 \newcommand{\etal}{\textit{et al}.}
 \newcommand*\elem[1]{\ensuremath{\mathrm{#1}}}
+\newcommand*\elemH[1]{\ensuremath{[\mathrm{#1}/\elem{H}]}}
 \newcommand{\sunanalog}{\text{HD 240429}}
 \newcommand{\bizarreone}{\text{HD 240430}}
 
@@ -282,24 +284,54 @@ relative to the Sun's orbit despite being young.
 % \end{table*}
 
 \begin{table*}[htpb]
-  \centering
-  \caption{Astrometric and spectroscopic measurements}
+  \caption{Astrometric and spectroscopic measurements.}
   \label{tab:t2}
+  \begin{threeparttable}
+  \centering
   \begin{tabular}{ccc}
 \hline\hline
 Name & HD 240429 & HD 240430 \\
 \hline
-Sp Type & G2 & G0 \\
-$T_\mathrm{eff}$ & 5878 & 5803 \\
-$\log{g}$ & 4.43 & 4.33 \\
-$v\sin{i}$ & 1.1 & 2.5 \\
-$[\elem{Fe}/\elem{H}]$ & 0.01 & 0.20 \\
-$v_r$ & $-21.2$ & $-21.2$ \\
-$\varpi$ & $9.35 \pm 0.24$ & $9.41 \pm 0.25$ \\
-$\mu_\alpha^*$ & $89.25 \pm 0.66$ & $89.41 \pm 0.69$ \\
-$\mu_\delta$  & $-29.68 \pm 0.54$ & $-30.12 \pm 0.52$\\
+Sp Type                                   & G2                & G0                \\
+$T_\mathrm{eff}$                          & 5878              & 5803              \\
+$\log{g}$                                 & 4.43              & 4.33              \\
+$v\sin{i}$                                & 1.1               & 2.5               \\
+$[\elem{Fe}/\elem{H}]$                    & 0.01              & 0.20              \\
+$v_r$                                     & $-21.2$           & $-21.2$           \\
+$\varpi$ \footnotemark[1]                 & $9.35 \pm 0.24$   & $9.41 \pm 0.25$   \\
+$\mu_\alpha^*$ \footnotemark[1]           & $89.25 \pm 0.66$  & $89.41 \pm 0.69$  \\
+$\mu_\delta$ \footnotemark[1]             & $-29.68 \pm 0.54$ & $-30.12 \pm 0.52$ \\
+\hline
+\multicolumn{3}{c}{$T_c < 1200$~K} \\
+\hline
+$\elemH{Li}_*$ \footnotemark[2]           & $2.25$            & $2.75$            \\
+$\elemH{C}$                               & $0.00$            & $0.09$            \\
+$\elemH{N}$                               & $-0.06$           & $-0.01$           \\
+$\elemH{O}$                               & $0.01$            & $0.09$            \\
+$\elemH{Na}$                              & $-0.06$           & $-0.04$           \\
+$\elemH{Mn}$                              & $-0.03$           & $0.00$            \\
+\hline
+\multicolumn{3}{c}{$T_c > 1200$~K} \\
+\hline
+$\elemH{Mg}$                              & $0.01$            & $0.19$            \\
+$\elemH{Al}$                              & $0.01$            & $0.21$            \\
+$\elemH{Si}$                              & $0.00$            & $0.16$            \\
+$\elemH{Ca}$                              & $0.02$            & $0.23$            \\
+$\elemH{Ti}$                              & $0.02$            & $0.20$            \\
+$\elemH{V}$                               & $0.02$            & $0.20$            \\
+$\elemH{Cr}$                              & $0.01$            & $0.17$            \\
+$\elemH{Fe}$                              & $0.01$            & $0.20$            \\
+$\elemH{Ni}$                              & $-0.01$           & $0.21$            \\
+$\elemH{Y}$                               & $0.04$            & $0.26$            \\
 \hline\hline
 \end{tabular}
+%
+\begin{tablenotes}
+  \item All spectroscopic measurements except $\elem{Li}$ are from \citealt{2016ApJS..225...32B}.
+  \footnotetext[1]{From \tgas. }
+  \footnotetext[2]{From \todo{CITE}}
+\end{tablenotes}
+  \end{threeparttable}
 \end{table*}
 
 \todo{Figure: posterior distributions of separation and delta V}
