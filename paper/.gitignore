@@ -9,6 +9,8 @@
 *.fls
 *.out
 *.toc
+gitstuff.tex
+ms.pdf
 
 ## Intermediate documents:
 *.dvi
