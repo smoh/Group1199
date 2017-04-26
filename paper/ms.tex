@@ -39,6 +39,7 @@
 \newcommand{\etal}{\textit{et al}.}
 \newcommand*\elem[1]{\ensuremath{\mathrm{#1}}}
 \newcommand*\elemH[1]{\ensuremath{[\mathrm{#1}/\elem{H}]}}
+\newcommand*{\feh}{\ensuremath{\elemH{Fe}}}
 \newcommand{\sunanalog}{\text{HD 240429}}
 \newcommand{\bizarreone}{\text{HD 240430}}
 
@@ -369,6 +370,7 @@ according to the theoretical models tuned to explain the solar lithium abundance
 and rotational profile (\citealt{2005Sci...309.2189C}).
 The lithium abundance of \bizarreone\ is still higher by $0.5$~dex
 showing the largest difference among all measured elements.
+This translates to $\sim 500$~Myr difference in age.
 Given the overall higher metal abundances and the peculiar abundance patterns in \bizarreone,
 it is unclear, however, whether this higher $\elem{Li}$ abundance
 means a younger age or something else.
@@ -453,6 +455,12 @@ stars in any direction, the rate of exchange scattering is
   \frac{n}{\mathrm{pc}^3} \frac{\mathrm{pc}}{a} \left(\frac{10~\mathrm{km}\,\mathrm{s}^{-1}}{v_i}\right)^5
 \end{eqnarray}
 low enough to be negligible.
+Because the exchange scattering cross section steeply depends on the incoming velocity
+relative to the critical velocity (of the order of orbital velocity of the binary),
+the rate of exchange scattering with a star within the same star forming region
+may be much larger.
+However, even in such scenario, the age difference of $\sim 500$~Myr is too large
+for two stars of the same star forming region.
 
 In regions where binarity fraction is high, binary-binary scattering may be more important
 than binary-single scattering (\todo{CITE})
@@ -463,7 +471,7 @@ than binary-single scattering (\todo{CITE})
 %not HD30 with anomalous abundance patterns.
 
 
-None of the above scenarios is quite satisfactory as it offers no
+None of the above scenarios is satisfactory as it offers no
 insight on the peculiarity in abundances of HD 30 (see \sectionname~{\ref{sec:data}).
 
 The unlikeliness of the above possibilities naturally leads us to
@@ -472,9 +480,19 @@ What can selectively enrich XX elements in one of the two stars that are born to
 
 % inhomogeneity in star formation
 It may be that the two stars are born at the same time from the same cloud, but
-there is inhomogeneity. Highly doubtful based on
-- Brewer et al. binaries that seem identical.
-- other?
+there is inhomogeneity within the cloud.
+However, there is already ample amount of evidence against such scenario.
+First, none of the other seven similar wide binaries examined in \citealt{2016ApJS..225...32B}
+show the same level differences in abundances although there is generally
+a larger spread in $\elem{C}$, $\elem{N}$ and $\elem{O}$, and some pairs show
+a large as $\approx 0.15$~dex difference in particular elements.
+The median and maximum \feh\ difference between component stars in the other seven pairs
+is $0.02$~dex and $0.09$~dex, respectively.
+This is consistent with the findings of \citealt{Desidera:2004aa} who examined 23 wide bianries
+of late F to K dwarfs, and found most pairs show difference in \feh\ less than $0.02$~dex
+and none larger than $0.07$~dex.
+
+% summarize other pair studies in detailed chemical abundance here
 
 % rocky planets (or the like) engulfment
 Yet another possibility is that the more metal-rich of the two stars
