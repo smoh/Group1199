@@ -16,7 +16,6 @@ gitstuff.tex: ../.git/logs/HEAD
 ${NAME}.pdf: ${NAME}.tex ref.bib gitstuff.tex aastexmods.tex figures/*.pdf
 	if [ -a ref.local.bib ] ; \
 	then \
-		# remove existing bib to prevent backup file mess
 		if [ -a ref.bib ] ; \
 		then \
 			${RM} ref.bib; \
