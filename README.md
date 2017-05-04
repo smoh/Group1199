@@ -1,1 +1,1 @@
-# Cronus & Crius
+# Kronos & Krios :metal:
