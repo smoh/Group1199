@@ -395,24 +395,6 @@ For Y, the trend for this pair is opposite of the others in Teff.
 Specifically, no difference within pair is found for Mn.
 (see figure X in that paper; purple is this pair)
 
-Surface lithium abundance in a sun-like star such as \sunanalog\ decreases with its age
-due to mixing induced by convection or rotation which brings lithium
-into the interior ($T>2.5 \times 10^{6}$~K)
-where it will be destroyed by proton capture burning.
-Thus, surface lithium abundance is an indicator of stellar ages.
-The $\elem{Li}$ abundance of $2.25$ for \sunanalog\ implies an age of $\lesssim 1$~Gyr
-according to the theoretical models tuned to explain the solar lithium abundance
-and rotational profile (\citealt{2005Sci...309.2189C}).
-The lithium abundance of \bizarreone\ is still higher by $0.5$~dex
-showing the largest difference among all measured elements.
-This translates to $\sim 500$~Myr difference in age.
-Given the overall higher metal abundances and the peculiar abundance patterns in \bizarreone,
-it is unclear, however, whether this higher $\elem{Li}$ abundance
-means a younger age or something else.
-For example, the presence of $\elem{Li}$-rich red giant stars has been attributed
-to the engulfment of substellar companions such as gas giant planets or brown dwarfs
-which may replenish $\elem{Li}$ (\citealt{Casey:2016aa}).
-
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.95\linewidth]{isochrones.png}
@@ -436,33 +418,54 @@ which may replenish $\elem{Li}$ (\citealt{Casey:2016aa}).
   \label{fig:sed}
 \end{figure}
 
-Given the precise measurements of $\log(g)$ and $T_\mathrm{eff}$,
-comparing these values to theoretical isochrones may also be indicative of the two stars' ages.
-We compared the measured $\log(g)$ and $T_\mathrm{eff}$ to \project{MIST} isochrones at two
-different $\feh$ of $0$ and $0.2$, corresponding to the $\feh$ of \sunanalog\ and \bizarreone.
-The ages most consistent with $\log(g)$ and $t_\mathrm{eff}$ for
-\sunanalog\ and \bizarreone\ using the isochrones of corresponding metallicities
-is $\approx 4$~Gyr and $\approx 5.6$~Gyr respectively, based on $\chi^2$ values.
-This is in tension with the relatively high $\elem{Li}$ abundance in both stars.
-Even for \sunanalog\, a $\elem{Li}$ abundance of 2.25 is unusually high for a sunlike star with
-similar ages.
 
-are plotted in Figure~\ref{fig:isochrones}.
-For \sunanalog\ ($\feh = 0.01$), the most consistent isochrone is that for
-an age of $2$~Gyr and $\feh = 0.2$.
-The $\log(g)$ values of the two stars, especially of \bizarreone\, seem to suggest
-that they could be at the end of the pre-main sequence phase.
-However, an age of $28$~Myr for \sunanalog\ is in tension with the larger age ($800$~Myr)
-inferred from its $\elem{Li}$ abundance.
-Also, at such a young age, we may expect to see infrared excess from a circumstellar disk or
-X-ray emission from magnetic activity. 
-However, the spectral energy distributions of the two stars based on
-\project{Tycho-2}, \tmass, \project{WISE} photometry (\todo{CITE}) are consistent with blackbody,
-and no relatable X-ray point sources are found in the \project{ROSAT} All-Sky Survey
-around the two stars,
-On the other hand, the most consistent main sequence age ($2$~Gyr) also is in tension with
-its relatively high $\elem{Li}$ abundance, not to mention with the $\log(g)$ of \bizarreone\
-if the two stars should have the same age.
+The fact that the two stars share a very similar space motion
+at a separation of $0.6$~pc strongly argues that the pair is coeval.
+We consider other age indicators apart from their phase space coordinates
+to assess the ages and coevality of the two stars.
+First, given the precise measurements of $\log(g)$, $T_\mathrm{eff}$,
+comparing these values to theoretical isochrones may also be indicative of the two stars' ages.
+We perform isochrone fitting using the Yale-Yonsei model isocrones (\todo{CITE}).
+The input data are $\log(g)$, $T_\mathrm{eff}$, \feh, parallaxes, $B$-band magnitudes, and their errors.
+The isochrone ages of \sunanalog\ and \bizarreone\ are
+$4.00_{-1.56}^{+1.51}$~Gyr and $4.28_{-1.03}^{+1.11}$~Gyr, respectively,
+consistent with them being coeval.
+
+Surface lithium abundance in a sun-like star decreases with its age
+due to mixing induced by convection or rotation which brings lithium
+into the interior ($T>2.5 \times 10^{6}$~K)
+where it will be destroyed by proton capture burning.
+Thus, surface lithium abundance is an indicator of stellar ages.
+The $\elem{Li}$ abundance of $2.25$ for \sunanalog\ implies an age of $\lesssim 1$~Gyr
+according to the theoretical models tuned to explain the solar lithium abundance
+and rotational profile (\citealt{2005Sci...309.2189C}).
+The lithium abundance of \bizarreone\ is still higher by $0.5$~dex
+showing the largest difference among all measured elements.
+This translates to $\sim 500$~Myr difference in age.
+Given the overall higher metal abundances and the peculiar abundance patterns in \bizarreone,
+it is unclear, however, whether this higher $\elem{Li}$ abundance
+means a younger age or something else.
+For example, the presence of $\elem{Li}$-rich red giant stars has been attributed
+to the engulfment of substellar companions such as gas giant planets or brown dwarfs
+which may replenish $\elem{Li}$ (\citealt{Casey:2016aa}).
+
+In fact, the surface lithium abundance is the only indication that points to younger ages.
+If the two stars are indeed only several hundred Myrs old at most,
+they are expected to be part of a larger co-moving group of stars.
+However, as we mention above, there is no evidence in our search of co-moving pairs
+using \tgas\ that the two stars belong to a larger group of young stars.
+Very young stars are often show signs of activity such as
+X-ray emission from magnetic activity, emission lines, or infrared excess due to
+circumstellar disks.
+We have looked for these signs for the pair to find none, and their spectral energy
+distribution is consistent with blackbody.
+The low $v\sin(i)$ values also argue against very young ages inferred from the
+surface lithium abundances.
+% TODO: ref for vertical action as age?
+Finally, their fiducial orbit in a Milky Way-like potential show that the vertical action
+for this pair is larger than the Sun, favoring an older age.
+We concluded that the two stars are most likely coeval, $\sim 4$~Gyr old main sequence
+stars, and that their unusually high \elem{Li} abundance requires an alternative explanation.
 
 \begin{figure}[htpb]
   \centering
@@ -479,6 +482,16 @@ if the two stars should have the same age.
     as a function of condensation temperature of elements (\citealt{2003ApJ...591.1220L}).
   }
   \label{fig:relabun_tc}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[angle=90,height=0.9\textheight]{TcRank_deltaXH.pdf}
+  \caption{Abundance of \bizarreone\ ($[\mathrm{Fe}/\mathrm{H}] = 0.20$)
+    relative to \sunanalog\ ($[\mathrm{Fe}/\mathrm{H}] = 0.01$)
+    as a function of condensation temperature of elements (\citealt{2003ApJ...591.1220L}).
+  }
+  \label{fig:relabun_tcrank}
 \end{figure}
 
 \begin{figure}[htpb]
