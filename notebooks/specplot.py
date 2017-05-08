@@ -23,21 +23,6 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 import re
 
-mpl.rcParams['figure.figsize']=(16.,10.)
-mpl.rcParams['font.size']=16
-mpl.rcParams['axes.linewidth'] = 3.0
-
-# set x tick size and width
-mpl.rcParams['xtick.major.size'] = 5
-mpl.rcParams['xtick.major.width'] = 2
-mpl.rcParams['xtick.minor.size'] = 2
-mpl.rcParams['xtick.minor.width'] = 1
-
-# set tick width
-mpl.rcParams['ytick.major.size'] = 5
-mpl.rcParams['ytick.major.width'] = 2
-mpl.rcParams['ytick.minor.size'] = 2
-mpl.rcParams['ytick.minor.width'] = 1
 
 # Speed of light for calculating offsets in wavelengths due to RV shifts
 cLight = 299792.458 # km/s
@@ -148,7 +133,7 @@ class SpecPlot(object):
 
     def plotSeg(self, segIdx=0, wRange=[5170.,5175.], showLines=[], ax=None,
                 yMin=0.0, showModel=True, obsColor='#999999', obsWidth=2, modColor='b', modWidth=2,
-                lineWidth=1):
+                lineWidth=1, labelSpeciesOnly=False):
         spec = self.spec
         # Speed of light for calculating offsets in wavelengths due to RV shifts
         cLight = 299792.458 # km/s
@@ -178,8 +163,8 @@ class SpecPlot(object):
         
         if ax == None:
             ax = plt.gca()
-            ax.set_xlabel("Wavelength",fontweight='bold')
-            ax.set_ylabel("Residual Intensity",fontweight='bold')
+            ax.set_xlabel("Wavelength")
+            ax.set_ylabel("Residual Intensity")
             ax.get_xaxis().set_major_formatter(
                 mpl.ticker.FuncFormatter(lambda x, p: "{:6.1f}".format(x)))
         
@@ -267,9 +252,12 @@ class SpecPlot(object):
                 
                 lBot = np.min(mod[wavesOfInterest]) + lineOffset
                 p = ax.plot([lWave,lWave],[lBot,labelLineTop],linestyle='-',color=lColor,linewidth=lineWidth)
-                pt = ax.text(lWave,labelTextBot,"{} - {:8.3f}".format(species[idx],lWave),
+                if labelSpeciesOnly:
+                    labelText = "{}".format(species[idx])
+                else:
+                    labelText = "{} - {:8.3f}".format(species[idx],lWave)
+                pt = ax.text(lWave,labelTextBot, labelText,
                        horizontalalignment=hAlign,verticalalignment='bottom',
-                       rotation=90,
-                       fontweight='bold',fontsize=12,color=lColor)
+                       rotation=90, fontsize=12,color=lColor)
         
         return ax.get_figure()
