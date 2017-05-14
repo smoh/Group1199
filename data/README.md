@@ -1,3 +1,10 @@
+* teske16_wasp94AB.csv
+
+* mack14_abundances.csv
+
+* melendez2017.csv
+
+
 * atomicmass.csv
 
 | column  | description              |
