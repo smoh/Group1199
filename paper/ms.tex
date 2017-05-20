@@ -42,6 +42,9 @@
 \newcommand*{\feh}{\ensuremath{\elemH{Fe}}}
 \newcommand{\sunanalog}{\text{Krios}}
 \newcommand{\bizarreone}{\text{Kronos}}
+\newcommand{\Tcondens}{\ensuremath{T_C}}
+\newcommand{\mearth}{\ensuremath{M_\oplus}}
+\newcommand{\mjupiter}{\ensuremath{M_\mathrm{Jup}}}
 
 
 
@@ -261,7 +264,7 @@ For each sample, we convert the heliocentric phase-space coordinates into
 Galactocentric coordinates assuming the Sun's position and velocity are $x_\odot
 = (-8.3, 0, 0)~{\rm kpc}$ and $v_\odot = (10, 244, 7.17)~\kms$ (\citealt{bovy,
 etc.}).
-\figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
+\figname~\ref{fig:dxdv} shows differences in posterior samples converted to
 Galactocentric phase-space coordinates for the two stars.
 In all components, the pair is consistent with being co-moving and close in
 separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
@@ -277,7 +280,7 @@ but the median 3-space separation is $\approx$$0.6~\pc$.
     \label{fig:dxdv}}
 \end{figure}
 
-\figurename~\ref{fig:orbit} shows an orbit computed from the median posterior
+\figname~\ref{fig:orbit} shows an orbit computed from the median posterior
 sample over 6D phase-space coordinates for \sunanalog\ (black line), integrated
 in a Milky Way-like gravitational potential (\cite{Gala:2017}). \todo{APW:
 explain}
@@ -378,7 +381,7 @@ perhaps in a wide binary from the same birth cloud.
 Thus, we expect the two stars to have identical metallicities and abundance patterns,
 \todo{except for thoese elements like Li...}
 Surprisingly, one of the stars, \bizarreone\ is significantly more metal
-rich than the other by 0.2~dex ($\approx 60\%$; Figure~\ref{fig:abundances}).
+rich than the other by 0.2~dex ($\approx 60\%$; \figname~\ref{fig:abundances}).
 What is more puzzling is that the abundances of this star
 shows selective depletion in C, N, O, Na, and Mn.
 
@@ -432,7 +435,7 @@ $4.00_{-1.56}^{+1.51}$~Gyr and $4.28_{-1.03}^{+1.11}$~Gyr, respectively,
 consistent with them being coeval.
 
 Surface lithium abundance in a sun-like star decreases with its age
-due to mixing induced by convection or rotation which brings lithium
+due to mixing induced by convection or rotation, which brings the lithium
 into the interior ($T>2.5 \times 10^{6}$~K)
 where it will be destroyed by proton capture burning.
 Thus, surface lithium abundance is an indicator of stellar ages.
@@ -472,16 +475,6 @@ stars, and that their unusually high \elem{Li} abundance requires an alternative
   \includegraphics[width=0.9\linewidth]{abundances.pdf}
   \caption{Abundances of the co-moving pair, \sunanalog\ and \bizarreone.}
   \label{fig:abundances}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.9\linewidth]{relabun_tc_XH.pdf}
-  \caption{Abundance of \bizarreone\ ($[\mathrm{Fe}/\mathrm{H}] = 0.20$)
-    relative to \sunanalog\ ($[\mathrm{Fe}/\mathrm{H}] = 0.01$)
-    as a function of condensation temperature of elements (\citealt{2003ApJ...591.1220L}).
-  }
-  \label{fig:relabun_tc}
 \end{figure}
 
 \begin{figure}[htpb]
@@ -568,12 +561,15 @@ than binary-single scattering (\todo{CITE})
 %not HD30 with anomalous abundance patterns.
 
 
-None of the above scenarios is satisfactory as it offers no
-insight on the peculiarity in abundances of HD 30 (see \sectionname~{\ref{sec:data}).
-
+None of the above scenarios is satisfactory as they offer no
+insight on the peculiarity of the abundances of \bizarreone
+(see \sectionname~{\ref{sec:data}}).
+In case that the pair formed from a exchange scattering event,
+we would expect the pair to be composed of typical field stars.
 The unlikeliness of the above possibilities naturally leads us to
 consider the alternative.
-What can selectively enrich XX elements in one of the two stars that are born together?
+What can selectively enrich refractory (high $T_C$) elements
+in one of the two stars that are born together?
 
 % inhomogeneity in star formation
 It may be that the two stars are born at the same time from the same cloud, but
@@ -585,31 +581,82 @@ a larger spread in $\elem{C}$, $\elem{N}$ and $\elem{O}$, and some pairs show
 a large as $\approx 0.15$~dex difference in particular elements.
 The median and maximum \feh\ difference between component stars in the other seven pairs
 is $0.02$~dex and $0.09$~dex, respectively.
-This is consistent with the findings of \citealt{Desidera:2004aa} who examined 23 wide bianries
+This is consistent with the findings of \citealt{Desidera:2004aa}, who examined 23 wide binaries
 of late F to K dwarfs, and found most pairs show difference in \feh\ less than $0.02$~dex
 and none larger than $0.07$~dex.
 
 % summarize other pair studies in detailed chemical abundance here
 
 % rocky planets (or the like) engulfment
-Yet another possibility is that the more metal-rich of the two stars
-was recently? bombarded by something that selectively removed the depleted elements but not the others.
+Yet another possibility that may change a star's surface abundance after formation
+is accretion of its planets or asteroids.
+Instabilities may develop in a multi-planet system due to chaotic
+nature of many body system, which may lead to planet engulfment by the host star.
+
+
+
+One informative proxy that may reveal the composition of the hypothetical material
+that was accreted to the stars is the condensation temperature.
 
 estimate: 10 earth mass
 
 Present the relative abundance figure here
 
-Change in stellar abundance due to ingestion of planets has been considered
-for similar bright star pairs HD XX/XX (Mack) and HD XX/XX(Mack).
+\citealt{Mack:2014aa} studied HD~20782/20781, two common proper motion G dwarf stars (G2/G9.5)
+with a projected separation of $\sim9000$~AU (correspoding to 4.2~arcmin sky separation).
+Both stars in this system host close-in giant planets.
+HD~20782 hosts a Jupiter-mass planet on a very eccentric ($e\approx 0.97$) orbit with a
+pericenter distance of 1.4~AU while HD~20781 hosts two Neptune-mass planets within 0.3~AU
+with moderately high eccentricity ($e\sim0.1-0.3$).
+They found that the abundances of 15 elements between the two stars are consistent with each other.
+However, they argued that there is a moderately significant ($\sim 2\sigma$)
+positive slope of $\approx 10^{-5}$~dex\,K$^{-1}$ in abundance of each star
+{\it individually} with increasing \Tcondens\ for $\Tcondens>900$~K elements
+(namely, Na, Mn, Cr, Si, Fe, Mg, Co, Ni, V, Ca, Ti, Al, Sc leaving out C and O
+of their measurements).
+They interpreted that this slope may be evidence for accretion of $10-20$~\mearth\ of 
+H-depleted rocky material that were pushed in during giant planet migration.
+
+\citealt{Teske:2016aa} studied WASP-94A/WASP-94B, a pair of F8 and F9 stars
+with super-solar metallicity ($\feh\approx 0.3$ for both stars). Both stars
+host a hot Jupiter.
+The planet hosted by WASP-94A is transiting with a misaligned, probably
+retrograde circular ($e<0.13$) orbit, while that hosted by WASP-94B is a little
+more massive by $\sim 0.15$~\mjupiter\ and closer in, aligned with the host
+star.
+With a claimed precision of $0.006$~dex (median among all elements), they
+detected a depletion of volatile and moderately volatile ($\Tcondens < 1200$~K)
+elements at $0.02$~dex level and an enhancement in refractory ($\Tcondens >
+1200$~K) elements at $0.01$~dex level in WASP-94A relative to WASP-94B.
+Excluding K, which is based on one strong line and largely affected by non-LTE
+effect, their analysis shows a statistically significant non-zero slope between
+$\Delta\elemH{X}$ and $\Tcondens$\footnote{Note that the condensation
+  temperature $\Tcondens$ used is for solar (system? atmosphere?) composition
+  gas, which can differ from that of higher metallicity gas.}.
+They considered multiple possibilities related to the formation and evolution
+of planetary systems around each star as well as causes unrelated to planets
+such as dust cleansing during the fully convective phase or different rotation
+and granulation between the stars, but did not favor any particular one.
+
+The pair of G5 stars HD 80606/HD 80607 has been independently studied by
+\citealt{Saffe:2015aa} and \citealt{Mack:2016aa} using the same KECK HIRES
+spectra. HD 80606 hosts a giant planet with mass of $4~\mjupiter$ at $0.5$~AU
+on a very eccentric ($e\approx0.95$) orbit while HD 80607 has no detected
+planets.
+Both stars are super solar with $\feh=0.35$.
 
 
-% Concluding remakrs
+
+
+
+
+% Concluding remarks
 
 
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.95\linewidth]{spec1.pdf}
-  \caption{Selective segments of spectra of \sunanalog\ and \bizarreone.
+  \caption{Selective segments of the spectra of \sunanalog\ and \bizarreone.
     For each row, the continuum-normalized data and model are plotted in the upper panel,
     and the ratio (\bizarreone/\sunanalog) of data (gray) and model (black)
     are plotted in the lower panel.
