@@ -39,6 +39,8 @@
 \newcommand{\etal}{\textit{et al}.}
 \newcommand*\elem[1]{\ensuremath{\mathrm{#1}}}
 \newcommand*\elemH[1]{\ensuremath{[\mathrm{#1}/\elem{H}]}}
+\newcommand*\teff{\ensuremath{T_\mathrm{eff}}}
+\newcommand*\logg{\ensuremath{\log{g}}}
 \newcommand*{\feh}{\ensuremath{\elemH{Fe}}}
 \newcommand{\sunanalog}{\text{Krios}}
 \newcommand{\bizarreone}{\text{Kronos}}
@@ -562,7 +564,7 @@ than binary-single scattering (\todo{CITE})
 
 
 None of the above scenarios is satisfactory as they offer no
-insight on the peculiarity of the abundances of \bizarreone
+insight on the peculiarity of the abundances of \bizarreone\
 (see \sectionname~{\ref{sec:data}}).
 In case that the pair formed from a exchange scattering event,
 we would expect the pair to be composed of typical field stars.
@@ -602,6 +604,20 @@ estimate: 10 earth mass
 
 Present the relative abundance figure here
 
+\input{otherstudies.tex}
+
+We summarize the few wide separation common proper motion pairs that have been
+studied in detailed chemical abundance so far.
+These systems are HD~20782/HD~20781, HD~80606/HD~80607, XO-2N/XO-2S, HAT-P-1,
+WASP-94A/WASP94-B, and HD~133131A/HD~133131B.
+Main properties of the systems relevant to the present discussion are
+summarized in \tablename~\ref{tab:otherstudies}.
+Their reported abundance differences $\Delta\elemH{X}$ where the difference is
+always taken as $\mathrm{higher}~\feh - \mathrm{lower}~\feh$ are plotted in
+\figname~\ref{fig:relabun_tcrank} as a function of \Tcondens-rank for
+comparision with this pair.
+
+{\bf HD~20782/HD~20782:} 
 \citealt{Mack:2014aa} studied HD~20782/20781, two common proper motion G dwarf stars (G2/G9.5)
 with a projected separation of $\sim9000$~AU (correspoding to 4.2~arcmin sky separation).
 Both stars in this system host close-in giant planets.
@@ -617,6 +633,7 @@ of their measurements).
 They interpreted that this slope may be evidence for accretion of $10-20$~\mearth\ of 
 H-depleted rocky material that were pushed in during giant planet migration.
 
+{\bf WASP-94A/WASP-94B:} 
 \citealt{Teske:2016aa} studied WASP-94A/WASP-94B, a pair of F8 and F9 stars
 with super-solar metallicity ($\feh\approx 0.3$ for both stars). Both stars
 host a hot Jupiter.
@@ -638,6 +655,7 @@ of planetary systems around each star as well as causes unrelated to planets
 such as dust cleansing during the fully convective phase or different rotation
 and granulation between the stars, but did not favor any particular one.
 
+{\bf HD~80606/HD~80607:}
 The pair of G5 stars HD 80606/HD 80607 has been independently studied by
 \citealt{Saffe:2015aa} and \citealt{Mack:2016aa} using the same KECK HIRES
 spectra. HD 80606 hosts a giant planet with mass of $4~\mjupiter$ at $0.5$~AU
@@ -646,6 +664,84 @@ planets.
 Both stars are super solar with $\feh=0.35$.
 
 
+{\bf HAT-P-1:}
+HAT-P-1 is a pair of G0 stars separated 11\farcs apart in sky
+with $\feh\approx0.15$.
+The secondary star in the system is known to host one transiting giant planet
+while no planet has been discovered around the primary star.
+\citealt{Liu:2014aa} found that the two stars are identical in their atmospheric composition:
+\feh\ is $0.146 \pm 0.014$ and $0.155 \pm 0.007$ for the primary and secondary respectively,
+and $\Delta\elem{X}/{Fe}$ is consistent with zero for 23 elements measured
+with the mean error being $0.013$~dex.
+Based on this analysis, they concluded that the presence of close-in giant planet
+does not necessarily lead to stellar atmospheric pollution of the host star.
+
+{\bf XO-2N/XO-2S:}
+The double star system XO-2 has received much attention due to
+possibly the most robust and significant difference between the component stars
+among those so far studied.
+XO-2 is a pair of G9 stars with super-solar metallicity ($\feh \gtrsim 0.35$),
+each hosting planet(s).
+XO-2N hosts on giant planet while XO-2S is known to host two giant planets with
+masses $0.26 \mjupiter$ and $1.37 \mjupiter$ on moderately eccentric ($\approx
+0.15$) orbits at $<0.5$~AU.
+
+The system was first analyzed by \citealt{Teske:2013aa}, who examined and found
+essentially no significant difference in Fe, Ni, C, and O between the two
+stars.
+However, re-analysis of the system using the same data in
+\citealt{Teske:2015aa} found that the trend of $\Delta\elemH{X}$ with
+\Tcondens\ varies significantly depending on the stellar parameters chosen in
+their analysis. Both analyses were based on spectra
+using Subaru High Dispersion Spectrograph at spectral resolution $R=60000$
+covering $4450-5660~\AA$ and $5860-7100~\AA$ with S/N of $170-230$
+(\citealt{Teske:2013aa}).
+
+Independently, \citealt{Ramirez:2015aa} used Keck HIRES spectra ($R=67000$,
+$4080-8300~\AA$) of the component stars with S/N of $350$ (in $5000-7500~\AA$)
+to perform a differential abundance analysis.
+They find that all 23 elements including Fe is enhanced in XO-2N
+compared to XO-2S, and that the difference $\Delta\elemH{X}$ shows
+a significant correlation with \Tcondens.
+At low \Tcondens, volatile elements differ by $0.015$~dex
+while the range of difference spans upto $0.1$~dex at $\Tcondens>1600$~K.
+There are inconsistencies in the determination of stellar parameters
+(\teff\ and \logg) between spectroscopic (based on Fe I/II lines)
+and photometric analysis,
+but the existence of correlation between $\Delta\elem{H}$ and
+\Tcondens\ seems robust.
+
+\citealt{Ramirez:2015aa} argued that the {\it depletion} of
+volatile elements in XO-2S relative to XO-2N is plausibly
+due to {\it more} gas giant planets around XO-2S,
+following a similar interpretation of \citealt{Melendez:2009aa}
+on the trend between solar twins and the Sun.
+In this scenario, forming planets in the protoplanetary disk
+are supposed to ``lock'' heavier elements to the core of gas giant
+planets as well as some volatile elements in their envelopes.
+Then, the host star will somehow accrete {\it gas} depleted in
+metals compared to their protostellar condition.
+By tuning the metal content ($Z/X$) of gas giant planets
+and when the accretion of gas occurs in terms of how much mass
+is in the convective envelop then, they can match
+the mass difference of gas giant planets around each star,
+which is at least $1~\mjupiter$.
+For the positive correlation of $\Delta\elemH{X}$ with \Tcondens,
+\citealt{Ramirez:2015aa} estimated that $20~\mearth$
+of equal-part mixture of Earth and CM chondrite-like material
+can explain the trend either as
+refractory {\it depletion} in XO-2S due to {\it more} rocky planets
+around XO-2S, or refractory enhancement in XO-2N by late time accretion
+in which case the complete opposite would be true.
+
+Finally, \citealt{Biazzo:2015aa} 
+
+
+
+
+
+
+% Useful follow up efforts
 
 
 
