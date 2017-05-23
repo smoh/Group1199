@@ -22,6 +22,7 @@
 \usepackage[flushleft]{threeparttable}
 \hypersetup{backref,breaklinks,colorlinks,urlcolor=cbblue,linkcolor=cbblue,citecolor=black}
 \graphicspath{{figures/}}
+\bibliographystyle{aasjournal.bst}
 
 % define macros for text
 \newcommand{\project}[1]{\textsl{#1}}
@@ -47,7 +48,6 @@
 \newcommand{\Tcondens}{\ensuremath{T_C}}
 \newcommand{\mearth}{\ensuremath{M_\oplus}}
 \newcommand{\mjupiter}{\ensuremath{M_\mathrm{Jup}}}
-
 
 
 % define macros for math
@@ -145,7 +145,9 @@ by detailed chemical abundance patterns as ``tag''s.
 A multiple-star system of any size that we believe are co-eval,
 with massive open clusters at one extreme, can serve this purpose.
 Wide binaries are at the other extreme in that we may be less confident of
-their coevality but they are much more abundant than the larger systems like open clusters.
+the coevality of individual systems
+but they are much more abundant than the larger systems like open clusters,
+rendering their statistics a meaningful indication of whether the hypothesis works.
 
 Independently, in efforts to connect the host star's chemistry to
 its planetary system, wide binaries with similar or very different planetary systems around
@@ -196,9 +198,10 @@ by lowering the likelihood ratio cut for the stars around this pair.
 
 In a separate effort to study detailed chemical abundances of
 potential planet-hosting stars, \citet{2016ApJS..225...32B}
-obtained high resolution spectroscopy for both \sunanalog\ and \bizarreone.
-\todo{from where? mention briefly Keck HIRES}
-The resulting measurements from this effort include abundances measured for 15
+analyzed high resolution spectra of both stars obtained using HIRES spectrograph
+on Keck~I telescope.
+The spectral resolution is \todo{$R\approx XXX$} and the wavelength coverage is \todo{$XXX-XXX$~\AA}.
+The resulting measurements include abundances measured for 15
 chemical species (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as
 well as high precision radial velocities.
 Other stellar parameters derived from these spectra are included in
@@ -587,22 +590,103 @@ This is consistent with the findings of \citealt{Desidera:2004aa}, who examined 
 of late F to K dwarfs, and found most pairs show difference in \feh\ less than $0.02$~dex
 and none larger than $0.07$~dex.
 
-% summarize other pair studies in detailed chemical abundance here
-
 % rocky planets (or the like) engulfment
 Yet another possibility that may change a star's surface abundance after formation
 is accretion of its planets or asteroids.
 Instabilities may develop in a multi-planet system due to chaotic
 nature of many body system, which may lead to planet engulfment by the host star.
 
-
-
 One informative proxy that may reveal the composition of the hypothetical material
 that was accreted to the stars is the condensation temperature.
 
-estimate: 10 earth mass
-
 Present the relative abundance figure here
+
+One can carry out simple toy calculations of expected $\Delta\elemH{X}$
+in a Sun-like star's atmosphere when adding material of e.g., bulk Earth composition
+under these assumptions:
+\begin{itemize}
+  \item The material added is instantly and completely mixed.
+  \item The atmospheric composition that we measure is identical throughout
+    the star's radiative and convective zone.
+\end{itemize}
+We take the solar abundances $\elemH{X}$ of \citealt{Asplund:2009aa}
+which can be converted to mass fraction in each element $X$ as in
+\begin{equation}
+  f_{X,\mathrm{photo}} = \frac{10^{\elemH{X}} m_X}{\Sigma_X 10^{\elemH{X}} m_X}
+\end{equation}
+where $m_X$ is the mass of each element in e.g., atomic mass unit.
+One can check that the \citealt{Asplund:2009aa} abundances
+are consistent with mass fraction in \elem{H}, \elem{He} and metals
+$X,\,Y,\,Z=0.757,\,0.249,\,0.0134$ as stated in that work.
+Assuming a fraction of the star's convective zone in mass $f_\mathrm{CZ}$,
+and that the added material has a total mass $M_\mathrm{add}$ and mass fraction in each
+element $f_{X,\mathrm{add}}$,
+the abundance difference is
+\begin{equation}
+  \Delta\elemH{X} = \log_{10} \frac{f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star} + f_{X,\mathrm{add}}\,M_\mathrm{add}}
+    {f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star}}
+\end{equation}
+We take the composition of bulk Earth from a chondritic model of the Earth
+(\citealt{mcdonough2001composition}) and CI chondrite from \citealt{2009LanB...4B...44L}.
+
+Figure~\ref{fig:toycalc} shows the expected change of surface abundances in a
+Sun-like star after $20~\mearth$ of material with composition of bulk Earth or
+CI chondrite is added.
+The CI chondrites are believed to have the closest in composition to the solar nebular.
+Their composition closely matches that of the solar atmosphere except
+Li, highly volatile ($\Tcondens < 250$~K) elements, and the noble gases.
+Other groups of chondrites show differing level of variations from CI chondrites.
+It has been long known that compared to CI or other carbonaceous chondrites,
+the composition of the Earth shows a volatilaity trend that moderately volatile
+elements (including Mn and Na) and volatile elements are incearsingly more
+depleted with decreasing condensation temperature (\citealt{mcdonough2001composition}).
+This trend is presumed to be closely related to the formation of terrestrial planets.
+Given the simplistic assumptions laid out above, and the uncertainties
+in our current knowledge of the compositions of terrestrial planets including bulk Earth,
+the match between our toy calculation and the observed abundance difference
+between \bizarreone\ and \sunanalog\ is remarkable.
+
+% some discussion of individual elements
+
+The element \elem{Li} is worth a special attention in the context of accretion scenario.
+Because Li is present in either carbonaceous chondrites or the bulk Earth with
+a concentration of $1-1.5$~ppm in mass (\citealt{mcdonough2001composition,}),
+but is depleted over time on the surface of a Sun-like star, accretion of
+either at later time will significantly replenish the lithium on the star's
+surface.
+For the present-day Sun, the accretion of $20~\mearth$ of bulk Earth-like
+material results in $\Delta\elemH{Li} \approx 1.6$~dex.
+Incidentally, the star under examination, \bizarreone, has an age (informed by
+stellar parameters) very close to the Sun ().
+Thus, as long as we believe the Sun's present-day surface Li abundance
+to be ordinary, this predicts that the \bizarreone\ should have $1.6$~dex enhancement
+in its Li.
+This is in fact exactly what we find: the Li abundance of \bizarreone\ is
+$A(\elem{Li}) = 2.75$ (Table~\ref{tab:t2}, \todo{CITE JM?})
+approximately $1.6$~dex higher than the solar value of $1.1$~dex.
+Furthermore, this implies that the accretion event should have happened
+very recently from a time ago that is shorter than the \elem{Li} depletion time.
+
+It is further worth pointing out that measuring the \elem{Li} abundance
+with some of the refractory elements such as $\elem{Fe}$
+provides a way to estimate the time of the event.
+%exlain
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.8\linewidth]{toycalc.pdf}
+  \caption{Solar surface abundance change expected from adding $20~\mearth$ of
+    material with bulk Earth or CI chondrite composition.
+    The assumed mass fraction in the convective zone is $0.03$.
+    For bulk earth composition, which is a closer match to the abundance difference
+    seen in \bizarreone\ and \sunanalog, we indicate measured elements with black boundary
+    lines around symbols.
+  }
+  \label{fig:toycalc}
+\end{figure}
+
+
+
 
 \input{otherstudies.tex}
 
@@ -615,11 +699,11 @@ summarized in \tablename~\ref{tab:otherstudies}.
 Their reported abundance differences $\Delta\elemH{X}$ where the difference is
 always taken as $\mathrm{higher}~\feh - \mathrm{lower}~\feh$ are plotted in
 \figname~\ref{fig:relabun_tcrank} as a function of \Tcondens-rank for
-comparision with this pair.
+comparison with this pair.
 
 {\bf HD~20782/HD~20782:} 
 \citealt{Mack:2014aa} studied HD~20782/20781, two common proper motion G dwarf stars (G2/G9.5)
-with a projected separation of $\sim9000$~AU (correspoding to 4.2~arcmin sky separation).
+with a projected separation of $\sim9000$~AU (corresponding to 4.2~arcmin sky separation).
 Both stars in this system host close-in giant planets.
 HD~20782 hosts a Jupiter-mass planet on a very eccentric ($e\approx 0.97$) orbit with a
 pericenter distance of 1.4~AU while HD~20781 hosts two Neptune-mass planets within 0.3~AU
