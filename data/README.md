@@ -3,6 +3,8 @@
 * mack14_abundances.csv
 
 * melendez2017.csv
+* ramirez2015_XO2.csv
+* biazzo2015_XO2.csv
 
 
 * atomicmass.csv
