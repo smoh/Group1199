@@ -80,7 +80,7 @@
 
 \author{
   Semyeong Oh\altaffilmark{\pu,\lead},
-  APW, JMB, KH, NL, DWH, DNS, JW
+  APW, JMB, KH, NL, DWH, DNS \etal\
 }
 
 % Affiliations
@@ -104,7 +104,7 @@
 
 
 \begin{abstract}
-  We report and discuss the discovery of a co-moving pair of bright solar-type
+  We report and discuss the discovery of a comoving pair of bright solar-type
   stars, \sunanalog\ and \bizarreone\, with significant differences in their chemical
   abundance patterns.
   The two stars are co-spatial ($|\Delta \bs{x}| < XX~\pc$) at a distance of
@@ -160,7 +160,7 @@ So far the strongest evidence for accretion of planetary material by host star c
 from spectral analysis of polluted white dwarfs.
 \todo{Discuss Zuckerman, Klein}.
 
-Here, we report and discuss the discovery of a co-moving pair of solar twin stars,
+Here, we report and discuss the discovery of a comoving pair of solar twin stars,
 HD~240430 and HD~240429, with unusual chemical abundance and differential abundance patterns
 that strongly suggest a dramatic accretion of planetary material by the two stars.
 We nickname the two stars \bizarreone\ (HD~240430) and
@@ -174,11 +174,13 @@ We nickname the two stars \bizarreone\ (HD~240430) and
 \section{Data}
 \label{sec:data}
 
+\input{kk.tex}
+
 Though previously recognized as a visual double star system
 (\citealt{2001AJ....122.3466M}), \sunanalog\ and \bizarreone\ were identified as a
-candidate co-moving star pair in our recent search for co-moving stars using the
+candidate comoving star pair in our recent search for comoving stars using the
 proper motions and parallaxes from the \tgas catalog, a component of \gaia\ \dr\
-(the astrometric measurements are listed in \tablename~\ref{tab:t2}).
+(the astrometric measurements are listed in \tablename~\ref{tab:kk}).
 We refer the readers to this previous work (\citealt{2016arXiv161202440O}) for a
 full explanation of the methodology behind this search and only briefly describe
 the method here.
@@ -186,14 +188,14 @@ For a given pair, we compute a marginalized likelihood ratio between the
 hypotheses (1) that a given pair of stars share the same 3D velocity vector, and
 (2) that they have independent 3D velocity vectors, both given only observations
 of two components of the velocities (proper motions).
-We then select a sample of high-confidence co-moving star pairs by making a
+We then select a sample of high-confidence comoving star pairs by making a
 conservative cut on this likelihood ratio.
-In the resulting catalog of co-moving pairs (\citealt{2016arXiv161202440O}),
+In the resulting catalog of comoving pairs (\citealt{2016arXiv161202440O}),
 the pair presented in this paper was assigned a group id of 1199,
 and the marginalized likelihood ratio (Bayes factor)
 between the two hypotheses is $\ln{\mathcal{L}_1/\mathcal{L}_2} = 8.52$,
 well above the adopted cut value of 6.
-We have checked that we do not find any possible additional co-moving companions
+We have checked that we do not find any possible additional comoving companions
 by lowering the likelihood ratio cut for the stars around this pair.
 
 In a separate effort to study detailed chemical abundances of
@@ -205,7 +207,7 @@ The resulting measurements include abundances measured for 15
 chemical species (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as
 well as high precision radial velocities.
 Other stellar parameters derived from these spectra are included in
-\tablename~\ref{tab:t2}.
+\tablename~\ref{tab:kk}.
 
 Combining these precise radial velocities with the \gaia\ astrometry, we can
 compare differences between the inferred 6D phase-space properties for the
@@ -271,7 +273,7 @@ Galactocentric coordinates assuming the Sun's position and velocity are $x_\odot
 etc.}).
 \figname~\ref{fig:dxdv} shows differences in posterior samples converted to
 Galactocentric phase-space coordinates for the two stars.
-In all components, the pair is consistent with being co-moving and close in
+In all components, the pair is consistent with being comoving and close in
 separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
 but the median 3-space separation is $\approx$$0.6~\pc$.
 
@@ -308,75 +310,7 @@ relative to the Sun's orbit despite being young.
 \label{fig:orbit}}
 \end{figure}
 
-% ----------------
-% Horizontal table
-% ----------------
-% \begin{table*}[htpb]
-%   \centering
-%   \caption{Astrometric and spectroscopic measurements}
-%   \label{tab:t1}
-%   \begin{tabular}{cccccccccc}
-% \hline\hline
-% Name & Sp Type & $T_\mathrm{eff}$ & $\log{g}$ & $v\sin{i}$ & $[\elem{Fe}/\elem{H}]$ & $v_r$ &
-% $\varpi$ & $\mu_\alpha^*$ & $\mu_\delta$ \\
-% % units
-% \hline
-% HD 240429 & G2 & 5878 & 4.43 & 1.1 & 0.01 & $-21.2$  & $9.35 \pm 0.24$ & $89.25 \pm 0.66$ & $-29.68 \pm 0.54$\\
-% HD 240430 & G0 & 5803 & 4.33 & 2.5 & 0.20 & $-21.2$  & $9.41 \pm 0.25$ & $89.41 \pm 0.69$ & $-30.12 \pm 0.52$\\
-% \hline\hline
-% \end{tabular}
-% \end{table*}
 
-\begin{table*}[htpb]
-  \caption{Astrometric and spectroscopic measurements.}
-  \label{tab:t2}
-  \begin{threeparttable}
-  \centering
-  \begin{tabular}{ccc}
-\hline\hline
-Name & HD 240429 & HD 240430 \\
-\hline
-Sp Type                                   & G2                & G0                \\
-$T_\mathrm{eff}$                          & 5878              & 5803              \\
-$\log{g}$                                 & 4.43              & 4.33              \\
-$v\sin{i}$                                & 1.1               & 2.5               \\
-$[\elem{Fe}/\elem{H}]$                    & 0.01              & 0.20              \\
-$v_r$                                     & $-21.2$           & $-21.2$           \\
-$\varpi$ \footnotemark[1]                 & $9.35 \pm 0.24$   & $9.41 \pm 0.25$   \\
-$\mu_\alpha^*$ \footnotemark[1]           & $89.25 \pm 0.66$  & $89.41 \pm 0.69$  \\
-$\mu_\delta$ \footnotemark[1]             & $-29.68 \pm 0.54$ & $-30.12 \pm 0.52$ \\
-\hline
-\multicolumn{3}{c}{$T_c < 1200$~K} \\
-\hline
-$A(\elem{Li})$ \footnotemark[2]           & $2.25$            & $2.75$            \\
-$\elemH{C}$                               & $0.00$            & $0.09$            \\
-$\elemH{N}$                               & $-0.06$           & $-0.01$           \\
-$\elemH{O}$                               & $0.01$            & $0.09$            \\
-$\elemH{Na}$                              & $-0.06$           & $-0.04$           \\
-$\elemH{Mn}$                              & $-0.03$           & $0.00$            \\
-\hline
-\multicolumn{3}{c}{$T_c > 1200$~K} \\
-\hline
-$\elemH{Mg}$                              & $0.01$            & $0.19$            \\
-$\elemH{Al}$                              & $0.01$            & $0.21$            \\
-$\elemH{Si}$                              & $0.00$            & $0.16$            \\
-$\elemH{Ca}$                              & $0.02$            & $0.23$            \\
-$\elemH{Ti}$                              & $0.02$            & $0.20$            \\
-$\elemH{V}$                               & $0.02$            & $0.20$            \\
-$\elemH{Cr}$                              & $0.01$            & $0.17$            \\
-$\elemH{Fe}$                              & $0.01$            & $0.20$            \\
-$\elemH{Ni}$                              & $-0.01$           & $0.21$            \\
-$\elemH{Y}$                               & $0.04$            & $0.26$            \\
-\hline\hline
-\end{tabular}
-%
-\begin{tablenotes}
-  \item All spectroscopic measurements except $\elem{Li}$ are from \citealt{2016ApJS..225...32B}.
-  \footnotetext[1]{From \tgas. }
-  \footnotetext[2]{Absolute abundance from \todo{CITE}.}
-\end{tablenotes}
-  \end{threeparttable}
-\end{table*}
 
 \todo{Figure: posterior distributions of separation and delta V}
 
@@ -459,8 +393,8 @@ which may replenish $\elem{Li}$ (\citealt{Casey:2016aa}).
 
 In fact, the surface lithium abundance is the only indication that points to younger ages.
 If the two stars are indeed only several hundred Myrs old at most,
-they are expected to be part of a larger co-moving group of stars.
-However, as we mention above, there is no evidence in our search of co-moving pairs
+they are expected to be part of a larger comoving group of stars.
+However, as we mention above, there is no evidence in our search of comoving pairs
 using \tgas\ that the two stars belong to a larger group of young stars.
 Very young stars are often show signs of activity such as
 X-ray emission from magnetic activity, emission lines, or infrared excess due to
@@ -478,7 +412,7 @@ stars, and that their unusually high \elem{Li} abundance requires an alternative
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.9\linewidth]{abundances.pdf}
-  \caption{Abundances of the co-moving pair, \sunanalog\ and \bizarreone.}
+  \caption{Abundances of the comoving pair, \sunanalog\ and \bizarreone.}
   \label{fig:abundances}
 \end{figure}
 
@@ -517,7 +451,7 @@ Let us first consider scenarios in which the two stars are not actually born tog
 % chance pair
 Given that their metallicities and abundance patterns are significantly
 different, one may simply conclude that the two stars are not related (coeval)
-but they merely happen to be co-moving at such small separation ($\approx 0.6$~pc)
+but they merely happen to be comoving at such small separation ($\approx 0.6$~pc)
 by chance.
 The two stars are in the Galactic disk, and assuming certain velocity ellipsoid
 at the stars' location, one may compute the probability that a star moving at
@@ -662,7 +596,7 @@ Thus, as long as we believe the Sun's present-day surface Li abundance
 to be ordinary, this predicts that the \bizarreone\ should have $1.6$~dex enhancement
 in its Li.
 This is in fact exactly what we find: the Li abundance of \bizarreone\ is
-$A(\elem{Li}) = 2.75$ (Table~\ref{tab:t2}, \todo{CITE JM?})
+$A(\elem{Li}) = 2.75$ (Table~\ref{tab:kk}, \todo{CITE JM?})
 approximately $1.6$~dex higher than the solar value of $1.1$~dex.
 Furthermore, this implies that the accretion event should have happened
 very recently from a time ago that is shorter than the \elem{Li} depletion time.
@@ -670,7 +604,36 @@ very recently from a time ago that is shorter than the \elem{Li} depletion time.
 It is further worth pointing out that measuring the \elem{Li} abundance
 with some of the refractory elements such as $\elem{Fe}$
 provides a way to estimate the time of the event.
-%exlain
+If the observed \elem{Li} abundance is less than what is inferred from
+abundance differences of other elements, and
+we have a model of \elem{Li} depletion, the time of \elem{Li} enhancement
+may be calculated.
+
+What about \sunanalog?
+\sunanalog\ is also enhanced in \elem{Li} considering its age of $4.00_{-1.56}^{+1.51}$~Gyr
+than the nominal \elem{Li} depletion predics by $\approx 1$~dex.
+This enhancement puts an upper limit on the accreted mass to be \todo{$\approx 4$~\mearth}
+assuming \elem{Li} concentration of $1.1$~ppm (\citealt{mcdonough2001composition}).
+Unlike \bizarreone, we cannot know the pre-accretion abundances of \sunanalog.
+However, we note that the span of abundance difference between highly volatile elements
+(C, N, O, Na) and refractory elements such as \elem{Fe} expected from accreting
+\todo{$\approx 4$~\mearth} to the Sun is $\approx 0.05$~dex.
+This is comparable to the abundance difference between N, Na and Fe in \sunanalog.
+It is also interesting that \sunanalog\ also shows a deficit in the same
+volatile and moderately volatile elements (C, N, O, Na, and Mn) relative to Fe
+just as in \bizarreone.
+Thus, we conclude that \sunanalog\ is also likely to have had a similar
+accretion event, but the amount of accretion was much smaller than \bizarreone.
+
+We stress that
+% - these calculations are carried out with very simple and unverified assumptions
+% - uncertainties exist on the bulk Earth
+
+
+
+
+
+
 
 \begin{figure}[htpb]
   \centering
@@ -725,7 +688,7 @@ The planet hosted by WASP-94A is transiting with a misaligned, probably
 retrograde circular ($e<0.13$) orbit, while that hosted by WASP-94B is a little
 more massive by $\sim 0.15$~\mjupiter\ and closer in, aligned with the host
 star.
-With a claimed precision of $0.006$~dex (median among all elements), they
+With a claimed median uncertainty of $0.006$~dex among all elements, they
 detected a depletion of volatile and moderately volatile ($\Tcondens < 1200$~K)
 elements at $0.02$~dex level and an enhancement in refractory ($\Tcondens >
 1200$~K) elements at $0.01$~dex level in WASP-94A relative to WASP-94B.
@@ -826,9 +789,18 @@ Finally, \citealt{Biazzo:2015aa}
 
 
 % Useful follow up efforts
+We discuss the follow up efforts that would be useful to further
+illuminate the peculiar abundance difference between the pair.
 
 
 
+\section{Summary}
+\label{sec:summary}
+
+We have reported and discussed the discovery of a comoving pair of bright solar-type stars
+HD~240430 and HD~240429 (G0 and G2)
+with very different metallicity ($\Delta\feh \approx 0.2$~dex),
+and a condensation temperature-dependent abundance difference.
 
 % Concluding remarks
 
