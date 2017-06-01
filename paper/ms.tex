@@ -49,7 +49,6 @@
 \newcommand{\mearth}{\ensuremath{M_\oplus}}
 \newcommand{\mjupiter}{\ensuremath{M_\mathrm{Jup}}}
 
-
 % define macros for math
 \newcommand{\given}{\,|\,}
 \newcommand{\normal}{{\mathcal{N}}}
@@ -214,8 +213,46 @@ We summarize or discussions in \sectionname~\ref{sec:summary}.
 
 \input{kk.tex}
 
-Though previously recognized as a visual double star system
-(\citealt{2001AJ....122.3466M}), \sunanalog\ and \bizarreone\ were identified as a
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.9\linewidth]{abundances.pdf}
+  \caption{Abundances of the comoving pair, \sunanalog\ and \bizarreone\
+    normalized to \elem{H} (top) and \elem{Fe} (bottom).
+    Lines are drawn for each star only to guide the eye.
+    \bizarreone\ is enhanced in \elem{Fe} by $\approx 0.2$~dex relative to \sunanalog\
+    along with \elem{Mg}, \elem{Al}, \elem{Si}, \elem{Ca}, \elem{Ti}, \elem{V},
+    \elem{Cr}, \elem{Ni}, \elem{Y} yet not in \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}.
+  }
+  \label{fig:abundances}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.95\linewidth]{deltaXH_elem_violins.pdf}
+  \caption{Difference in abundances of this pair and other wide binaries in
+    \citealt{2016ApJS..225...32B}.
+    Additionally, we show the distribution of abundance difference
+    between stars with similar metallicity difference
+    ($\Delta[\elem{Fe}/\elem{H}] \approx 0.2$)
+    as violins with medians indicated by black line segments
+    by randomly pairing up single stars in \citealt{2016ApJS..225...32B} at two metallicity bins,
+    $-0.025 < \feh < 0.025$ (160 stars) and $1.975 > \feh > 2.025$ (137 stars),
+    similar to \bizarreone\ and \sunanalog.
+    The difference is always taken to be $\mathrm{higher}\,\feh - \mathrm{lower}\,\feh$.
+    Thus, the narrower range of in $\Delta\feh$ is by construction.
+    First, we see that most of the other comoving wide binaries included in \citealt{2016ApJS..225...32B}
+    have small ($<0.1$~dex) differences in all elements making a difference of $\approx 0.2$~dex seen in
+    \bizarreone-\sunanalog\ pair rare.
+    Second, random pairings of disk stars with similar $\Delta\feh$ usually show
+    similar enhancement in all other elements.
+    %Notably, the relative depletion of \elem{Na} and \elem{Mn} with respect to \elem{Fe}
+    %suggests that even when we assume \bizarreone\ and \sunanalog\ are of different origin,
+    %Galactic evolution cannot explain the difference.
+  }
+  \label{fig:deltaXH}
+\end{figure}
+
+\sunanalog\ and \bizarreone\ were identified as a
 candidate comoving star pair in our recent search for comoving stars using the
 proper motions and parallaxes from the \tgas catalog, a component of \gaia\ \dr\
 (the astrometric measurements are listed in \tablename~\ref{tab:kk}).
@@ -233,176 +270,123 @@ the pair presented in this paper was assigned a group id of 1199,
 and the marginalized likelihood ratio (Bayes factor)
 between the two hypotheses is $\ln{\mathcal{L}_1/\mathcal{L}_2} = 8.52$,
 well above the adopted cut value of 6.
+The pair has also been previously recognized as a visual double star system
+in Washington Double Star catalog (\citealt{2001AJ....122.3466M}).
 We have checked that we do not find any possible additional comoving companions
 by lowering the likelihood ratio cut for the stars around this pair.
 
-In a separate effort to study detailed chemical abundances of
-potential planet-hosting stars, \citet{2016ApJS..225...32B}
-analyzed high resolution spectra of both stars obtained using HIRES spectrograph
-on Keck~I telescope.
+In a separate effort to study detailed chemical abundances of potential
+planet-hosting stars, \citet{2016ApJS..225...32B} analyzed high resolution
+spectra of both stars obtained using HIRES spectrograph on Keck~I telescope.
 The spectral resolution is $R\approx 70000$ and the wavelength coverage is
 $5164-7799$~\AA.
 Typical signal-to-noise ratio in continuum is $>200$~per pixel.
-The resulting measurements include abundances measured for 15
-chemical species (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as
-well as high precision radial velocities.
-Other stellar parameters derived from these spectra are included in
-\tablename~\ref{tab:kk}.
+The resulting measurements include abundances measured for 15 chemical species
+(C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as well as stellar parameters
+and high precision radial velocities.
 For the details of the spectral analysis, we refer the readers to
 \citealt{2016ApJS..225...32B}.
-
-Combining these precise radial velocities with the \gaia\ astrometry, we can
-compare differences between the inferred 6D phase-space properties for the
-two stars.
-We start by generating posterior samples over the Heliocentric distance, $r$,
-tangential velocities, $(v_\alpha, v_\delta)$, and radial velocity, $\hat{v}_r$,
-given the observed parallax, $\pi$, and proper motion components,
-$(\mu_{\alpha^*}, \mu_\delta)$, and radial velocity, $v_r$.
-By defining the vectors
-% SMOH: I understand you meant hat v_r as the latent true radial velocity but
-% personally think a) it can confuse some people that there are hat quantities
-% with no-hat quantities for hat-y vector and thus b) it'd be better to use hat
-% quantities for observed variables and no-hat for latent true ones.
-% SMOH: v_r is missing in the LHS of eq(3)
-\begin{eqnarray}
-  \vec{y} &=&
-      \transp{\left(
-        \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
-          \pi &
-          \mu_{\alpha^*} &
-          \mu_\delta &
-          v_r
-        \end{array}
-      \right)}\\
-  \hat{\vec{y}} &=&
-      \transp{\left(
-        \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
-          r^{-1} &
-          r^{-1}\,v_\alpha &
-          r^{-1}\,v_\delta &
-          \hat{v}_r
-        \end{array}
-      \right)}
-\end{eqnarray}
-and by considering the covariance matrix $\mat{C}$ between the observed
-quantities (provided by \tgas\ and extended to include the uncorrelated radial
-velocity uncertainty), the likelihood can be written
-\begin{eqnarray}
-p(\pi, \mu_{\alpha^*}, \mu_\delta \given r, v_\alpha, v_\delta) &=&
-  \left[\det\left(\frac{\mat{C}^{-1}}{2\pi}\right)\right]^{1/2} \,
-    \exp \left[ -\frac{1}{2} \transp{\left(\vec{y} - \hat{\vec{y}} \right)} \,
-    \mat{C}^{-1} \,
-    \left(\vec{y} - \hat{\vec{y}} \right) \right] \label{eq:likefn} \quad .
-\end{eqnarray}
-We adopt a uniform space density prior for the distance and an isotropic
-Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$
-\begin{eqnarray}
-p(r) &=&
-  \begin{cases}
-    \frac{3}{r_{\rm lim}^3} \, r^2 & \text{if } 0 < r < r_{\rm lim}\\
-    0              & \text{otherwise}
-  \end{cases}\\
-p(v) &=& \frac{1}{\sqrt{2\pi}\,\sigma_v} \,
-  \exp\left[-\frac{1}{2} \, \frac{v^2}{\sigma_v^2} \right] \quad .
-\end{eqnarray}
-For each of the two stars, we use \project{emcee}
-(\citealt{Foreman-Mackey:2013}) to generate posterior samples in $(r, v_\alpha,
-v_\delta, \hat{v}_r)$ by running 64 walkers for 4608 steps and discarding the
-first 512 steps as the burn-in period.
-For each sample, we convert the heliocentric phase-space coordinates into
-Galactocentric coordinates assuming the Sun's position and velocity are $x_\odot
-= (-8.3, 0, 0)~{\rm kpc}$ and $v_\odot = (10, 244, 7.17)~\kms$ (\citealt{bovy,
-etc.}).
-\figname~\ref{fig:dxdv} shows differences in posterior samples converted to
-Galactocentric phase-space coordinates for the two stars.
-In all components, the pair is consistent with being comoving and close in
-separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
-but the median 3-space separation is $\approx$$0.6~\pc$.
-
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=\linewidth]{dx_dv_posterior.pdf}
-  \end{center}
-  \caption{%
-    Differences in posterior samples over Galactocentric phase-space coordinates
-    for the two stars \sunanalog\ and \bizarreone.
-    \label{fig:dxdv}}
-\end{figure}
-
-\figname~\ref{fig:orbit} shows an orbit computed from the median posterior
-sample over 6D phase-space coordinates for \sunanalog\ (black line), integrated
-in a Milky Way-like gravitational potential (\cite{Gala:2017}). \todo{APW:
-explain}
-The Sun's orbit in this same Milky Way model is under-plotted for comparison
-(grey line); the orbits of the stars in this pair have large scale-heights
-relative to the Sun's orbit despite being young.
-
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=\linewidth]{orbits.pdf}
-  \end{center}
-  \caption{%
-    Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
-    For \sunanalog\, the initial conditions are set to the median posterior
-    sample over the inferred 6D phase-space coordinates.
-    The orbits are computed by integrating backwards from the present-day
-    positions for $2.5~{\rm Gyr}$ with a time-step of $0.5~{\rm Myr}$ using the
-    Leapfrog integration scheme implemented in \project{Gala}
-    (\citealt{Gala:2017}). \todo{APW: citation...}
-\label{fig:orbit}}
-\end{figure}
+The \elem{Li} doublet at $6707.6$~\AA\ for this sample was
+investigated in a separate work (\citealt{jmlithium}).
+We list all spectroscopic measurements including
+the absolute abundance\footnote{
+  Absolute abundance of element \elem{X} is $A(\elem{X}) = \log_{10} (n_\elem{X}/n_\elem{H})$
+  where $n_\elem{X}$ is the number density of element \elem{X}.
+} of \elem{Li} for the two stars in Table~\ref{tab:kk}.
 
 
+%In all components, the pair is consistent with being comoving and close in
+%separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
+%but the median 3-space separation is $\approx$$0.6~\pc$.
 
-Given their proximity in space and kinematics,
-it is generally accepted to assume that the two stars were born coeval
-perhaps in a wide binary from the same birth cloud.
-Thus, we expect the two stars to have identical metallicities and abundance patterns,
-\todo{except for thoese elements like Li...}
-Surprisingly, one of the stars, \bizarreone\ is significantly more metal
+%\begin{figure}[htbp]
+%  \begin{center}
+%    \includegraphics[width=\linewidth]{dx_dv_posterior.pdf}
+%  \end{center}
+%  \caption{%
+%    Differences in posterior samples over Galactocentric phase-space coordinates
+%    for the two stars \sunanalog\ and \bizarreone.
+%    \label{fig:dxdv}}
+%\end{figure}
+
+%\figname~\ref{fig:orbit} shows an orbit computed from the median posterior
+%sample over 6D phase-space coordinates for \sunanalog\ (black line), integrated
+%in a Milky Way-like gravitational potential (\cite{Gala:2017}). \todo{APW:
+%explain}
+%The Sun's orbit in this same Milky Way model is under-plotted for comparison
+%(grey line); the orbits of the stars in this pair have large scale-heights
+%relative to the Sun's orbit despite being young.
+
+%\begin{figure}[htbp]
+%  \begin{center}
+%    \includegraphics[width=\linewidth]{orbits.pdf}
+%  \end{center}
+%  \caption{%
+%    Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
+%    For \sunanalog\, the initial conditions are set to the median posterior
+%    sample over the inferred 6D phase-space coordinates.
+%    The orbits are computed by integrating backwards from the present-day
+%    positions for $2.5~{\rm Gyr}$ with a time-step of $0.5~{\rm Myr}$ using the
+%    Leapfrog integration scheme implemented in \project{Gala}
+%    (\citealt{Gala:2017}). \todo{APW: citation...}
+%\label{fig:orbit}}
+%\end{figure}
+
+
+Although selected based only on their proper motions, the two stars
+have identical radial velocities within uncertainties (Table~\ref{tab:kk}),
+confirming that they are comoving in all directions.
+The projected separation between the pair is 1.9\arcmin\ ($\approx 0.01$~pc),
+and the 3D separation is $\approx 0.6$~pc.
+Given their proximity in phase space, it is generally accepted to assume that
+the two stars were born together perhaps to form a wide binary system from the
+same birth cloud.
+Thus, we expect the two stars to have identical metallicities and abundance patterns.
+Surprisingly, however, one of the stars, \bizarreone\ is significantly more metal
 rich than the other by 0.2~dex ($\approx 60\%$; \figname~\ref{fig:abundances}).
-What is more puzzling is that the abundances of this star
-shows selective depletion in C, N, O, Na, and Mn.
+What is more puzzling is that not all elements are equally enhanced:
+the abundances of \bizarreone\ shows selective depletion in
+\elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}
+relative to \elem{Fe}.
 
-The abundance of \bizarreone\ is peculiar on its own compared to other disk stars with
-similar $[\elem{Fe}/\elem{H}]$.
-For a star with $[\elem{Fe}/\elem{H}] \approx 0.2$, we generally expect
-$[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
-(\citealt{Battistini:2015aa,Bensby:2003aa}) making the abundances of \bizarreone\ ever more unlikely.
-We stress that none of the other seven binary pairs examined in \citealt{2016ApJS..225...32B}
-show discrepancies in abundances between the stars at this level.
+The validity of the measured abundance differences is further demonstrated
+in \figname~\ref{fig:spec1} and \ref{fig:spec2} where we show
+segments of the spectra and model of the two stars.
+As expected from metallicity difference ($\Delta\feh \approx 0.2$),
+the ratio of data and model between the two stars show significant
+residuals of almost all metal features, largely dominated by \elem{Fe}.
+However, for lines of elements that are not as enhanced in \bizarreone\,
+the residuals are much smaller in amplitude.
+%Li?
+
+
+We stress that none of the other four twin-like ($\Delta T_mathrm{eff} \lesssim 100$~K)
+wide binary pairs examined in \citealt{2016ApJS..225...32B} show discrepancies in abundances between the
+stars at this level (\figname~\ref{fig:deltaXH}).
+As shown in \figname~\ref{fig:deltaXH}, 
 In fact, no strong trend is found in pair for most elements
 except N and Y.
 For Y, the trend for this pair is opposite of the others in Teff.
 Specifically, no difference within pair is found for Mn.
 (see figure X in that paper; purple is this pair)
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.95\linewidth]{isochrones.png}
-  \caption{Isochrone ages of \sunanalog\ and \bizarreone.
-    On the left, we show the two stars on $T_\mathrm{eff}-\log(g)$ plane,
-    and on the right, the color-magnitude diagram using \gaia\ $G$ band
-    and \tmass\ $J$ band magnitudes.
-    In each panel, \project{MIST} isochrones (\citealt{Choi:2016aa}) at $28$~Myr and $2$~Gyr are
-    plotted. The thicker and thinner lines are for $\feh = 0.$ and $0.2$,
-    corresponding to values of \sunanalog\ and \bizarreone.
-  }
-  \label{fig:isochrones}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.8\linewidth]{sed.png}
-  \caption{Spectral energy distributions (SEDs) of \sunanalog\ and \bizarreone.
-    The yellow line is the SED of a blackbody at $T=5878$ scaled arbitrarily.
-  }
-  \label{fig:sed}
-\end{figure}
-
+Moreoever, the abundance differences cannot be due to different chemical enrichment
+history in the disk even if the two stars were of different origin.
+\figname~\ref{fig:deltaXH} shows the distribution of $\Delta[\elem{X}/\elem{H}]$
+for random pairings of two stars from similar \feh\ as \bizarreone\ and \sunanalog
+as violins for each element.
+We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
+all other elements are enhanced at a similar level with some variations.
+% Clean up:
+% Specifically, it is very unlikely that the star 
+% The abundance of \bizarreone\ is peculiar on its own compared to other disk
+stars with similar \feh.
+%For a star with $\feh \approx 0.2$ like \bizarreone, we generally expect
+%$[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
+%(\citealt{Battistini:2015aa,Bensby:2003aa}) making the abundances of \bizarreone\
+%very unlikely to arise from Galactic chemical evolution.
 
 The fact that the two stars share a very similar space motion
-at a separation of $0.6$~pc strongly argues that the pair is coeval.
+at a separation of $\approx 0.6$~pc strongly argues that the pair is coeval.
 We consider other age indicators apart from their phase space coordinates
 to assess the ages and coevality of the two stars.
 First, given the precise measurements of $\log(g)$, $T_\mathrm{eff}$,
@@ -449,38 +433,22 @@ for this pair is larger than the Sun, favoring an older age.
 We concluded that the two stars are most likely coeval, $\sim 4$~Gyr old main sequence
 stars, and that their unusually high \elem{Li} abundance requires an alternative explanation.
 
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.9\linewidth]{abundances.pdf}
-  \caption{Abundances of the comoving pair, \sunanalog\ and \bizarreone.}
-  \label{fig:abundances}
-\end{figure}
 
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.95\linewidth]{TcRank_deltaXH_concise.pdf}
   \caption{Abundance of \bizarreone\ ($[\mathrm{Fe}/\mathrm{H}] = 0.20$)
     relative to \sunanalog\ ($[\mathrm{Fe}/\mathrm{H}] = 0.01$)
-    as a function of condensation temperature of elements (\citealt{2003ApJ...591.1220L}).
+    ranked by the condensation temperature of elements in solar composition gas
+    from \citealt{2003ApJ...591.1220L}.
+    We show three wide binary systems selected from the literature:
+    HD~20782/1 (\citealt{Mack:2014aa}), XO-2N/S (\citealt{Biazzo:2015aa}),
+    and WASP-94AB (\citealt{Teske:2016aa}).
+    Note that multiple values are reported 
   }
   \label{fig:relabun_tcrank}
 \end{figure}
 
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.9\linewidth]{deltaXH_Tc_violins.png}
-  \caption{Difference in abundances of this pair and other binary pairs in
-    \citealt{2016ApJS..225...32B}.
-    Additionally, we show the distribution of abundance difference
-    between stars with similar metallicity difference
-    ($\Delta[\elem{Fe}/\elem{H}] \approx 0.2$)
-    as violins with medians indicated by black line segments
-    by randomly pairing up single stars at two metallicity bins similar to
-    the pair of interest.
-    The difference is always relative to the lower-$[\elem{Fe}/\elem{H}]$ star.
-  }
-  \label{fig:deltaXH}
-\end{figure}
 
 \section{Discussion}
 \label{sec:discussion}
@@ -677,13 +645,15 @@ We stress that
 
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=0.8\linewidth]{toycalc.pdf}
-  \caption{Solar surface abundance change expected from adding $20~\mearth$ of
-    material with bulk Earth or CI chondrite composition.
+  \includegraphics[width=0.95\linewidth]{toycalc.pdf}
+  \caption{Expected change in solar surface abundance after adding $20~\mearth$ of
+    material with bulk Earth composition (\citealt{mcdonough2001composition}).
     The assumed mass fraction in the convective zone is $0.03$.
-    For bulk earth composition, which is a closer match to the abundance difference
-    seen in \bizarreone\ and \sunanalog, we indicate measured elements with black boundary
-    lines around symbols.
+    The close match with the observed abundance difference in \bizarreone-\sunanalog\ pair
+    suggests that the abundance difference may be due to accretion of
+    $20~\mearth$ of rocky planetary material.
+    We elements measured for \bizarreone-\sunanalog\ pair are filled with purple
+    while those without measurements are left empty.
   }
   \label{fig:toycalc}
 \end{figure}
@@ -824,14 +794,6 @@ Finally, \citealt{Biazzo:2015aa}
 
 
 
-
-
-% Useful follow up efforts
-We discuss the follow up efforts that would be useful to further
-illuminate the peculiar abundance difference between the pair.
-
-
-
 \section{Summary}
 \label{sec:summary}
 
@@ -841,6 +803,7 @@ with very different metallicity ($\Delta\feh \approx 0.2$~dex),
 and a condensation temperature-dependent abundance difference.
 
 % Concluding remarks
+% include Useful follow up efforts
 
 
 \begin{figure}[htpb]
