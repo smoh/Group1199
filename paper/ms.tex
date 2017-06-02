@@ -216,12 +216,13 @@ We summarize or discussions in \sectionname~\ref{sec:summary}.
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.9\linewidth]{abundances.pdf}
-  \caption{Abundances of the comoving pair, \sunanalog\ and \bizarreone\
+  \caption{Abundances of the comoving pair, \sunanalog\ and \bizarreone,
     normalized to \elem{H} (top) and \elem{Fe} (bottom).
     Lines are drawn for each star only to guide the eye.
-    \bizarreone\ is enhanced in \elem{Fe} by $\approx 0.2$~dex relative to \sunanalog\
-    along with \elem{Mg}, \elem{Al}, \elem{Si}, \elem{Ca}, \elem{Ti}, \elem{V},
-    \elem{Cr}, \elem{Ni}, \elem{Y} yet not in \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}.
+    \bizarreone\ is enhanced in \elem{Fe} by $\approx 0.2$~dex relative to
+    \sunanalog\ along with \elem{Mg}, \elem{Al}, \elem{Si}, \elem{Ca},
+    \elem{Ti}, \elem{V}, \elem{Cr}, \elem{Ni}, \elem{Y} yet not in \elem{C},
+    \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}.
   }
   \label{fig:abundances}
 \end{figure}
@@ -229,9 +230,14 @@ We summarize or discussions in \sectionname~\ref{sec:summary}.
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.95\linewidth]{deltaXH_elem_violins.pdf}
-  \caption{Difference in abundances of this pair and other wide binaries in
+  \caption{Abundance difference in this pair and other twin-like
+    ($\Delta T_\mathrm{eff}\lesssim 100$~K) wide binaries in
     \citealt{2016ApJS..225...32B}.
-    Additionally, we show the distribution of abundance difference
+    The differences in other pairs are small ($<0.05$~dex)
+    for all elements except \elem{N} and \elem{O} which are the most
+    uncertain, making the difference of $\approx 0.2$~dex seen in
+    \bizarreone-\sunanalog\ rare.
+    Additionally, we show the distribution of abundance differences
     between stars with similar metallicity difference
     ($\Delta[\elem{Fe}/\elem{H}] \approx 0.2$)
     as violins with medians indicated by black line segments
@@ -240,14 +246,9 @@ We summarize or discussions in \sectionname~\ref{sec:summary}.
     similar to \bizarreone\ and \sunanalog.
     The difference is always taken to be $\mathrm{higher}\,\feh - \mathrm{lower}\,\feh$.
     Thus, the narrower range of in $\Delta\feh$ is by construction.
-    First, we see that most of the other comoving wide binaries included in \citealt{2016ApJS..225...32B}
-    have small ($<0.1$~dex) differences in all elements making a difference of $\approx 0.2$~dex seen in
-    \bizarreone-\sunanalog\ pair rare.
-    Second, random pairings of disk stars with similar $\Delta\feh$ usually show
-    similar enhancement in all other elements.
-    %Notably, the relative depletion of \elem{Na} and \elem{Mn} with respect to \elem{Fe}
-    %suggests that even when we assume \bizarreone\ and \sunanalog\ are of different origin,
-    %Galactic evolution cannot explain the difference.
+    Random pairings of disk stars with similar $\Delta\feh$ usually show
+    similar enhancement in all other elements
+    unlike the pattern seen in \bizarreone-\sunanalog\ pair.
   }
   \label{fig:deltaXH}
 \end{figure}
@@ -295,44 +296,6 @@ the absolute abundance\footnote{
 } of \elem{Li} for the two stars in Table~\ref{tab:kk}.
 
 
-%In all components, the pair is consistent with being comoving and close in
-%separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
-%but the median 3-space separation is $\approx$$0.6~\pc$.
-
-%\begin{figure}[htbp]
-%  \begin{center}
-%    \includegraphics[width=\linewidth]{dx_dv_posterior.pdf}
-%  \end{center}
-%  \caption{%
-%    Differences in posterior samples over Galactocentric phase-space coordinates
-%    for the two stars \sunanalog\ and \bizarreone.
-%    \label{fig:dxdv}}
-%\end{figure}
-
-%\figname~\ref{fig:orbit} shows an orbit computed from the median posterior
-%sample over 6D phase-space coordinates for \sunanalog\ (black line), integrated
-%in a Milky Way-like gravitational potential (\cite{Gala:2017}). \todo{APW:
-%explain}
-%The Sun's orbit in this same Milky Way model is under-plotted for comparison
-%(grey line); the orbits of the stars in this pair have large scale-heights
-%relative to the Sun's orbit despite being young.
-
-%\begin{figure}[htbp]
-%  \begin{center}
-%    \includegraphics[width=\linewidth]{orbits.pdf}
-%  \end{center}
-%  \caption{%
-%    Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
-%    For \sunanalog\, the initial conditions are set to the median posterior
-%    sample over the inferred 6D phase-space coordinates.
-%    The orbits are computed by integrating backwards from the present-day
-%    positions for $2.5~{\rm Gyr}$ with a time-step of $0.5~{\rm Myr}$ using the
-%    Leapfrog integration scheme implemented in \project{Gala}
-%    (\citealt{Gala:2017}). \todo{APW: citation...}
-%\label{fig:orbit}}
-%\end{figure}
-
-
 Although selected based only on their proper motions, the two stars
 have identical radial velocities within uncertainties (Table~\ref{tab:kk}),
 confirming that they are comoving in all directions.
@@ -360,30 +323,27 @@ the residuals are much smaller in amplitude.
 %Li?
 
 
-We stress that none of the other four twin-like ($\Delta T_mathrm{eff} \lesssim 100$~K)
-wide binary pairs examined in \citealt{2016ApJS..225...32B} show discrepancies in abundances between the
-stars at this level (\figname~\ref{fig:deltaXH}).
-As shown in \figname~\ref{fig:deltaXH}, 
-In fact, no strong trend is found in pair for most elements
-except N and Y.
-For Y, the trend for this pair is opposite of the others in Teff.
-Specifically, no difference within pair is found for Mn.
-(see figure X in that paper; purple is this pair)
+We stress that none of the other four twin-like ($\Delta T_\mathrm{eff}
+\lesssim 100$~K) wide binary pairs examined in \citealt{2016ApJS..225...32B}
+show discrepancies in abundances between the stars at this level.
+As shown in \figname~\ref{fig:deltaXH},
+the differences in other pairs for all elements except \elem{N} and \elem{O},
+which are also the most uncertain (\tablename~\ref{tab:kk})
+are less than $0.05$~dex, makiing \bizarreone-\sunanalog\ pair an outlier.
 Moreoever, the abundance differences cannot be due to different chemical enrichment
 history in the disk even if the two stars were of different origin.
-\figname~\ref{fig:deltaXH} shows the distribution of $\Delta[\elem{X}/\elem{H}]$
-for random pairings of two stars from similar \feh\ as \bizarreone\ and \sunanalog
+\figname~\ref{fig:deltaXH} additioanlly shows the distribution of $\Delta[\elem{X}/\elem{H}]$
+for random pairings of two stars with similar \feh\ as \bizarreone\ and \sunanalog
 as violins for each element.
 We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
 all other elements are enhanced at a similar level with some variations.
-% Clean up:
-% Specifically, it is very unlikely that the star 
-% The abundance of \bizarreone\ is peculiar on its own compared to other disk
-stars with similar \feh.
-%For a star with $\feh \approx 0.2$ like \bizarreone, we generally expect
-%$[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
-%(\citealt{Battistini:2015aa,Bensby:2003aa}) making the abundances of \bizarreone\
-%very unlikely to arise from Galactic chemical evolution.
+Specifically, for a typical star with $\elem{Fe} \approx 0.2$~dex,
+we generally expect $[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
+(\citealt{Battistini:2015aa,Bensby:2003aa})
+making the low $\elem{Na}/\elem{Fe}$ and $\elem{Mn}/\elem{Fe}$ seen in \bizarreone\
+very unlikely to arise from variations in Galactic chemical evolution.
+
+% HOGG to provide some theoretical account adding to the above empirical evidence.
 
 The fact that the two stars share a very similar space motion
 at a separation of $\approx 0.6$~pc strongly argues that the pair is coeval.
@@ -397,23 +357,23 @@ The isochrone ages of \sunanalog\ and \bizarreone\ are
 $4.00_{-1.56}^{+1.51}$~Gyr and $4.28_{-1.03}^{+1.11}$~Gyr, respectively,
 consistent with them being coeval.
 
-Surface lithium abundance in a sun-like star decreases with its age
-due to mixing induced by convection or rotation, which brings the lithium
-into the interior ($T>2.5 \times 10^{6}$~K)
-where it will be destroyed by proton capture burning.
+Surface lithium abundance in a sun-like star decreases with its age due to
+mixing induced by convection or rotation, which brings the lithium into the
+interior ($T>2.5 \times 10^{6}$~K) where it will be destroyed by proton capture
+burning.
 Thus, surface lithium abundance is an indicator of stellar ages.
-The $\elem{Li}$ abundance of $2.25$ for \sunanalog\ implies an age of $\lesssim 1$~Gyr
-according to the theoretical models tuned to explain the solar lithium abundance
-and rotational profile (\citealt{2005Sci...309.2189C}).
-The lithium abundance of \bizarreone\ is still higher by $0.5$~dex
-showing the largest difference among all measured elements.
+The $\elem{Li}$ abundance of $2.25$ for \sunanalog\ implies an age of $\lesssim
+1$~Gyr according to the theoretical models tuned to explain the solar lithium
+abundance and rotational profile (\citealt{2005Sci...309.2189C}).
+The lithium abundance of \bizarreone\ is still higher by $0.5$~dex showing the
+largest difference among all measured elements.
 This translates to $\sim 500$~Myr difference in age.
-Given the overall higher metal abundances and the peculiar abundance patterns in \bizarreone,
-it is unclear, however, whether this higher $\elem{Li}$ abundance
-means a younger age or something else.
-For example, the presence of $\elem{Li}$-rich red giant stars has been attributed
-to the engulfment of substellar companions such as gas giant planets or brown dwarfs
-which may replenish $\elem{Li}$ (\citealt{Casey:2016aa}).
+Given the overall higher metal abundances and the peculiar abundance patterns
+in \bizarreone, it is unclear, however, whether this higher $\elem{Li}$
+abundance means a younger age or something else.
+For example, the presence of $\elem{Li}$-rich red giant stars has been
+attributed to the engulfment of substellar companions such as gas giant planets
+or brown dwarfs which may replenish $\elem{Li}$ (\citealt{Casey:2016aa}).
 
 In fact, the surface lithium abundance is the only indication that points to younger ages.
 If the two stars are indeed only several hundred Myrs old at most,
@@ -424,14 +384,15 @@ Very young stars are often show signs of activity such as
 X-ray emission from magnetic activity, emission lines, or infrared excess due to
 circumstellar disks.
 We have looked for these signs for the pair to find none, and their spectral energy
-distribution is consistent with blackbody.
+distributions are consistent with blackbody.
 The low $v\sin(i)$ values also argue against very young ages inferred from the
 surface lithium abundances.
-% TODO: ref for vertical action as age?
-Finally, their fiducial orbit in a Milky Way-like potential show that the vertical action
-for this pair is larger than the Sun, favoring an older age.
-We concluded that the two stars are most likely coeval, $\sim 4$~Gyr old main sequence
-stars, and that their unusually high \elem{Li} abundance requires an alternative explanation.
+% TODO: reference for vertical action as age?
+Finally, the pair's fiducial orbit in a axisymmeric Milky Way-like potential
+has a vertical action larger than the Sun, favoring an older age.
+We concluded that the two stars are most likely coeval, $\sim 4$~Gyr old main
+sequence stars, and that their unusually high \elem{Li} abundance requires an
+alternative explanation.
 
 
 \begin{figure}[htpb]
@@ -453,8 +414,11 @@ stars, and that their unusually high \elem{Li} abundance requires an alternative
 \section{Discussion}
 \label{sec:discussion}
 
-We discuss the possible origins of this pair.
-Let us first consider scenarios in which the two stars are not actually born together.
+We discuss the possible origins of the peculiar abundance differences of
+\bizarreone-\sunanalog.
+Although the data described above strongly suggests that the two stars are
+coeval, let us first consider scenarios in which the two stars are not actually
+born together.
 
 % chance pair
 Given that their metallicities and abundance patterns are significantly
@@ -499,9 +463,7 @@ may be much larger.
 However, even in such scenario, the age difference of $\sim 500$~Myr is too large
 for two stars of the same star forming region.
 
-In regions where binarity fraction is high, binary-binary scattering may be more important
-than binary-single scattering (\todo{CITE})
-
+%LEIGH
 
 %Two factors that make this even more unlikely are that both stars are very young given their large Li,
 %and that if the pair is a result of scattering, one expect to end up with typical stars of the field,
