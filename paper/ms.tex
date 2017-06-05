@@ -183,8 +183,8 @@ used to constrain the mass of massive compact halo objects (\citealt{Yoo:2004aa}
 On the other hand, they are also prime targets to test the chemical tagging
 hypothesis that stars of the same birthplace may be traced back by detailed
 chemical abundance patterns as birth ``tag''s (\citealt{2002ARA&A..40..487F}).
-A multiple-star system of any size that we believe are born together can serve this purpose,
-with massive open clusters at one extreme.
+A multiple-star system of any size that we believe are born together can serve
+this purpose, with massive open clusters at one extreme.
 Wide binaries are at the other extreme in that we may be less confident of
 the coevality of individual systems
 but they are much more abundant than the larger systems like open clusters,
@@ -500,14 +500,14 @@ coeval, let us first consider scenarios in which the two stars are not actually
 born together.
 
 % chance pair
-Given that their metallicities and abundance patterns are significantly
-different, one may simply conclude that the two stars are not related (coeval)
-but they merely happen to be comoving at such small separation ($\approx 0.6$~pc)
-by chance.
-The two stars are in the Galactic disk, and assuming certain velocity ellipsoid
-at the stars' location, one may compute the probability that a star moving at
-the mean velocity of the two stars would have a companion within $\Delta v = XX$~km/s.
-...
+%Given that their metallicities and abundance patterns are significantly
+%different, one may simply conclude that the two stars are not related (coeval)
+%but they merely happen to be comoving at such small separation ($\approx 0.6$~pc)
+%by chance.
+%The two stars are in the Galactic disk, and assuming certain velocity ellipsoid
+%at the stars' location, one may compute the probability that a star moving at
+%the mean velocity of the two stars would have a companion within $\Delta v = XX$~km/s.
+%...
 
 % binary-single and binary-binary exchange
 Two stars unrelated at birth may end up in a binary system via binary-single scattering event
@@ -580,7 +580,7 @@ be altered by accretion of planetary material after birth.
 Instabilities may develop in a multi-planet system due to its chaotic nature
 which may lead to planet engulfment or ejection by the host star.
 %TODO: needs references
-% kozai?
+%TODO: kozai?
 Indeed, it is an important goal of many exoplanet studies
 to detect chemical signatures of planet formation or accretion,
 distinguish them from Galactic chemical evolution, and
@@ -588,10 +588,16 @@ connect them to theories of evolution of planetary systems.
 One approach that is free from confusion with Galactic chemical evolution
 is to compare two almost identical stars in a wide binary system,
 which are assumed to be born together.
-
-%One proxy that is informative of the composition of the material
-%that was hypothetically accreted to a star is the condensation temperature (\Tcondens).
-% TODO: why?
+Assuming that the component stars were born together with identical
+initial composition, we may see a difference in their surface abundances
+if the two stars then went through different amount of accretion
+of planetary material.
+This abundance difference may depend on the condensation temperatures of
+elements in the protoplanetary disks from which the accreted planets formed
+as their compositions depend on the radial temperature gradient in the disk.
+%TODO: cautions on condensation temperature
+% 1. it is just a proxy
+% 2. it is **equlibrium** condensation temperature
 
 Only a handful of wide binary systems have been studied with high-resolution
 spectroscopy in their detailed chemical abundances so far.
@@ -599,8 +605,7 @@ These systems are HD~20782/HD~20781, HD~80606/HD~80607, XO-2N/XO-2S, HAT-P-1,
 WASP-94A/WASP94-B, and HD~133131A/HD~133131B.
 We first review and summarize the studies of these systems focusing on key
 characteristics of stars and planets, and interpretation of any trend in
-$\Delta\elemH{X}$.
-These studies commonly look for
+$\Delta\elemH{X}$ with \Tcondens.
 %TODO: needs to include **16 Cyg** and HD~133131AB
 
 {\bf HD~20782/HD~20782:} 
@@ -811,24 +816,25 @@ For the present-day Sun, the accretion of $20~\mearth$ of bulk Earth-like
 material results in $\Delta\elemH{Li} \approx 1.6$~dex (which
 is indicated as an upward arrow in \figname~\ref{fig:toycalc}).
 Incidentally, the star under examination, \bizarreone, has an age (informed by
-stellar parameters) very close to the Sun ($4.28_{-1.03}^{+1.11}$).
+stellar parameters) very close to the Sun ($4.28_{-1.03}^{+1.11}$~Gyr).
 Thus, as long as we believe the Sun's present-day surface \elem{Li} abundance
 to be ordinary, this predicts that the \bizarreone\ should have $1.6$~dex enhancement
 in its \elem{Li}.
 This is in fact exactly what we find: the \elem{Li} abundance of \bizarreone\ is
 $A(\elem{Li}) = 2.75$ (Table~\ref{tab:kk}, \citealt{jmlithium})
 approximately $1.65$~dex higher than the solar value of $1.1$~dex.
-% TODO: solar Li needs reference
+%TODO: solar Li needs reference
 Furthermore, this implies that the accretion event should have happened very
 recently from a time ago that is shorter than the \elem{Li} depletion time.
 
-It is further worth pointing out that measuring the \elem{Li} abundance
-with some of the refractory elements such as $\elem{Fe}$
-provides a way to estimate the time of the event.
-If the observed \elem{Li} abundance is less than what is inferred from
-abundance differences of other elements, and
-we have a model of \elem{Li} depletion, the time of \elem{Li} enhancement
-may be calculated.
+%TODO: not sure if this is too obvious of a point or useful in practice..
+%It is further worth pointing out that measuring the \elem{Li} abundance
+%with some of the refractory elements such as $\elem{Fe}$
+%provides a way to estimate the time of the event.
+%If the observed \elem{Li} abundance is less than what is inferred from
+%abundance differences of other elements, and
+%we have a model of \elem{Li} depletion, the time of \elem{Li} enhancement
+%may be calculated.
 
 What about \sunanalog?
 \sunanalog\ is also enhanced in \elem{Li} considering its age of
@@ -860,25 +866,37 @@ just as in \bizarreone.
 Thus, we conclude that \sunanalog\ is also likely to have had a similar
 accretion event, but the amount of accretion was much smaller than \bizarreone.
 
+%TODO: augment this paragraph
+% - more geochemical study references
 We stress that while the calculation carried out is useful in
 order-of-magnitude sense, further investigation of each of the simplifying
 assumptions made is warranted.
-In addition, 
-
+In addition, the composition of bulk Earth also has some uncertainties.
+For example, the reported bulk Earth concentration of the siderphile element
+\elem{Mn}, varies from $800$ to $1700$~ppm (\citealt{1998psc..book.....L}).
+While the latter value from \citealt{mcdonough2001composition} has been used in
+our calculation, the former value would bring the observed $\Delta\elemH{Mn}$
+to an even closer agreement.
 Given these limitations, the level of agreement for the refractory {\it and}
 \elem{Li} for \bizarreone\ is remarkable.
 
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.95\linewidth]{toycalc.png}
-  \caption{Expected change in solar surface abundance after adding $20~\mearth$ of
+  \caption{
+    Comparing the observed abundance difference vs. \Tcondens\ rank
+    to the expected change in solar surface abundance after adding $20$~\mearth\ of
     material with bulk Earth composition (\citealt{mcdonough2001composition}).
     The assumed mass fraction in the convective zone is $0.03$.
+    All metals are ranked by their \Tcondens\ for solar composition gas,
+    same as in \figname~\ref{fig:relabun_tcrank}.
+    Locations of the elements measured for \bizarreone-\sunanalog\ pair are
+    indicated by a vertical line and its symbol.
     The close match with the observed abundance difference in \bizarreone-\sunanalog\ pair
     suggests that the abundance difference may be due to accretion of
-    $20~\mearth$ of rocky planetary material.
-    We elements measured for \bizarreone-\sunanalog\ pair are filled with purple
-    while those without measurements are left empty.
+    $20$~\mearth\ of rocky planetary material.
+    The element \elem{Li} is off the plot and indicated with a red arrow
+    (see text for details).
   }
   \label{fig:toycalc}
 \end{figure}
@@ -936,7 +954,7 @@ refractory-rich planetary material provides an explanation for their
 $\Tcondens$-dependent abundance difference.
 
 
-%Implications
+%TODO: Implications
 %- chemical tagging, frequency is of concern
 %- exoplaneteers looking for accretion signature: look for the most odd ones in
 %the expected direction not just in binaries already known to host a planet.
