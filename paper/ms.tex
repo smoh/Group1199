@@ -2,7 +2,7 @@
 
 % to-do list
 % ----------
-% - Add references and uncertainties to Table 1
+% - Add items here.
 
 % style notes
 % -----------
@@ -11,8 +11,9 @@
 % - Use \, as a multiply operator.
 % - Reserve () for function arguments; use [] or {} for outer shit.
 % - Use \sectionname not Section, \figname not Figure, \documentname not Article or Paper or paper.
+% - Use "comoving" instead of "co-moving".
+% - Write elements as \elem{X}.
 
-\include{gitstuff}
 \include{aastexmods}
 
 % packages
@@ -75,31 +76,50 @@
 
 \begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
 
-\title{Kronos \& Krios: Evidence for accretion of massive, rocky planetary system in a sun-like pair}
+\title{
+  Kronos \& Krios:
+  Evidence for accretion of massive, rocky planetary system in a sun-like pair
+}
 
 \author{
   Semyeong Oh\altaffilmark{\pu,\lead},
-  APW, JMB, KH, NL, DWH, DNS \etal\
+  Adrian M. Price-Whelan\altaffilmark{\pu},
+  John M. Brewer\altaffilmark{\yale},
+  Keith A. Hawkins\altaffilmark{\columbia},
+  Nathan W. C. Leigh\altaffilmark{\amnh},
+  David W. Hogg\altaffilmark{\ccpp,\mpia,\cca},
+  David N. Spergel\altaffilmark{\pu,\cca},
+  Justin Myles\altaffilmark{\yale} \etal\
 }
 
 % Affiliations
 \newcommand{\pu}{1}
 \newcommand{\lead}{2}
-\newcommand{\ccpp}{3}
-\newcommand{\mpia}{4}
-\newcommand{\cca}{5}
+\newcommand{\yale}{3}
+\newcommand{\columbia}{4}
+\newcommand{\amnh}{5}
+\newcommand{\ccpp}{6}
+\newcommand{\mpia}{7}
+\newcommand{\cca}{8}
 
 \altaffiltext{\pu}{Department of Astrophysical Sciences,
-                   Princeton University, Princeton, NJ 08544, USA}
+  Princeton University, 4 Ivy Ln, Princeton, NJ 08544, USA}
 \altaffiltext{\lead}{To whom correspondence should be addressed:
-                     \texttt{semyeong@astro.princeton.edu}}
+  \texttt{semyeong@astro.princeton.edu}}
+\altaffiltext{\columbia}{Department of Astronomy,
+  Columbia University, 550 W 120th St, New York, NY 10027, USA}
+\altaffiltext{\yale}{Department of Astronomy,
+  Yale University, 260 Whitney Ave, New Haven, CT 06511, USA}
+\altaffiltext{\amnh}{Department of Astrophysics,
+  American Museum of Natural History, Central Park West and 79th St, New York, NY 10024, USA}
 \altaffiltext{\ccpp}{Center for Cosmology and Particle Physics,
-                     Department of Physics,
-                     New York University, 4 Washington Place,
-                     New York, NY 10003, USA}
+  Department of Physics,
+  New York University, 4 Washington Place,
+  New York, NY 10003, USA}
 \altaffiltext{\mpia}{Max-Planck-Institut f\"ur Astronomie,
-                     K\"onigstuhl 17, D-69117 Heidelberg, Germany}
-\altaffiltext{\cca}{Center for Computational Astrophysics, 162 5th Ave, New York, NY 10003, USA}
+  K\"onigstuhl 17, D-69117 Heidelberg, Germany}
+\altaffiltext{\cca}{Center for Computational Astrophysics,
+  Flatiron Institute, 162 5th Ave, New York, NY 10003, USA}
 
 
 \begin{abstract}
