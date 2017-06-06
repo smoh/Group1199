@@ -306,12 +306,12 @@ We summarize our discussions in \sectionname~\ref{sec:summary}.
   \caption{Same as \figname~\ref{fig:spec1}
     but for smaller portions of spectra at longer wavelengths that are
     not dominated by \elem{Fe}.
-    We mark elements that give rise to strong lines.
+    We mark elements that give rise to strong absorption lines.
     The feature in the third column of the second row is a strong \elem{Li}
-    line that was not modeled by \citealt{2016ApJS..225...32B}. This line was
+    line that was not modeled by \citealt{2016ApJS..225...32B}; this line was
     studied in a separate work (\citealt{jmlithium}).
-    Note that the lines of \elem{Na} and \elem{O} which are under-enhanced
-    in \bizarreone\ relative to \elem{Fe} or other refractory elements
+    Note that the lines of \elem{Na} and \elem{O}, which are under-enhanced
+    in \bizarreone\ relative to \elem{Fe} or other refractory elements,
     show weaker residuals.
   }
   \label{fig:spec2}
@@ -319,7 +319,7 @@ We summarize our discussions in \sectionname~\ref{sec:summary}.
 
 \sunanalog\ and \bizarreone\ were identified as a
 candidate comoving star pair in our recent search for comoving stars using the
-proper motions and parallaxes from the \tgas catalog, a component of \gaia\ \dr\
+proper motions and parallaxes from the \tgas\ catalog, a component of \gaia\ \dr\
 (the astrometric measurements are listed in \tablename~\ref{tab:kk}).
 We refer the readers to this previous work (\citealt{2016arXiv161202440O}) for a
 full explanation of the methodology behind this search and only briefly describe
@@ -327,7 +327,7 @@ the method here.
 For a given pair, we compute a marginalized likelihood ratio between the
 hypotheses (1) that a given pair of stars share the same 3D velocity vector, and
 (2) that they have independent 3D velocity vectors, both given only observations
-of two components of the velocities (proper motions).
+of two components of the velocities (parallaxes and proper motions).
 We then select a sample of high-confidence comoving star pairs by making a
 conservative cut on this likelihood ratio.
 In the resulting catalog of comoving pairs (\citealt{2016arXiv161202440O}),
@@ -341,47 +341,50 @@ We have checked that we do not find any possible additional comoving companions
 by lowering the likelihood ratio cut for the stars around this pair.
 
 In a separate effort to study detailed chemical abundances of potential
-planet-hosting stars, \citet{2016ApJS..225...32B} analyzed high resolution
-spectra of both stars obtained using HIRES spectrograph on Keck~I telescope.
+planet-hosting stars, \citet{2016ApJS..225...32B} obtained and analyzed high resolution
+spectra of both stars using the HIRES spectrograph on the Keck~I telescope.
 The spectral resolution is $R\approx 70000$ and the wavelength coverage is
-$5164-7799$~\AA.
-Typical signal-to-noise ratio in continuum is $>200$~per pixel.
-The resulting measurements include abundances measured for 15 chemical species
+$5164--7799$~\AA.
+A typical signal-to-noise ratio in the spectral continuum is $>200$~per pixel.
+The resulting measurements include elemental abundances for 15 chemical species
 (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as well as stellar parameters
 and high precision radial velocities.
 For the details of the spectral analysis, we refer the readers to
 \citealt{2016ApJS..225...32B}.
-The \elem{Li} doublet at $6707.6$~\AA\ for this sample was
-investigated in a separate work (\citealt{jmlithium}).
+The \elem{Li} doublet at $6707.6$~\AA\ --- clearly visible in both spectra (see
+\figname~\ref{fig:spec2}) --- for this sample was investigated in a separate
+work (\citealt{jmlithium}).
 We list all spectroscopic measurements including
 the absolute abundance\footnote{
-  Absolute abundance of element \elem{X} is $A(\elem{X}) = \log_{10} (n_\elem{X}/n_\elem{H})$
+  Absolute abundance of element \elem{X} is
+  $A(\elem{X}) = \log_{10} (n_\elem{X}/n_\elem{H})$
   where $n_\elem{X}$ is the number density of element \elem{X}.
-} of \elem{Li} for the two stars in Table~\ref{tab:kk}.
+}
+of \elem{Li} for the two stars in Table~\ref{tab:kk}.
 
-
-Although selected based only on their proper motions, the two stars
+Although selected based only on their astrometry, the two stars
 have identical radial velocities within uncertainties (Table~\ref{tab:kk}),
-confirming that they are comoving in all directions.
+confirming that they are truly comoving.
 The projected separation between the pair is 1.9\arcmin\ ($\approx 0.01$~pc),
 and the 3D separation is $\approx 0.6$~pc.
+% note on uncertainties
 Given their proximity in phase space, it is generally accepted to assume that
-the two stars were born together perhaps to form a wide binary system from the
-same birth cloud.
+the two stars were born together and, perhaps, are a bound wide binary system.
 Thus, we expect the two stars to have identical metallicities and abundance patterns.
-Surprisingly, however, one of the stars, \bizarreone\ is significantly more metal
-rich than the other by 0.2~dex ($\approx 60\%$; \figname~\ref{fig:abundances}).
-What is more puzzling is that not all elements are equally enhanced:
-the abundances of \bizarreone\ shows selective depletion in
+Surprisingly, one of the stars, \bizarreone\ is significantly more metal
+rich than the other (by 0.2~dex $\approx 60\%$; \figname~\ref{fig:abundances}).
+Even more puzzling is that not all elements are equally enhanced:
+the abundances of \bizarreone\ show selective depletion in
 \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}
 relative to \elem{Fe}.
 
 The validity of the measured abundance differences is further demonstrated
 in \figname~\ref{fig:spec1} and \ref{fig:spec2} where we show
-segments of the spectra and model of the two stars.
-As expected from metallicity difference ($\Delta\feh \approx 0.2$),
+segments of the spectra and models of the two stars
+used to measure their abundances.
+As expected from their reported metallicity difference ($\Delta\feh \approx 0.2$),
 the ratio of data and model between the two stars show significant
-residuals of almost all metal features, largely dominated by \elem{Fe}.
+residuals of almost all metal line features, largely dominated by \elem{Fe}.
 However, for lines of elements that are not as enhanced in \bizarreone\,
 the residuals are much smaller in amplitude.
 %Li?
@@ -392,46 +395,50 @@ We stress that none of the other four twin-like ($\Delta T_\mathrm{eff}
 show discrepancies in abundances between the stars at this level.
 As shown in \figname~\ref{fig:deltaXH},
 the differences in other pairs for all elements except \elem{N} and \elem{O},
-which are also the most uncertain (\tablename~\ref{tab:kk})
-are less than $0.05$~dex, makiing \bizarreone-\sunanalog\ pair an outlier.
-Moreoever, the abundance differences cannot be due to different chemical enrichment
-history in the disk even if the two stars were of different origin.
-\figname~\ref{fig:deltaXH} additioanlly shows the distribution of $\Delta[\elem{X}/\elem{H}]$
-for random pairings of two stars with similar \feh\ as \bizarreone\ and \sunanalog\
-as violins for each element.
+which are also the most uncertain (\tablename~\ref{tab:kk}),
+are less than $0.05$~dex, making \bizarreone-\sunanalog\ pair a significant outlier.
+
+The abundance differences cannot be due to different chemical enrichment
+histories in the disk even if the two stars were of different origin.
+\figname~\ref{fig:deltaXH} additionally shows the distribution of abundance
+differences, $\Delta[\elem{X}/\elem{H}]$, between random pairings of two stars
+with similar \feh\ as \bizarreone\ and \sunanalog\.
 We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
-all other elements are enhanced at a similar level with some variations.
-Specifically, for a typical star with $\elem{Fe} \approx 0.2$~dex,
+all other elements are typically enhanced at a similar level, with some variations.
+Specifically, for a typical star with $\feh \approx 0.2$~dex,
 we generally expect $[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
 (\citealt{Battistini:2015aa,Bensby:2003aa})
-making the low $\elem{Na}/\elem{Fe}$ and $\elem{Mn}/\elem{Fe}$ seen in \bizarreone\
+making the low [\elem{Na}/\elem{Fe}] and [\elem{Mn}/\elem{Fe}] seen in \bizarreone\
 very unlikely to arise from variations in Galactic chemical evolution.
 
 % HOGG to provide some theoretical account adding to the above empirical evidence.
 
-The fact that the two stars share a very similar space motion
-at a separation of $\approx 0.6$~pc strongly argues that the pair is coeval.
-We consider other age indicators apart from their phase space coordinates
+The fact that the two stars share a nearly identical space motion
+at a separation of $< 1$~pc strongly argues that the pair is coeval.
+We therefore  consider other age indicators apart from their phase space coordinates
 to assess the ages and coevality of the two stars.
-First, given the precise measurements of $\log(g)$, $T_\mathrm{eff}$,
-comparing these values to theoretical isochrones may also be indicative of the two stars' ages.
-We perform isochrone fitting using the Yale-Yonsei model isochrones (\citealt{2013ApJ...776...87S}).
-The input data are $\log(g)$, $T_\mathrm{eff}$, \feh, parallaxes, $B$-band magnitudes, and their errors.
-The isochrone ages of \sunanalog\ and \bizarreone\ are
+First, given the precise measurements of $\log(g)$ and $T_\mathrm{eff}$,
+we can constrain the ages of the two stars by
+comparing these values to theoretical isochrones.
+We perform isochrone fitting to these values using the Yale-Yonsei model
+isochrones (\citealt{2013ApJ...776...87S}).
+The input data are $\log(g)$, $T_\mathrm{eff}$, \feh,
+parallaxes, $B$-band magnitudes, and their errors.
+The best-fit isochrone ages of \sunanalog\ and \bizarreone\ are
 $4.00_{-1.56}^{+1.51}$~Gyr and $4.28_{-1.03}^{+1.11}$~Gyr, respectively,
 consistent with them being coeval.
 
-Surface lithium abundance in a sun-like star decreases with its age due to
+The Surface lithium abundance in a sun-like star decreases with its age due to
 mixing induced by convection or rotation, which brings the lithium into the
 interior ($T>2.5 \times 10^{6}$~K) where it will be destroyed by proton capture
 burning.
 Thus, surface lithium abundance is an indicator of stellar ages.
-The $\elem{Li}$ abundance of $2.25$ for \sunanalog\ implies an age of $\lesssim
-1$~Gyr according to the theoretical models tuned to explain the solar lithium
-abundance and rotational profile (\citealt{2005Sci...309.2189C}).
-The lithium abundance of \bizarreone\ is still higher by $0.5$~dex showing the
-largest difference among all measured elements.
-This translates to $\sim 500$~Myr difference in age.
+The absolute $\elem{Li}$ abundance of $2.25$~dex for \sunanalog\ implies an age
+of $\lesssim 1$~Gyr according to the theoretical models tuned to explain the
+solar lithium abundance and rotational profile (\citealt{2005Sci...309.2189C}).
+The lithium abundance of \bizarreone\, $2.74$~dex, shows the largest difference
+among all measured elements.
+This translates to a $\sim 500$~Myr difference in age.
 Given the overall higher metal abundances and the peculiar abundance patterns
 in \bizarreone, it is unclear, however, whether this higher $\elem{Li}$
 abundance means a younger age or something else.
@@ -449,12 +456,12 @@ X-ray emission from magnetic activity, emission lines, or infrared excess due to
 circumstellar disks.
 We have looked for these signs for the pair to find none, and their spectral energy
 distributions are consistent with blackbody.
-The low $v\sin(i)$ values also argue against very young ages inferred from the
-surface lithium abundances.
+The low $v\sin(i)$ values (\tablename~\ref{tab:kk}) also argue against very
+young ages inferred from the surface lithium abundances.
 % TODO: reference for vertical action as age?
 Finally, the pair's fiducial orbit in a axisymmetric Milky Way-like potential
 has a vertical action larger than the Sun, favoring an older age.
-We concluded that the two stars are most likely coeval, $\sim 4$~Gyr old main
+We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr old main
 sequence stars, and that their unusually high \elem{Li} abundance requires an
 alternative explanation.
 
@@ -462,7 +469,7 @@ alternative explanation.
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.95\linewidth]{TcRank_deltaXH_concise.pdf}
-  \caption{Abundance difference of \bizarreone-\sunanalog\ pair
+  \caption{Abundance differences of the \bizarreone-\sunanalog\ pair
     ranked by the condensation temperature of elements for solar composition gas
     from \citealt{2003ApJ...591.1220L}.
     The condensation temperature may be read from the gray line and right y-axis.
