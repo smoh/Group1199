@@ -10,7 +10,7 @@ NAME = ms
 all: ${NAME}.pdf
 
 
-${NAME}.pdf: ${NAME}.tex ref.bib aastexmods.tex kk.tex
+${NAME}.pdf: ${NAME}.tex ref.bib kk.tex
 	if [ -a ref.local.bib ] ; \
 	then \
 		if [ -a ref.bib ] ; \
@@ -28,7 +28,6 @@ ${NAME}.pdf: ${NAME}.tex ref.bib aastexmods.tex kk.tex
 
 clean:
 	${RM} $(foreach suff, ${TMP_SUFFS}, ${NAME}.${suff})
-	${RM} aastexmods.aux
 	${RM} gitstuff.aux
 	${RM} *Notes.bib
 
