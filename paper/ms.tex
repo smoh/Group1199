@@ -240,6 +240,13 @@ In \sectionname~\ref{sec:discussion} we discuss possible interpretations of
 the abundance difference between the pair.
 We summarize our discussions in \sectionname~\ref{sec:summary}.
 
+Throughout the \documentname\, we use the following convention for
+chemical abundances of stars: [\elemH{X}] is the ratio of number density of
+element \elem{X} to \elem{H} relative to the solar values.
+The absolute abundance of \elem{X} is
+$A(\elem{X}) = \log_{10} (n_\elem{X}/n_\elem{H})$
+where $n_\elem{X}$ is the number density of element \elem{X}.
+
 \subsection{Review of Detailed Chemical Abundance Studies of Wide Binary Stars}
 \label{sub:review}
 
@@ -496,18 +503,95 @@ The \elem{Li} doublet at $6707.6$~\AA\ --- clearly visible in both spectra (see
 work (\citealt{jmlithium}).
 We list all spectroscopic measurements including
 the absolute abundance\footnote{
-  Absolute abundance of element \elem{X} is
+  The absolute abundance of element \elem{X} is
   $A(\elem{X}) = \log_{10} (n_\elem{X}/n_\elem{H})$
   where $n_\elem{X}$ is the number density of element \elem{X}.
 }
 of \elem{Li} for the two stars in Table~\ref{tab:kk}.
 
+The projected separation between the pair is 1.9\arcmin\ ($\approx 0.01$~pc),
+and the 3D separation is $\approx 0.6$~pc.
 Although selected based only on their astrometry, the two stars
 have identical radial velocities within uncertainties (Table~\ref{tab:kk}),
 confirming that they are truly comoving.
-The projected separation between the pair is 1.9\arcmin\ ($\approx 0.01$~pc),
-and the 3D separation is $\approx 0.6$~pc.
-% note on uncertainties
+Combining these precise radial velocities with the \gaia\ \tgas\ astrometry, we
+can compare differences between the inferred 6D phase space coordinates of the
+two stars.
+We start by generating posterior samples over the Heliocentric distance, $r$,
+tangential velocities, $(v_\alpha, v_\delta)$, and radial velocity, $\hat{v}_r$,
+given the observed parallax, $\pi$, and proper motion components,
+$(\mu_{\alpha^*}, \mu_\delta)$, and radial velocity, $v_r$.
+By defining the vectors
+% SMOH: I understand you meant hat v_r as the latent true radial velocity but
+% personally think a) it can confuse some people that there are hat quantities
+% with no-hat quantities for hat-y vector and thus b) it'd be better to use hat
+% quantities for observed variables and no-hat for latent true ones.
+% SMOH: v_r is missing in the LHS of eq(3)
+\begin{eqnarray}
+  \vec{y} &=&
+      \transp{\left(
+        \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
+          \pi &
+          \mu_{\alpha^*} &
+          \mu_\delta &
+          v_r
+        \end{array}
+      \right)}\\
+  \hat{\vec{y}} &=&
+      \transp{\left(
+        \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
+          r^{-1} &
+          r^{-1}\,v_\alpha &
+          r^{-1}\,v_\delta &
+          \hat{v}_r
+        \end{array}
+      \right)}
+\end{eqnarray}
+and by considering the covariance matrix $\mat{C}$ between the observed
+quantities (provided by \tgas\ and extended to include the uncorrelated radial
+velocity uncertainty), the likelihood can be written
+\begin{eqnarray}
+p(\pi, \mu_{\alpha^*}, \mu_\delta \given r, v_\alpha, v_\delta) &=&
+  \left[\det\left(\frac{\mat{C}^{-1}}{2\pi}\right)\right]^{1/2} \,
+    \exp \left[ -\frac{1}{2} \transp{\left(\vec{y} - \hat{\vec{y}} \right)} \,
+    \mat{C}^{-1} \,
+    \left(\vec{y} - \hat{\vec{y}} \right) \right] \label{eq:likefn} \quad .
+\end{eqnarray}
+We adopt a uniform space density prior for the distance and an isotropic
+Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$
+\begin{eqnarray}
+p(r) &=&
+  \begin{cases}
+    \frac{3}{r_{\rm lim}^3} \, r^2 & \text{if } 0 < r < r_{\rm lim}\\
+    0              & \text{otherwise}
+  \end{cases}\\
+p(v) &=& \frac{1}{\sqrt{2\pi}\,\sigma_v} \,
+  \exp\left[-\frac{1}{2} \, \frac{v^2}{\sigma_v^2} \right] \quad .
+\end{eqnarray}
+For each of the two stars, we use \project{emcee}
+(\citealt{Foreman-Mackey:2013}) to generate posterior samples in $(r, v_\alpha,
+v_\delta, \hat{v}_r)$ by running 64 walkers for 4608 steps and discarding the
+first 512 steps as the burn-in period.
+For each sample, we convert the heliocentric phase-space coordinates into
+Galactocentric coordinates assuming the Sun's position and velocity are $x_\odot
+= (-8.3, 0, 0)~{\rm kpc}$ and $v_\odot = (10, 244, 7.17)~\kms$ (\citealt{bovy,
+etc.}).
+\figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
+Galactocentric phase-space coordinates for the two stars.
+In all components, the pair is consistent with being co-moving and close in
+separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
+but the median 3-space separation is $\approx$$0.6~\pc$.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\linewidth]{dx_dv_posterior.pdf}
+  \end{center}
+  \caption{%
+    Differences in posterior samples over Galactocentric phase-space coordinates
+    for the two stars \sunanalog\ and \bizarreone.
+    \label{fig:dxdv}}
+\end{figure}
+
 Given their proximity in phase space, it is generally accepted to assume that
 the two stars were born together and, perhaps, are a bound wide binary system.
 Thus, we expect the two stars to have identical metallicities and abundance patterns.
@@ -651,6 +735,29 @@ has a vertical action larger than the Sun, favoring an older age.
 We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr old main
 sequence stars, and that their unusually high \elem{Li} abundance requires an
 alternative explanation.
+
+\figurename~\ref{fig:orbit} shows an orbit computed from the median posterior
+sample over 6D phase-space coordinates for \sunanalog\ (black line), integrated
+in a Milky Way-like gravitational potential (\cite{Gala:2017}). \todo{APW:
+explain}
+The Sun's orbit in this same Milky Way model is under-plotted for comparison
+(grey line); the orbits of the stars in this pair have large scale-heights
+relative to the Sun's orbit despite being young.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\linewidth]{orbits.pdf}
+  \end{center}
+  \caption{%
+    Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
+    For \sunanalog\, the initial conditions are set to the median posterior
+    sample over the inferred 6D phase-space coordinates.
+    The orbits are computed by integrating backwards from the present-day
+    positions for $2.5~{\rm Gyr}$ with a time-step of $0.5~{\rm Myr}$ using the
+    Leapfrog integration scheme implemented in \project{Gala}
+    (\citealt{Gala:2017}). \todo{APW: citation...}
+\label{fig:orbit}}
+\end{figure}
 
 
 \subsection{Exchange Scattering}
