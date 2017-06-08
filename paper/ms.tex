@@ -13,7 +13,7 @@
 % - Reserve () for function arguments; use [] or {} for outer shit.
 % - Use \sectionname not Section, \figname not Figure, \documentname not Article or Paper or paper.
 % - Use "comoving" instead of "co-moving".
-% - USe "phase space" not "phase-space".
+% - Use "phase space" not "phase-space", "phase-space coordinates" not "phase space coordinates".
 % - Write elements as \elem{X}.
 
 % packages
@@ -127,7 +127,7 @@
   \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}):
   this is the largest and the most significant difference found in
   wide binary pairs yet.
-  The proximity in phase space and ages between the two stars suggests that
+  The proximity in phase-space and ages between the two stars suggests that
   they formed together with the same composition, at odds with the observed
   differences in metallicity and abundance patterns.
   We therefore suggest that the star HD~240430, ``Kronos'', recently accreted $\approx 20$~\mearth\ of
@@ -496,7 +496,7 @@ Although selected based only on their astrometry, the two stars
 have identical radial velocities within uncertainties (Table~\ref{tab:kk}),
 confirming that they are truly comoving.
 Combining these precise radial velocities with the \gaia\ \tgas\ astrometry, we
-can compare differences between the inferred 6D phase space coordinates of the
+can compare differences between the inferred 6D phase-space coordinates of the
 two stars.
 We start by generating posterior samples over the Heliocentric distance, $r$,
 tangential velocities, $(v_\alpha, v_\delta)$, and radial velocity, $v_r$,
@@ -546,12 +546,12 @@ For each of the two stars, we use \project{emcee}
 (\citealt{2013PASP..125..306F}) to generate posterior samples in $(r, v_\alpha,
 v_\delta, v_r)$ by running 64 walkers for 4608 steps and discarding the first
 512 steps as the burn-in period.
-For each sample, we convert the heliocentric phase space coordinates into
+For each sample, we convert the heliocentric phase-space coordinates into
 Galactocentric coordinates assuming that the Sun's position and velocity are
 $\vec x_\odot = (-8.3,\,0,\,0)~{\rm kpc}$ and $\vec v_\odot = (10,\,244,\,7.17)~\kms$.
 % TODO: APW (\citealt{bovy, etc.}).
 \figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
-Galactocentric phase space coordinates for the two stars.
+Galactocentric phase-space coordinates for the two stars.
 The differences in positions and velocities are consistent with zero.
 
 Given their proximity in phase space, it is generally accepted to assume that
@@ -595,7 +595,7 @@ are less than $0.05$~dex, making \bizarreone-\sunanalog\ pair a significant outl
   \end{center}
   \caption{Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
     For \sunanalog, the initial conditions are set to the median of the
-    posterior sample over the phase space coordinates.
+    posterior sample over the phase-space coordinates.
     The orbits are computed by integrating backwards from the present-day
     positions for $2.5$~Gyr with a time step of $0.5$~Myr using the Leapfrog
     integration scheme implemented in \project{Gala} (\citealt{gala}).
@@ -651,8 +651,8 @@ Our favored scenario is discussed in the last subsection,
 
 The fact that the two stars share nearly identical space motion
 at a separation of $< 1$~pc strongly supports that the pair is coeval.
-We therefore consider other age indicators apart from their phase space coordinates
-to assess the ages and coevality of the two stars.
+We therefore consider other age indicators apart from their phase-space
+coordinates to assess the ages and coevality of the two stars.
 First, given the precise measurements of $\log(g)$ and $T_\mathrm{eff}$,
 we can constrain the ages of the two stars by
 comparing these values to theoretical isochrones.
