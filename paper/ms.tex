@@ -389,34 +389,6 @@ and granulation between the stars were considered, but none was favored.
 
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=0.95\linewidth]{deltaXH_elem_violins.pdf}
-  \caption{Abundance difference in this pair and other twin-like
-    ($\Delta T_\mathrm{eff}\lesssim 100$~K) wide binaries in
-    \citealt{2016ApJS..225...32B}.
-    The differences in other pairs are small ($<0.05$~dex)
-    for all elements except \elem{N} and \elem{O} which are the most
-    uncertain, making the difference of $\approx 0.2$~dex seen in
-    \bizarreone-\sunanalog\ rare.
-    Additionally, we show the distribution of abundance differences
-    between field stars with similar metallicity difference
-    ($\Delta[\elem{Fe}/\elem{H}] \approx 0.2$)
-    as violins with medians indicated by black line segments.
-    These are random pairings of single stars in
-    in \citealt{2016ApJS..225...32B} at two metallicity bins,
-    $-0.025 < \feh < 0.025$ (160 stars) and $1.975 > \feh > 2.025$ (137 stars),
-    similar to \bizarreone\ and \sunanalog.
-    The difference is always taken to be
-    $\mathrm{higher}\,\feh - \mathrm{lower}\,\feh$.
-    Thus, the narrower range of in $\Delta\feh$ is by construction.
-    Random pairings of disk stars with similar $\Delta\feh$ usually show
-    similar enhancement in all other elements
-    unlike the pattern seen in \bizarreone-\sunanalog\ pair.
-  }
-  \label{fig:deltaXH}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
   \includegraphics[width=0.95\linewidth]{spec1.pdf}
   \caption{Selective segments of the spectra of \sunanalog\ and \bizarreone.
     Alternating sets of two rows show
@@ -443,6 +415,35 @@ and granulation between the stars were considered, but none was favored.
   }
   \label{fig:spec2}
 \end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.95\linewidth]{deltaXH_elem_violins.pdf}
+  \caption{Abundance difference in this pair and other twin-like
+    ($\Delta T_\mathrm{eff}\lesssim 100$~K) wide binaries in
+    \citealt{2016ApJS..225...32B}.
+    The differences in other pairs are small ($<0.05$~dex)
+    for all elements except \elem{N} and \elem{O} which are the most
+    uncertain, making the difference of $\approx 0.2$~dex seen in
+    \bizarreone-\sunanalog\ rare.
+    Additionally, we show the distribution of abundance differences
+    between field stars with similar metallicity difference
+    ($\Delta[\elem{Fe}/\elem{H}] \approx 0.2$)
+    as violins with medians indicated by black line segments.
+    These are random pairings of single stars in
+    in \citealt{2016ApJS..225...32B} at two metallicity bins,
+    $-0.025 < \feh < 0.025$ (160 stars) and $1.975 > \feh > 2.025$ (137 stars),
+    similar to \bizarreone\ and \sunanalog.
+    The difference is always taken to be
+    $\mathrm{higher}\,\feh - \mathrm{lower}\,\feh$.
+    Thus, the narrower range of in $\Delta\feh$ is by construction.
+    Random pairings of disk stars with similar $\Delta\feh$ usually show
+    similar enhancement in all other elements
+    unlike the pattern seen in \bizarreone-\sunanalog\ pair.
+  }
+  \label{fig:deltaXH}
+\end{figure}
+
 
 \sunanalog\ and \bizarreone\ were identified as a
 candidate comoving star pair in our recent search for comoving stars using the
@@ -471,7 +472,7 @@ In a separate effort to study detailed chemical abundances of potential
 planet-hosting stars, \citet{2016ApJS..225...32B} obtained and analyzed high resolution
 spectra of both stars using the HIRES spectrograph on the Keck~I telescope.
 The spectral resolution is $R\approx 70000$ and the wavelength coverage is
-$5164--7799$~\AA.
+$5164-7799$~\AA.
 A typical signal-to-noise ratio in the spectral continuum is $>200$~per pixel.
 The resulting measurements include elemental abundances for 15 chemical species
 (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as well as stellar parameters
@@ -562,6 +563,9 @@ Even more puzzling is that not all elements are equally enhanced:
 the abundances of \bizarreone\ show selective depletion in
 \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}
 relative to \elem{Fe}.
+Both stars have high surface \elem{Li} abundances, and the difference in
+\elem{Li} abundance ($\approx 0.5$~dex) is the largest among all elements
+measured.
 
 The validity of the measured abundance differences is further demonstrated
 in \figname~\ref{fig:spec1} and \ref{fig:spec2} where we show
@@ -583,22 +587,21 @@ the differences in other pairs for all elements except \elem{N} and \elem{O},
 which are also the most uncertain (\tablename~\ref{tab:kk}),
 are less than $0.05$~dex, making \bizarreone-\sunanalog\ pair a significant outlier.
 
-The abundance differences cannot be due to different chemical enrichment
-histories in the disk even if the two stars were of different origin.
-\figname~\ref{fig:deltaXH} additionally shows the distribution of abundance
-differences, $\Delta[\elem{X}/\elem{H}]$, between random pairings of two stars
-with similar \feh\ as \bizarreone\ and \sunanalog\.
-We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
-all other elements are typically enhanced at a similar level, with some variations.
-Specifically, for a typical star with $\feh \approx 0.2$~dex,
-we generally expect $[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
-(\citealt{Battistini:2015aa,Bensby:2003aa})
-making the low [\elem{Na}/\elem{Fe}] and [\elem{Mn}/\elem{Fe}] seen in \bizarreone\
-very unlikely to arise from variations in Galactic chemical evolution.
-
-% HOGG to provide some theoretical account adding to the above empirical evidence.
-
-
+%TODO: what is the histogram of?
+%TODO: plot styles...
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\linewidth]{orbits.pdf}
+  \end{center}
+  \caption{Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
+    For \sunanalog, the initial conditions are set to the median of the
+    posterior sample over the phase space coordinates.
+    The orbits are computed by integrating backwards from the present-day
+    positions for $2.5$~Gyr with a time step of $0.5$~Myr using the Leapfrog
+    integration scheme implemented in \project{Gala} (\citealt{gala}).
+  }
+  \label{fig:orbit}
+\end{figure}
 
 \begin{figure}[htpb]
   \centering
@@ -628,9 +631,10 @@ very unlikely to arise from variations in Galactic chemical evolution.
 
 We discuss the possible origins of the peculiar abundance differences of
 \bizarreone-\sunanalog.
-Although the data described above strongly suggests that the two stars are
-coeval, let us first consider scenarios in which the two stars are not actually
-born together.
+We first discuss the ages and coevality of the stars in this pair, and consider
+both possibilities in which the two stars are or are not coeval.
+Our favored scenario is discussed in the last subsection,
+\sectionname~\ref{sub:accretion}.
 
 % chance pair
 %Given that their metallicities and abundance patterns are significantly
@@ -645,9 +649,9 @@ born together.
 \subsection{Stellar Ages \& Coevality}
 \label{sub:ages}
 
-The fact that the two stars share a nearly identical space motion
-at a separation of $< 1$~pc strongly argues that the pair is coeval.
-We therefore  consider other age indicators apart from their phase space coordinates
+The fact that the two stars share nearly identical space motion
+at a separation of $< 1$~pc strongly supports that the pair is coeval.
+We therefore consider other age indicators apart from their phase space coordinates
 to assess the ages and coevality of the two stars.
 First, given the precise measurements of $\log(g)$ and $T_\mathrm{eff}$,
 we can constrain the ages of the two stars by
@@ -686,47 +690,32 @@ using \tgas\ that the two stars belong to a larger group of young stars.
 Very young stars are often show signs of activity such as
 X-ray emission from magnetic activity, emission lines, or infrared excess due to
 circumstellar disks.
-We have looked for these signs for the pair to find none, and their spectral energy
-distributions are consistent with blackbody.
+%TODO: refernces
+We have compiled GALEX, Tycho-2, 2MASS, and WISE photometry for these stars,
+and found no evidence for indications of activity in their spectral energy
+distributions.
 The low $v\sin(i)$ values (\tablename~\ref{tab:kk}) also argue against very
-young ages inferred from the surface lithium abundances.
+young ages that would be inferred from the surface lithium abundances.
 % TODO: reference for vertical action as age?
-Finally, the pair's fiducial orbit in a axisymmetric Milky Way-like potential
-has a vertical action larger than the Sun, favoring an older age.
-We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr old main
-sequence stars, and that their unusually high \elem{Li} abundance requires an
-alternative explanation.
-
-\figurename~\ref{fig:orbit} shows an orbit computed from the median posterior
-sample over 6D phase-space coordinates for \sunanalog\ (black line), integrated
-in a Milky Way-like gravitational potential (\cite{Gala:2017}). \todo{APW:
-explain}
-The Sun's orbit in this same Milky Way model is under-plotted for comparison
-(grey line); the orbits of the stars in this pair have large scale-heights
-relative to the Sun's orbit despite being young.
-
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=\linewidth]{orbits.pdf}
-  \end{center}
-  \caption{%
-    Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
-    For \sunanalog\, the initial conditions are set to the median posterior
-    sample over the inferred 6D phase-space coordinates.
-    The orbits are computed by integrating backwards from the present-day
-    positions for $2.5~{\rm Gyr}$ with a time-step of $0.5~{\rm Myr}$ using the
-    Leapfrog integration scheme implemented in \project{Gala}
-    (\citealt{Gala:2017}). \todo{APW: citation...}
-\label{fig:orbit}}
-\end{figure}
+Finally, we computed the Galactic orbit of the pair using the median of the
+posterior sample over the phase space coordinates of \sunanalog, in a Milky
+Way-like gravitational potential using \project{Gala} (\citealt{gala}).
+%TODO: APW to check (missing) citations
+The pair's fiducial orbit has a vertical action larger than the Sun, favoring
+an older age.
+We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr
+old main sequence stars, and that their unusually high \elem{Li} abundance
+requires an alternative explanation.
 
 
 \subsection{Exchange Scattering}
 \label{sub:exchange_scattering}
 
-% binary-single and binary-binary exchange
-Two stars unrelated at birth may end up in a binary system via binary-single scattering event
-that results in an exchange of binary member.
+Although the data described above strongly suggests that the two stars are
+coeval, we may still consider scenarios in which the two stars are not actually
+born together.
+Two stars unrelated at birth may end up in a binary system via a binary-single
+scattering event that results in an exchange of binary members.
 In order to estimate the rate at which any binary-single
 event will produce a wide binary system such as \sunanalog\ and \bizarreone,
 we may consider the rate at which this wide binary will scatter with a field star to
@@ -734,238 +723,66 @@ result in an exchange reaction.
 The cross-section of exchange scattering for a binary with semi-major axis $a$ is
 \begin{eqnarray}
   \sigma_\mathrm{ex} = \frac{640}{81} \pi a^{2} \frac{1}{v^6}
+  \label{eq:crosssection}
 \end{eqnarray}
-where $v$ is the incoming velocity $v_i$ in units of critical velocity $v_c$ defined as
+where $v$ is the incoming velocity, $v_i$, in units of critical velocity, $v_c$, defined as
 \begin{eqnarray}
-  v_c^2 = G \frac{m_1 m_2 (m_1 + m_2 + m_3)}{m_3 (m_1 + m_2)} \frac{1}{a}
+  v_c^2 = G \frac{m_1 m_2 (m_1 + m_2 + m_3)}{m_3 (m_1 + m_2)} \frac{1}{a}\,\,.
 \end{eqnarray}
-when $v \gg 1$ using the impulse approximation (\citealt{Hut:1983aa,Hut:1983ab}),
-which is appropriate for wide binaries scattering with field (disk) stars.
-If we assume that field stars are made of solar mass stars
-with constant number density $n=1$~pc$^{-3}$, and the incoming velocity of field stars
-is $10$~km\,s$^{-1}$, a lower limit to the velocity dispersions of disk
-stars in any direction, the rate of exchange scattering is
+\eqname~\ref{eq:crosssection} is appropriate when $v \gg 1$ (\citealt{Hut:1983aa,Hut:1983ab}),
+which is the case for wide binaries scattering with field (disk) stars.
+If we assume that field stars are made of solar mass stars with a constant
+number density $n=1$~pc$^{-3}$, and the incoming velocity of field stars is
+$10$~km\,s$^{-1}$, a lower limit to the velocity dispersions of disk stars in
+any direction, the rate of exchange scattering is
 \begin{eqnarray}
   n \sigma_\mathrm{ex} v_i = 6.82\times 10^{-8}\,\mathrm{Gyr}^{-1}
-  \frac{n}{\mathrm{pc}^{-3}} \frac{\mathrm{pc}}{a} \left(\frac{10~\mathrm{km}\,\mathrm{s}^{-1}}{v_i}\right)^5
+  \frac{n}{\mathrm{pc}^{-3}} \frac{\mathrm{pc}}{a}
+  \left(\frac{10~\mathrm{km}\,\mathrm{s}^{-1}}{v_i}\right)^5\,,
 \end{eqnarray}
-low enough to be negligible.
-Because the exchange scattering cross section steeply depends on the incoming velocity
-relative to the critical velocity (of the order of orbital velocity of the binary),
-the rate of exchange scattering with a star within the same star forming region
-may be much larger.
-However, this, or any other exchange scattering scenario,
-is still unsatisfactory as it offers no insight on the
-peculiarity of the abundances of \bizarreone\ (see
-\sectionname~{\ref{sec:data}}).
-In case that the pair formed from an exchange scattering event,
-we would expect the pair to be composed of typical field stars,
-not one with such low $\elem{Na}/\elem{Fe}$ and $\elem{Mn}/\elem{Fe}$.
+which is low enough to be negligible.
 
-%LEIGH to fill in binary-binary exchange scattering?
+In fact, any exchange scattering scenario is unsatisfactory as typical
+field stars with similar metallicities as \bizarreone\ and \sunanalog\ is very
+unlikely to show the abundance difference pattern observed.
+In \figname~\ref{fig:deltaXH}, we compare the abundance difference of
+\bizarreone-\sunanalog\ with the distribution of abundance differences,
+$\Delta[\elem{X}/\elem{H}]$, between random pairings of two stars with similar
+\feh\ as \bizarreone\ and \sunanalog.
+We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
+all other elements are typically enhanced at a similar level, with some variations.
+Specifically, for a typical star with $\feh \approx 0.2$~dex, we generally
+expect $[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
+(\citealt{Battistini:2015aa,Bensby:2003aa}) making the low
+[\elem{Na}/\elem{Fe}] and [\elem{Mn}/\elem{Fe}] seen in \bizarreone\ very
+unlikely to arise from variations in Galactic chemical evolution.
 
-The unlikeliness of the above possibilities naturally leads us to consider the
-alternative that their peculiar disparity in chemical abundance space may be
-more naturally explained.
-
+% HOGG to provide some theoretical account adding to the above empirical evidence.
 
 \subsection{Chemical Inhomogeneity in Star Formation}
 \label{sub:chemical_inhomogeneity_in_star_formation}
 
-% inhomogeneity in star formation
-It may be that the two stars are born at the same time from the same cloud, but
-there is chemical inhomogeneity within the cloud.
-However, there is already ample amount of evidence against such scenario.
+In case we assume that the two stars were born together, one possibility to
+explain the chemical difference is that there was chemical inhomogeneity within
+the birth cloud.
+However, there is already ample evidence against such a scenario.
 First, none of the other seven similar wide binaries examined in
-\citealt{2016ApJS..225...32B} show the same level differences in abundances
-although there is generally a larger spread in $\elem{C}$, $\elem{N}$ and
-$\elem{O}$, and some pairs show a large as $\approx 0.15$~dex difference in
-particular elements.
+\citealt{2016ApJS..225...32B} show the same level of differences in abundances.
+Though there is generally a larger spread in $\elem{C}$, $\elem{N}$ and
+$\elem{O}$, and some pairs show a difference in particular elements as large as
+$\approx 0.15$~dex.
 The median and maximum \feh\ difference between component stars in the other
 seven pairs is $0.02$~dex and $0.09$~dex, respectively.
-The differences are even smaller (maximum $\Delta\feh = 0.03$~dex)
-if we compare only twin-like ($\Delta T_\mathrm{eff} \lesssim 100$~K) pairs.
+The differences are even smaller (maximum $\Delta\feh = 0.03$~dex) if we
+compare only twin-like ($\Delta T_\mathrm{eff} \lesssim 100$~K) pairs
+(\figname~\ref{fig:deltaXH}).
 This is consistent with the findings of \citealt{Desidera:2004aa}, who examined
-23 wide binaries of late F to K dwarfs, and found most pairs show difference in
+23 wide binaries of late F to K dwarfs, and found most pairs show a difference in
 \feh\ less than $0.02$~dex and none larger than $0.07$~dex.
-Similarly \citealt{Gratton:2001aa} found that four out of six equal mass binaries
+Similarly, \citealt{Gratton:2001aa} found that four out of six equal mass binaries
 have the same chemical composition with $\gtrsim 0.01$~dex uncertainties.
-Thus, a difference of $\approx 0.2$~dex seen in \bizarreone-\sunanalog\ pair
-cannot be due to chemical inhomogeneity in the birth cloud.
-
-
-\subsection{Accretion of rocky planetary material}
-\label{sub:accretion}
-
-% rocky planets (or the like) engulfment
-Yet another more exotic possibility is that a star's surface abundance may
-be altered by accretion of planetary material after birth.
-Instabilities may develop in a multi-planet system due to its chaotic nature
-which may lead to planet engulfment or ejection by the host star.
-%TODO: needs references
-%TODO: kozai?
-Indeed, it is an important goal of many exoplanet studies
-to detect chemical signatures of planet formation or accretion,
-distinguish them from Galactic chemical evolution, and
-connect them to theories of evolution of planetary systems.
-One approach that is free from confusion with Galactic chemical evolution
-is to compare two almost identical stars in a wide binary system,
-which are assumed to be born together.
-Assuming that the component stars were born together with identical
-initial composition, we may see a difference in their surface abundances
-if the two stars then went through different amount of accretion
-of planetary material.
-This abundance difference may depend on the condensation temperatures of
-elements in the protoplanetary disks from which the accreted planets formed
-as their compositions depend on the radial temperature gradient in the disk.
-%TODO: cautions on condensation temperature
-% 1. it is just a proxy
-% 2. it is **equlibrium** condensation temperature
-
-We now turn to \bizarreone-\sunanalog\ pair.
-In Figure~\ref{fig:relabun_tcrank}, we show the abundace difference
-between \bizarreone\ and \sunanalog\ ordered by the rank of \Tcondens\
-of each element.
-The equilibrium condensation temperatures for the composition of solar system
-are taken from \citealt{2003ApJ...591.1220L} (Table~8).
-The difference seen in \bizarreone-\sunanalog\ is
-compared to HD~20781/2, XO-2N/S, WASP-94A/B in \figname~\ref{fig:relabun_tcrank}.
-The metallicity difference of $\approx 0.2$~dex observed in this pair
-is larger than the differences seen in any other pairs studied so far.
-%Indeed, some may consider such large difference in metallicity
-%enough to concluded that the two stars are completely unrelated.
-Strikingly, the five under-enhanced elements in \bizarreone\
-relative to \sunanalog\ are the five most volatile in all elements measured.
-The difference in \elem{Mn} ($\Tcondens = 1158$~K) and
-\elem{Cr} ($\Tcondens = 1296$~K) suggests a break in $\Tcondens \approx 1200$~K.
-This $\Tcondens$-dependent trend of $\Delta\elemH{X}$,
-combined with the enhanced $\elem{Li}$ abundance ($A(\elem{Li}) = 2.75$),
-strongly suggests that accretion of rocky material has occured in \bizarreone.
-
-How much mass of rocky material is needed to explain an increment of $\approx 0.2$~dex?
-One can carry out simple toy calculations of expected $\Delta\elemH{X}$
-in a Sun-like star's atmosphere when adding material of e.g., bulk Earth composition
-under these simplifying assumptions:
-\begin{itemize}
-  \item The material added is instantly and completely mixed.
-  \item The atmospheric composition that we measure is identical throughout
-    the star's radiative and convective zone.
-  \item The surface abundance of the star has been altered once only by this
-    accretion event, and remained the same since.
-\end{itemize}
-
-We take the solar abundances $\elemH{X}$ of \citealt{Asplund:2009aa}
-which can be converted to mass fraction in each element $X$ as in
-\begin{equation}
-  f_{X,\mathrm{photo}} = \frac{10^{\elemH{X}} m_X}{\Sigma_X 10^{\elemH{X}} m_X}
-\end{equation}
-where $m_X$ is the mass of each element in e.g., atomic mass unit.
-One can check that the \citealt{Asplund:2009aa} abundances
-are consistent with mass fraction in \elem{H}, \elem{He} and metals
-$X,\,Y,\,Z=0.757,\,0.249,\,0.0134$ as stated in that work.
-Assuming a fraction of the star's convective zone in mass $f_\mathrm{CZ}$,
-and that the added material has a total mass $M_\mathrm{add}$ and mass fraction in each
-element $f_{X,\mathrm{add}}$,
-the abundance difference is
-\begin{equation}
-  \Delta\elemH{X} = \log_{10} \frac{f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star} + f_{X,\mathrm{add}}\,M_\mathrm{add}}
-    {f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star}}
-\end{equation}
-We take the composition of bulk Earth from a chondritic model of the Earth
-(\citealt{mcdonough2001composition}).
-
-Figure~\ref{fig:toycalc} shows the expected change of surface abundances of
-metals in a Sun-like star after $20~\mearth$ of material with composition of
-bulk Earth is added.
-It has been long known that compared to CI or other carbonaceous chondrites,
-the composition of the Earth shows a volatilaity trend that moderately volatile
-elements (including Mn and Na) and volatile elements are incearsingly more
-depleted with decreasing condensation temperature
-(\citealt{mcdonough2001composition}).
-This trend is presumed to be closely related to the formation of terrestrial
-planets in particular to the radial temperature gradient in a protoplanetary
-disk.
-Given the simplistic assumptions laid out above, and the uncertainties in our
-current knowledge of the compositions of terrestrial planets including bulk
-Earth, the match between our toy calculation and the observed abundance
-difference between \bizarreone\ and \sunanalog\ is remarkable.
-
-% some discussion of individual elements
-
-What about \elem{Li}?
-The element \elem{Li} is worth a special attention in the context of accretion scenario.
-Because Li is present in either carbonaceous chondrites or the bulk Earth with
-a concentration of $1-1.5$~ppm in mass (\citealt{mcdonough2001composition}),
-but is depleted quickly within the first couple of Gyrs on the surface of a
-Sun-like star, accretion of either material at later times will significantly
-replenish the lithium on the star's surface.
-For the present-day Sun, the accretion of $20~\mearth$ of bulk Earth-like
-material results in $\Delta\elemH{Li} \approx 1.6$~dex (which
-is indicated as an upward arrow in \figname~\ref{fig:toycalc}).
-Incidentally, the star under examination, \bizarreone, has an age (informed by
-stellar parameters) very close to the Sun ($4.28_{-1.03}^{+1.11}$~Gyr).
-Thus, as long as we believe the Sun's present-day surface \elem{Li} abundance
-to be ordinary, this predicts that the \bizarreone\ should have $1.6$~dex enhancement
-in its \elem{Li}.
-This is in fact exactly what we find: the \elem{Li} abundance of \bizarreone\ is
-$A(\elem{Li}) = 2.75$ (Table~\ref{tab:kk}, \citealt{jmlithium})
-approximately $1.65$~dex higher than the solar value of $1.1$~dex.
-%TODO: solar Li needs reference
-Furthermore, this implies that the accretion event should have happened very
-recently from a time ago that is shorter than the \elem{Li} depletion time.
-
-%TODO: not sure if this is too obvious of a point or useful in practice..
-%It is further worth pointing out that measuring the \elem{Li} abundance
-%with some of the refractory elements such as $\elem{Fe}$
-%provides a way to estimate the time of the event.
-%If the observed \elem{Li} abundance is less than what is inferred from
-%abundance differences of other elements, and
-%we have a model of \elem{Li} depletion, the time of \elem{Li} enhancement
-%may be calculated.
-
-What about \sunanalog?
-\sunanalog\ is also enhanced in \elem{Li} considering its age of
-$4.00_{-1.56}^{+1.51}$~Gyr than the nominal \elem{Li} depletion predics by
-$\approx 1$~dex.
-This enhancement puts an upper limit on the accreted mass to be
-$\approx 4$~\mearth\ assuming \elem{Li} concentration of $1.1$~ppm
-(\citealt{mcdonough2001composition}).
-Unlike \bizarreone, we cannot know the pre-accretion abundances of
-\sunanalog.\footnote{
-  Strictly speaking, we can never know the pre-accretion abundances
-  for \bizarreone\ either.
-  We only have an {\it approximate} idea that this is not far from a solar-twin
-  star \sunanalog, and because the deviation from this ``anchor'' star is
-  large, it is reasonable to consider an accretion by the Sun.
-  In reality, \sunanalog\ may as well have had its own accretion history,
-  which indeed seems to be the case according to its \elem{Li} abundance.
-}
-However, we note that the span of abundance difference between highly volatile
-elements (\elem{C}, \elem{N}, \elem{O}, \elem{Na}) and refractory elements such
-as \elem{Fe} expected from accreting $4$~\mearth to the Sun is $\approx
-0.05$~dex.
-This is comparable to the abundance difference between N, Na and Fe in
-\sunanalog.
-It is also interesting that \sunanalog\ also shows a deficit in the same
-volatile and moderately volatile elements
-(\elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}) relative to Fe
-just as in \bizarreone.
-Thus, we conclude that \sunanalog\ is also likely to have had a similar
-accretion event, but the amount of accretion was much smaller than \bizarreone.
-
-%TODO: augment this paragraph
-% - more geochemical study references
-We stress that while the calculation carried out is useful in
-order-of-magnitude sense, further investigation of each of the simplifying
-assumptions made is warranted.
-In addition, the composition of bulk Earth also has some uncertainties.
-For example, the reported bulk Earth concentration of the siderphile element
-\elem{Mn}, varies from $800$ to $1700$~ppm (\citealt{1998psc..book.....L}).
-While the latter value from \citealt{mcdonough2001composition} has been used in
-our calculation, the former value would bring the observed $\Delta\elemH{Mn}$
-to an even closer agreement.
-Given these limitations, the level of agreement for the refractory {\it and}
-\elem{Li} for \bizarreone\ is remarkable.
+Thus, a difference of $\approx 0.2$~dex seen in \bizarreone-\sunanalog\ pair is
+not likely due to chemical inhomogeneity in the birth cloud.
 
 \begin{figure}[htpb]
   \centering
@@ -989,6 +806,158 @@ Given these limitations, the level of agreement for the refractory {\it and}
   \label{fig:toycalc}
 \end{figure}
 
+\subsection{Accretion of rocky planetary material}
+\label{sub:accretion}
+
+Another possibility that two coeval stars may end up with different surface
+abundances is accretion of planetary material after birth.
+Instabilities may develop in a multi-planet system due to its chaotic nature
+which may lead to planet engulfment or ejection by the host star.
+%TODO: needs references
+%TODO: kozai?
+Indeed, it is an important goal of many exoplanet studies
+to detect chemical signatures of planet formation or accretion,
+distinguish them from Galactic chemical evolution, and
+connect them to theories of evolution of planetary systems.
+One approach that is free from confusion with Galactic chemical evolution
+is to compare two almost identical stars in a wide binary system.
+Assuming that the component stars were born together with identical
+initial composition, we may see a difference in their surface abundances
+if the two stars then accreted different amounts of accretion
+of planetary material.
+The resulting abundance difference may depend on the condensation
+temperatures of elements in the protoplanetary disks from which the accreted
+planets formed, as their compositions depend on the radial temperature gradient
+in the disk.
+%TODO: cautions on condensation temperature
+% 1. it is just a proxy
+% 2. it is **equlibrium** condensation temperature
+
+In Figure~\ref{fig:relabun_tcrank}, we show the abundace difference
+between \bizarreone\ and \sunanalog\ ordered by the rank of \Tcondens\
+of each element.
+The equilibrium condensation temperatures for the composition of solar system
+are taken from \citealt{2003ApJ...591.1220L} (Table~8).
+The difference seen in \bizarreone-\sunanalog\ is
+compared to HD~20781/2, XO-2N/S, WASP-94A/B in \figname~\ref{fig:relabun_tcrank}.
+The metallicity difference of $\approx 0.2$~dex observed in this pair
+is larger than the differences seen in any other pairs studied so far.
+Strikingly, the five under-enhanced elements in \bizarreone\
+relative to \sunanalog\ are the five most volatile in all elements measured.
+The difference in \elem{Mn} ($\Tcondens = 1158$~K) and
+\elem{Cr} ($\Tcondens = 1296$~K) suggests a break in $\Tcondens \approx 1200$~K.
+This $\Tcondens$-dependent trend of $\Delta\elemH{X}$,
+combined with the enhanced $\elem{Li}$ abundance ($A(\elem{Li}) = 2.75$),
+strongly suggests that accretion of rocky material has occured in \bizarreone.
+
+How much mass of rocky material is needed to explain an increment of $\approx 0.2$~dex?
+We carry out simple toy calculations of expected $\Delta\elemH{X}$
+in a Sun-like star's atmosphere by adding certian mass of bulk Earth composition
+under these simplifying assumptions:
+\begin{itemize}
+  \item The material added is instantly and completely mixed.
+  \item The atmospheric composition that we measure is identical throughout
+    the star's radiative and convective zone.
+  \item The surface abundance of the star has been altered only by the
+    accretion event(s).
+\end{itemize}
+
+We take the solar abundances, $\elemH{X}$, of element \elem{X}
+(\citealt{Asplund:2009aa}) which can be converted to mass fraction as
+\begin{equation}
+  f_{X,\mathrm{photo}} = \frac{10^{\elemH{X}} m_X}{\Sigma_X 10^{\elemH{X}} m_X}
+\end{equation}
+where $m_X$ is the mass of each element in e.g., atomic mass unit.
+Assuming that the added material has a total mass $M_\mathrm{add}$, and the
+mass fraction in each element $f_{X,\mathrm{add}}$,
+the abundance difference is
+\begin{equation}
+  \Delta\elemH{X} = \log_{10} \frac{f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star}
+    + f_{X,\mathrm{add}}\,M_\mathrm{add}}
+    {f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star}}
+\end{equation}
+where $f_\mathrm{CZ}$ is the fraction of the star's mass in the convective envelope.
+We take the composition of bulk Earth from a chondritic model of the Earth
+(\citealt{mcdonough2001composition}).
+
+Figure~\ref{fig:toycalc} shows the expected change of surface abundances of
+metals in a Sun-like star after $20~\mearth$ of material with composition of
+bulk Earth is added.
+A volatility trend that more volatile (low \Tcondens) elements are more
+depleted in the Earth relative to CI or other carbonaceous chondrites
+has long been known (\citealt{mcdonough2001composition}).
+This trend is presumed to be closely related to the formation of terrestrial
+planets and, in particular to the radial temperature gradient in a
+protoplanetary disk.
+The trend resulting from adding $20~\mearth$ of bulk Earth
+provides an overall good match to the observed $\Delta\elemH{X}$,
+suggeting that the refractory-enhanced star, \bizarreone\,
+accreted $20~\mearth$ more of rocky planetary material than \sunanalog.
+
+What about \elem{Li}?
+The element \elem{Li} is worth special attention in the context of the
+accretion scenario.
+Because Li is present in either carbonaceous chondrites or bulk Earth with
+a concentration of $1-1.5$~ppm in mass (\citealt{mcdonough2001composition}),
+but is depleted quickly within the first couple of Gyrs on the surface of a
+Sun-like star, accretion of either material at later times will significantly
+replenish the lithium on the star's surface.
+For the present-day Sun, the accretion of $20~\mearth$ of bulk Earth-like
+material results in $\Delta\elemH{Li} \approx 1.6$~dex (which
+is indicated as an upward arrow in \figname~\ref{fig:toycalc}).
+Incidentally, the star under examination, \bizarreone, has an age (informed by
+stellar parameters) very close to the Sun ($4.28_{-1.03}^{+1.11}$~Gyr).
+Thus, as long as we believe the Sun's present-day surface \elem{Li} abundance
+to be ordinary, this predicts that the \bizarreone\ should have $1.6$~dex
+enhancement in its \elem{Li}.
+This is exactly what we find: the \elem{Li} abundance of \bizarreone\ is
+$A(\elem{Li}) = 2.75$ (Table~\ref{tab:kk}, \citealt{jmlithium})
+approximately $1.65$~dex higher than the solar value of $1.1$~dex.
+%TODO: solar Li needs reference
+Furthermore, this implies that the accretion event should have happened very
+recently, or at least within the \elem{Li} depletion time.
+
+What about \sunanalog?
+Considering its age of $4.00_{-1.56}^{+1.51}$~Gyr, \sunanalog\ is also enhanced
+in \elem{Li} compared to other stars of similar ages by $\approx 1$~dex.
+This enhancement puts an upper limit on the accreted mass to be
+$\approx 4$~\mearth\ assuming \elem{Li} concentration of $1.1$~ppm
+(\citealt{mcdonough2001composition}).
+Unlike \bizarreone, we cannot know the pre-accretion abundances of
+\sunanalog.\footnote{
+  Strictly speaking, we can never know the pre-accretion abundances
+  for \bizarreone\ either.
+  We only have an {\it approximate} idea that this is not far from a solar-twin
+  star \sunanalog, and because the deviation from this ``anchor'' star is
+  large, it is reasonable to consider accretion by the Sun.
+  In reality, \sunanalog\ may as well have had its own accretion history,
+  which indeed seems to be the case according to its \elem{Li} abundance.
+}
+However, we note that the span of abundance difference between highly volatile
+elements (\elem{C}, \elem{N}, \elem{O}, \elem{Na}) and refractory elements such
+as \elem{Fe} expected from accreting $4$~\mearth to the Sun is $\approx
+0.05$~dex.
+This is comparable to the abundance difference between N, Na and Fe in
+\sunanalog.
+It is also interesting that \sunanalog\ shows a deficit in the same volatile
+and moderately volatile elements (\elem{C}, \elem{N}, \elem{O}, \elem{Na}, and
+\elem{Mn}) relative to Fe as in \bizarreone.
+Thus, we conclude that \sunanalog\ is also likely to have had a similar
+accretion event, but the amount of accretion was much smaller than \bizarreone.
+
+%TODO: augment this paragraph
+% - more geochemical study references
+We stress that while the calculation carried out is useful in
+order-of-magnitude sense, further investigation of each of the simplifying
+assumptions made is warranted.
+In addition, the composition of bulk Earth also has some uncertainties.
+For example, the reported bulk Earth concentration of the siderphile element
+\elem{Mn}, varies from $800$ to $1700$~ppm (\citealt{1998psc..book.....L}).
+While the latter value from \citealt{mcdonough2001composition} has been used in
+our calculation, the former value would bring the observed $\Delta\elemH{Mn}$
+to an even closer agreement.
+Given these limitations, the level of agreement for the refractory {\it and}
+\elem{Li} for \bizarreone\ is remarkable.
 
 \section{Summary}
 \label{sec:summary}
