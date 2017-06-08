@@ -13,6 +13,7 @@
 % - Reserve () for function arguments; use [] or {} for outer shit.
 % - Use \sectionname not Section, \figname not Figure, \documentname not Article or Paper or paper.
 % - Use "comoving" instead of "co-moving".
+% - USe "phase space" not "phase-space".
 % - Write elements as \elem{X}.
 
 % packages
@@ -497,45 +498,37 @@ Combining these precise radial velocities with the \gaia\ \tgas\ astrometry, we
 can compare differences between the inferred 6D phase space coordinates of the
 two stars.
 We start by generating posterior samples over the Heliocentric distance, $r$,
-tangential velocities, $(v_\alpha, v_\delta)$, and radial velocity, $\hat{v}_r$,
-given the observed parallax, $\pi$, and proper motion components,
-$(\mu_{\alpha^*}, \mu_\delta)$, and radial velocity, $v_r$.
-By defining the vectors
-% SMOH: I understand you meant hat v_r as the latent true radial velocity but
-% personally think a) it can confuse some people that there are hat quantities
-% with no-hat quantities for hat-y vector and thus b) it'd be better to use hat
-% quantities for observed variables and no-hat for latent true ones.
-% SMOH: v_r is missing in the LHS of eq(3)
+tangential velocities, $(v_\alpha, v_\delta)$, and radial velocity, $v_r$,
+given the observed parallax, $\hat\pi$, and proper motions,
+$(\hat\mu_{\alpha^*}, \hat\mu_\delta)$, and radial velocity, $\hat v_r$.
+We assume the noise is Gaussian, and the radial velocity measurement is
+uncorrelated with the astrometric measurements.
+If we define
 \begin{eqnarray}
-  \vec{y} &=&
+  \vec{\hat y} &=&
       \transp{\left(
         \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
-          \pi &
-          \mu_{\alpha^*} &
-          \mu_\delta &
-          v_r
+          \hat\pi &
+          \hat\mu_{\alpha^*} &
+          \hat\mu_\delta &
+          \hat v_r
         \end{array}
       \right)}\\
-  \hat{\vec{y}} &=&
+  \vec{y} &=&
       \transp{\left(
         \begin{array}{c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c}
           r^{-1} &
           r^{-1}\,v_\alpha &
           r^{-1}\,v_\delta &
-          \hat{v}_r
+          v_r
         \end{array}
       \right)}
 \end{eqnarray}
-and by considering the covariance matrix $\mat{C}$ between the observed
-quantities (provided by \tgas\ and extended to include the uncorrelated radial
-velocity uncertainty), the likelihood can be written
-\begin{eqnarray}
-p(\pi, \mu_{\alpha^*}, \mu_\delta \given r, v_\alpha, v_\delta) &=&
-  \left[\det\left(\frac{\mat{C}^{-1}}{2\pi}\right)\right]^{1/2} \,
-    \exp \left[ -\frac{1}{2} \transp{\left(\vec{y} - \hat{\vec{y}} \right)} \,
-    \mat{C}^{-1} \,
-    \left(\vec{y} - \hat{\vec{y}} \right) \right] \label{eq:likefn} \quad .
-\end{eqnarray}
+then the likelihood is
+\begin{equation}
+  \vec{\hat y} \sim \mathcal{N}(\vec{y}, \mat{C})
+\end{equation} where $\mat{C}$ is the covariance matrix.
+%TODO: what is assumed for uncertanties in RV?
 We adopt a uniform space density prior for the distance and an isotropic
 Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$
 \begin{eqnarray}
@@ -547,19 +540,18 @@ p(r) &=&
 p(v) &=& \frac{1}{\sqrt{2\pi}\,\sigma_v} \,
   \exp\left[-\frac{1}{2} \, \frac{v^2}{\sigma_v^2} \right] \quad .
 \end{eqnarray}
+%
 For each of the two stars, we use \project{emcee}
-(\citealt{Foreman-Mackey:2013}) to generate posterior samples in $(r, v_\alpha,
-v_\delta, \hat{v}_r)$ by running 64 walkers for 4608 steps and discarding the
-first 512 steps as the burn-in period.
-For each sample, we convert the heliocentric phase-space coordinates into
-Galactocentric coordinates assuming the Sun's position and velocity are $x_\odot
-= (-8.3, 0, 0)~{\rm kpc}$ and $v_\odot = (10, 244, 7.17)~\kms$ (\citealt{bovy,
-etc.}).
+(\citealt{2013PASP..125..306F}) to generate posterior samples in $(r, v_\alpha,
+v_\delta, v_r)$ by running 64 walkers for 4608 steps and discarding the first
+512 steps as the burn-in period.
+For each sample, we convert the heliocentric phase space coordinates into
+Galactocentric coordinates assuming that the Sun's position and velocity are
+$\vec x_\odot = (-8.3,\,0,\,0)~{\rm kpc}$ and $\vec v_\odot = (10,\,244,\,7.17)~\kms$.
+% TODO: APW (\citealt{bovy, etc.}).
 \figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
-Galactocentric phase-space coordinates for the two stars.
-In all components, the pair is consistent with being co-moving and close in
-separation; the sky-projected separation of the two stars is $\approx$$0.01~\pc$
-but the median 3-space separation is $\approx$$0.6~\pc$.
+Galactocentric phase space coordinates for the two stars.
+The differences in positions and velocities are consistent with zero.
 
 Given their proximity in phase space, it is generally accepted to assume that
 the two stars were born together and, perhaps, are a bound wide binary system.
