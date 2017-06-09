@@ -11,20 +11,15 @@ all: ${NAME}.pdf
 
 
 ${NAME}.pdf: ${NAME}.tex ref.bib kk.tex
-	if [ -a ref.local.bib ] ; \
-	then \
-		if [ -a ref.bib ] ; \
-		then \
-			${RM} ref.bib; \
-		fi; \
-		bibexport -a -o ref.bib ref.local.bib ; \
-	fi;
 	${LATEX} ${NAME}
 	bibtex ${NAME}
 	${LATEX} ${NAME}
 	( grep "Rerun to get" ${NAME}.log && ${LATEX} ${NAME} ) || echo "Done."
 	( grep "Rerun to get" ${NAME}.log && ${LATEX} ${NAME} ) || echo "Done."
 
+ref: ref.local.bib
+	${RM} ref.bib; 
+	bibexport -a -o ref.bib ref.local
 
 clean:
 	${RM} $(foreach suff, ${TMP_SUFFS}, ${NAME}.${suff})
