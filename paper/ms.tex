@@ -599,18 +599,20 @@ the differences in other pairs for all elements except \elem{N} and \elem{O},
 which are also the most uncertain (\tablename~\ref{tab:kk}),
 are less than $0.05$~dex, making \bizarreone-\sunanalog\ pair a significant outlier.
 
-%TODO: APW what is the histogram of?
 %TODO: plot styles...
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=\linewidth]{orbits.pdf}
   \end{center}
-  \caption{Galactic orbits computed for \sunanalog\ (black) and the Sun (grey).
+  \caption{Left panel: Galactic orbits computed for \sunanalog\ (black) and the
+    Sun (grey).
     For \sunanalog, the initial conditions are set to the median of the
-    posterior sample over the phase-space coordinates.
+    posterior samples over the phase-space coordinates.
     The orbits are computed by integrating backwards from the present-day
     positions for $2.5$~Gyr with a time step of $0.5$~Myr using the Leapfrog
     integration scheme implemented in \project{Gala} (\citealt{gala}).
+    Right panel: distribution of maximum $z$-heights for orbits computed from
+    all posterior samples.
   }
   \label{fig:orbit}
 \end{figure}
