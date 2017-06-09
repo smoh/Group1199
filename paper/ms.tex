@@ -557,11 +557,14 @@ v_\delta, v_r)$ by running 64 walkers for 4608 steps and discarding the first
 512 steps as the burn-in period.
 For each sample, we convert the heliocentric phase-space coordinates into
 Galactocentric coordinates assuming that the Sun's position and velocity are
-$\vec x_\odot = (-8.3,\,0,\,0)~{\rm kpc}$ and $\vec v_\odot = (10,\,244,\,7.17)~\kms$.
-% TODO: APW (\citealt{bovy, etc.}).
+$\vec x_\odot = (-8.3,\,0,\,0)~{\rm kpc}$ and $\vec v_\odot =
+(-11.1,\,244,\,7.25)~\kms$ \citep[e.g.,][]{Schonrich:2010, Schonrich:2012}.
+
 \figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
 Galactocentric phase-space coordinates for the two stars.
 The differences in positions and velocities are consistent with zero.
+\todo{should we instead show $|\Delta\boldsymbol{x}|$ and
+$|\Delta\boldsymbol{v}|$ computed from the 6D posterior samples?}
 
 Given their proximity in phase space, it is generally accepted to assume that
 the two stars were born together and, perhaps, are a bound wide binary system.
@@ -709,8 +712,8 @@ young ages that would be inferred from the surface lithium abundances.
 % TODO: reference for vertical action as age?
 Finally, we computed the Galactic orbit of the pair using the median of the
 posterior sample over the phase space coordinates of \sunanalog, in a Milky
-Way-like gravitational potential using \project{Gala} (\citealt{gala}).
-%TODO: APW to check (missing) citations
+Way-like gravitational potential (similar to \texttt{MWPotential2014} from
+\citealt{Bovy:2015}) using \project{Gala} (\citealt{gala}).
 The pair's fiducial orbit has a vertical action larger than the Sun, favoring
 an older age.
 We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr
