@@ -62,7 +62,7 @@
 \newcommand{\mat}[1]{\mathbf{#1}}
 \renewcommand{\vec}[1]{\bs{#1}}
 \newcommand{\kms}{\ensuremath{\rm km~s^{-1}}}
-\newcommand{\msun}{{\rm M}_\odot}
+\newcommand{\msun}{\ensuremath{{\mathrm M}_\odot}}
 \newcommand{\pc}{{\rm pc}}
 \newcommand{\data}{\mathrm{data}}
 \newcommand{\snr}{[S/N]_\varpi}
@@ -147,8 +147,8 @@
   The other star HD~240429, ``Krios'', may also have had a similar accretion
   event given its high surface \elem{Li} abundance but of much smaller amount
   ($\approx 4$~\mearth).
-  Follow-ups to study the existence and properties of the planetary systems
-  around these stars will help illuminate planet-star interactions.
+  %Follow-ups to study the existence and properties of the planetary systems
+  %around these stars will help illuminate planet-star interactions.
 \end{abstract}
 
 \keywords{
@@ -565,12 +565,14 @@ The differences in positions and velocities are consistent with zero.
 \todo{should we instead show $|\Delta\boldsymbol{x}|$ and
 $|\Delta\boldsymbol{v}|$ computed from the 6D posterior samples?}
 
-Given their proximity in phase space, it is generally accepted to assume that
-the two stars were born together and, perhaps, are a bound wide binary system.
+For a 2~\msun\ binary system, the Jacobi radius in the Galactic neighborhood is
+1.2~pc (\citealt{jiangtremaine2010}).
+%TODO
+\bizarreone\ and \sunanalog\ are likely a bound system that formed coevally.
 Thus, we expect the two stars to have identical metallicities and abundance patterns.
-Surprisingly, one of the stars, \bizarreone\ is significantly more metal
+However, one of the stars, \bizarreone\ is significantly more metal
 rich than the other (by 0.2~dex $\approx 60\%$; \figname~\ref{fig:abundances}).
-Even more puzzling is that not all elements are equally enhanced:
+Moreover, not all elements are equally enhanced:
 the abundances of \bizarreone\ show selective depletion in
 \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}
 relative to \elem{Fe}.
@@ -591,7 +593,7 @@ the residuals are much smaller in amplitude.
 
 
 We stress that none of the other four twin-like ($\Delta T_\mathrm{eff}
-\lesssim 100$~K) wide binary pairs examined in \citealt{2016ApJS..225...32B}
+\lesssim 100$~K) wide binary pairs examined by \citealt{2016ApJS..225...32B}
 show discrepancies in abundances between the stars at this level.
 As shown in \figname~\ref{fig:deltaXH},
 the differences in other pairs for all elements except \elem{N} and \elem{O},
@@ -734,11 +736,11 @@ we may consider the rate at which this wide binary will scatter with a field sta
 result in an exchange reaction.
 The cross-section of exchange scattering for a binary with semi-major axis $a$ is
 \begin{eqnarray}
-  \sigma_\mathrm{ex} = \frac{640}{81} \pi a^{2} \frac{1}{v^6}
+  \sigma_\mathrm{ex} = \frac{640}{81} \pi a^{2} \left(\frac{v_i}{v_c}\right)^{-6}
   \label{eq:crosssection}
 \end{eqnarray}
-where $v$ is the incoming velocity, $v_i$, in units of critical velocity,
-$v_c$, defined as
+where $v_i$ is the incoming velocity, and $v_c$ is the critical velocity,
+defined as
 \begin{eqnarray}
   v_c^2 = G \frac{m_1 m_2 (m_1 + m_2 + m_3)}{m_3 (m_1 + m_2)} \frac{1}{a}\,\,.
 \end{eqnarray}
@@ -776,7 +778,7 @@ unlikely to arise from variations in Galactic chemical evolution.
 \subsection{Chemical Inhomogeneity in Star Formation}
 \label{sub:chemical_inhomogeneity_in_star_formation}
 
-In case we assume that the two stars were born together, one possibility to
+Assuming that the two stars were born together, one possibility to
 explain the chemical difference is that there was chemical inhomogeneity within
 the birth cloud.
 However, there is already ample evidence against such a scenario.
@@ -919,19 +921,19 @@ but is depleted quickly within the first couple of Gyrs on the surface of a
 Sun-like star, accretion of either material at later times will significantly
 replenish the lithium on the star's surface.
 For the present-day Sun, the accretion of $20~\mearth$ of bulk Earth-like
-material results in $\Delta\elemH{Li} \approx 1.6$~dex (which
+material would result in $\Delta\elemH{Li} \approx 1.6$~dex (which
 is indicated as an upward arrow in \figname~\ref{fig:toycalc}).
 Incidentally, the star under examination, \bizarreone, has an age (informed by
 stellar parameters) very close to the Sun ($4.28_{-1.03}^{+1.11}$~Gyr).
 Thus, as long as we believe the Sun's present-day surface \elem{Li} abundance
-to be ordinary, this predicts that the \bizarreone\ should have $1.6$~dex
+to be ordinary, the accretion of $20$~\mearth\ by \bizarreone\ is consistent with $1.6$~dex
 enhancement in its \elem{Li}.
 This is exactly what we find: the \elem{Li} abundance of \bizarreone\ is
 $A(\elem{Li}) = 2.75$ (Table~\ref{tab:kk}, \citealt{jmlithium})
 approximately $1.65$~dex higher than the solar value of $1.1$~dex
 (\todo{needs reference}).
 Furthermore, this implies that the accretion event should have happened very
-recently, or at least within the \elem{Li} depletion time.
+recently, or at least within the \elem{Li} depletion time ($\lesssim 1$~Gyr).
 
 What about \sunanalog?
 Considering its age of $4.00_{-1.56}^{+1.51}$~Gyr, \sunanalog\ is also enhanced
@@ -951,7 +953,7 @@ Unlike \bizarreone, we cannot know the pre-accretion abundances of
 }
 However, we note that the span of abundance difference between highly volatile
 elements (\elem{C}, \elem{N}, \elem{O}, \elem{Na}) and refractory elements such
-as \elem{Fe} expected from accreting $4$~\mearth to the Sun is $\approx
+as \elem{Fe} expected from accreting $4$~\mearth\ to the Sun is $\approx
 0.05$~dex.
 This is comparable to the abundance difference between N, Na and Fe in
 \sunanalog.
@@ -959,7 +961,8 @@ It is also interesting that \sunanalog\ shows a deficit in the same volatile
 and moderately volatile elements (\elem{C}, \elem{N}, \elem{O}, \elem{Na}, and
 \elem{Mn}) relative to Fe as in \bizarreone.
 Thus, we conclude that \sunanalog\ is also likely to have had a similar
-accretion event, but the amount of accretion was much smaller than \bizarreone.
+accretion event, but the amount of accretion was at least 5 time
+smaller than \bizarreone.
 
 %TODO: augment this paragraph
 % - more geochemical study references
@@ -1011,7 +1014,7 @@ The two stars have not been included in any publicly released data from planet
 search programs.
 If both stars have accreted planetary material, it would be very interesting to
 search for the existence and architectures of the planetary systems left
-behind, and whether they are very different between the two stars.
+behind.
 
 %TODO: Implications
 %- chemical tagging, frequency is of concern
