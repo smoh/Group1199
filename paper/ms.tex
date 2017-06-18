@@ -24,6 +24,7 @@
 \hypersetup{backref,breaklinks,colorlinks,urlcolor=cbblue,linkcolor=cbblue,citecolor=black}
 \graphicspath{{figures/}}
 
+\setcitestyle{square,numbers}
 
 % define macros for text
 \newcommand{\project}[1]{\textsl{#1}}
@@ -170,20 +171,8 @@
 \section{Main Text}
 \label{sec:main}
 
-\input{kk.tex}
 
 
-%Here, we report and discuss the discovery of a comoving pair of G stars,
-%HD~240430 and HD~240429, with unusual chemical abundance differences
-%that strongly suggest accretion of planetary material by the two stars.
-%Throughout the \documentname, we nickname the two stars \bizarreone\
-%(HD~240430) and \sunanalog\ (HD~240429).
-%We use the following convention for chemical abundances of stars: \elemH{X} is
-%the log ratio of number density of element \elem{X} to \elem{H} relative to the
-%solar value.
-%The absolute abundance of \elem{X} is $A(\elem{X}) = 12 + \log_{10}
-%(n_\elem{X}/n_\elem{H})$ where $n_\elem{X}$ is the number density of element
-%\elem{X}.
 %In \sectionname~\ref{sec:data} we present the astrometric and spectroscopic data
 %about the two stars relevant to the present discussion.
 %In \sectionname~\ref{sec:discussion} we discuss possible interpretations of
@@ -204,65 +193,23 @@
   \label{fig:abundances}
 \end{figure}
 
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.95\linewidth]{deltaXH_elem_violins.pdf}
-  \caption{Abundance difference in this pair and other twin-like
-    ($\Delta T_\mathrm{eff}\lesssim 100$~K) wide binaries in
-    \citealt{2016ApJS..225...32B}.
-    The differences in other pairs are small ($<0.05$~dex)
-    for all elements except \elem{N} and \elem{O} which are the most
-    uncertain, making the difference of $\approx 0.2$~dex seen in
-    \bizarreone-\sunanalog\ rare.
-    Additionally, we show the distribution of abundance differences
-    between field stars with similar metallicity difference
-    ($\Delta[\elem{Fe}/\elem{H}] \approx 0.2$)
-    as violins with medians indicated by black line segments.
-    These are random pairings of single stars in
-    in \citealt{2016ApJS..225...32B} at two metallicity bins,
-    $-0.025 < \feh < 0.025$ (160 stars) and $0.175 > \feh > 0.225$ (137 stars),
-    similar to \bizarreone\ and \sunanalog.
-    The difference is always taken to be
-    $\mathrm{higher}\,\feh - \mathrm{lower}\,\feh$.
-    Thus, the narrower range of in $\Delta\feh$ is by construction.
-    Random pairings of disk stars with similar $\Delta\feh$ usually show
-    similar enhancement in all other elements
-    unlike the pattern seen in \bizarreone-\sunanalog\ pair.
-  }
-  \label{fig:deltaXH}
-\end{figure}
-
-
 \sunanalog\ and \bizarreone\ were identified as a
 candidate comoving star pair in our recent search for comoving stars using the
 proper motions and parallaxes from the \tgas\ catalog, a component of \gaia\ \dr\
 (the astrometric measurements are listed in \tablename~\ref{tab:kk}).
 The pair has also been previously recognized as a visual double star system
 in Washington Double Star catalog (\citealt{2001AJ....122.3466M}).
+The two stars have spectral types G0 and G2 like the Sun.
 High resolution spectra of both stars were obtained using the HIRES spectrograph
 on the Keck-I telescope in a separate effort to
 to study detailed chemical abundances of potential
-planet-hosting stars, \citet{2016ApJS..225...32B}
+planet-hosting stars (\citealt{2016ApJS..225...32B}).
 The spectral resolution is $R\approx 70000$ and the wavelength coverage is
 $5164$--$7799$~\AA.
 A typical signal-to-noise ratio in the spectral continuum is $>200$~per pixel.
-
-
 The resulting measurements include elemental abundances for 15 chemical species
 (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as well as stellar parameters
 and high precision radial velocities.
-For the details of the spectral analysis, we refer the readers to
-\citealt{2016ApJS..225...32B}.
-The \elem{Li} doublet at $6707.6$~\AA\ --- clearly visible in both spectra (see
-\figname~\ref{fig:spec2}) --- for this sample was investigated in a separate
-work (\citealt{jmlithium}).
-We list all spectroscopic measurements including
-the absolute abundance\footnote{
-  The absolute abundance of element \elem{X} is
-  $A(\elem{X}) = \log_{10} (n_\elem{X}/n_\elem{H})$
-  where $n_\elem{X}$ is the number density of element \elem{X}.
-}
-of \elem{Li} for the two stars in Table~\ref{tab:kk}.
 
 The projected separation between the pair is 1.9\arcmin\ ($\approx 0.01$~pc),
 and the 3D separation is $\approx 0.6$~pc.
@@ -272,11 +219,19 @@ confirming that they are truly comoving.
 Combining these precise radial velocities with the \gaia\ \tgas\ astrometry, we
 can compare differences between the inferred 6D phase-space coordinates of the
 two stars.
-
 For a 2~\msun\ binary system, the Jacobi radius in the Galactic neighborhood is
 1.2~pc (\citealt{jiangtremaine2010}).
 %TODO
 \bizarreone\ and \sunanalog\ are likely a bound system that formed coevally.
+
+%We use the following convention for chemical abundances of stars: \elemH{X} is
+%the log ratio of number density of element \elem{X} to \elem{H} relative to the
+%solar value.
+%The absolute abundance of \elem{X} is $A(\elem{X}) = 12 + \log_{10}
+%(n_\elem{X}/n_\elem{H})$ where $n_\elem{X}$ is the number density of element
+%\elem{X}.
+
+
 Thus, we expect the two stars to have identical metallicities and abundance patterns.
 However, one of the stars, \bizarreone\ is significantly more metal
 rich than the other (by 0.2~dex $\approx 60\%$; \figname~\ref{fig:abundances}).
@@ -284,9 +239,6 @@ Moreover, not all elements are equally enhanced:
 the abundances of \bizarreone\ show selective depletion in
 \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}
 relative to \elem{Fe}.
-Both stars have high surface \elem{Li} abundances, and the difference in
-\elem{Li} abundance ($\approx 0.5$~dex) is the largest among all elements
-measured.
 
 The validity of the measured abundance differences is further demonstrated
 in \figname~\ref{fig:spec1} and \ref{fig:spec2} where we show
@@ -299,6 +251,28 @@ However, for lines of elements that are not as enhanced in \bizarreone\,
 the residuals are much smaller in amplitude.
 %Li?
 
+Assuming that the two stars were born together, one possibility to
+explain the chemical difference is that there was chemical inhomogeneity within
+the birth cloud.
+However, there is already ample evidence against such a scenario.
+First, none of the other seven similar wide binaries examined in
+\citealt{2016ApJS..225...32B} show the same level of differences in abundances.
+Though there is generally a larger spread in $\elem{C}$, $\elem{N}$ and
+$\elem{O}$, and some pairs show a difference in particular elements as large as
+$\approx 0.15$~dex.
+The median and maximum \feh\ difference between component stars in the other
+seven pairs is $0.02$~dex and $0.09$~dex, respectively.
+The differences are even smaller (maximum $\Delta\feh = 0.03$~dex) if we
+compare only twin-like ($\Delta T_\mathrm{eff} \lesssim 100$~K) pairs
+(\figname~\ref{fig:deltaXH}).
+This is consistent with the findings of \citealt{Desidera:2004aa}, who examined
+23 wide binaries of late F to K dwarfs, and found most pairs show a difference
+in \feh\ less than $0.02$~dex and none larger than $0.07$~dex.
+Similarly, \citealt{Gratton:2001aa} found that four out of six equal mass
+binaries have the same chemical composition with $\gtrsim 0.01$~dex
+uncertainties.
+Thus, a difference of $\approx 0.2$~dex seen in \bizarreone-\sunanalog\ pair is
+not likely due to chemical inhomogeneity in the birth cloud.
 
 We stress that none of the other four twin-like ($\Delta T_\mathrm{eff}
 \lesssim 100$~K) wide binary pairs examined by \citealt{2016ApJS..225...32B}
@@ -308,8 +282,13 @@ the differences in other pairs for all elements except \elem{N} and \elem{O},
 which are also the most uncertain (\tablename~\ref{tab:kk}),
 are less than $0.05$~dex, making \bizarreone-\sunanalog\ pair a significant outlier.
 
-%\section{Discussion}
-%\label{sec:discussion}
+The spectra of both stars 
+The \elem{Li} doublet at $6707.6$~\AA\ --- clearly visible in both spectra (see
+\figname~\ref{fig:spec2}) --- for this sample was investigated in a separate
+work (\citealt{jmlithium}).
+Both stars have high surface \elem{Li} abundances, and the difference in
+\elem{Li} abundance ($\approx 0.5$~dex) is the largest among all elements
+measured.
 
 
 %\subsection{Stellar Ages \& Coevality}
@@ -373,32 +352,6 @@ old main sequence stars, and that their unusually high \elem{Li} abundance
 requires an alternative explanation.
 
 
-\subsection{Chemical Inhomogeneity in Star Formation}
-\label{sub:chemical_inhomogeneity_in_star_formation}
-
-Assuming that the two stars were born together, one possibility to
-explain the chemical difference is that there was chemical inhomogeneity within
-the birth cloud.
-However, there is already ample evidence against such a scenario.
-First, none of the other seven similar wide binaries examined in
-\citealt{2016ApJS..225...32B} show the same level of differences in abundances.
-Though there is generally a larger spread in $\elem{C}$, $\elem{N}$ and
-$\elem{O}$, and some pairs show a difference in particular elements as large as
-$\approx 0.15$~dex.
-The median and maximum \feh\ difference between component stars in the other
-seven pairs is $0.02$~dex and $0.09$~dex, respectively.
-The differences are even smaller (maximum $\Delta\feh = 0.03$~dex) if we
-compare only twin-like ($\Delta T_\mathrm{eff} \lesssim 100$~K) pairs
-(\figname~\ref{fig:deltaXH}).
-This is consistent with the findings of \citealt{Desidera:2004aa}, who examined
-23 wide binaries of late F to K dwarfs, and found most pairs show a difference
-in \feh\ less than $0.02$~dex and none larger than $0.07$~dex.
-Similarly, \citealt{Gratton:2001aa} found that four out of six equal mass
-binaries have the same chemical composition with $\gtrsim 0.01$~dex
-uncertainties.
-Thus, a difference of $\approx 0.2$~dex seen in \bizarreone-\sunanalog\ pair is
-not likely due to chemical inhomogeneity in the birth cloud.
-
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=0.95\linewidth]{toycalc.png}
@@ -421,31 +374,6 @@ not likely due to chemical inhomogeneity in the birth cloud.
   \label{fig:toycalc}
 \end{figure}
 
-\subsection{Accretion of rocky planetary material}
-\label{sub:accretion}
-
-Another possibility that two coeval stars may end up with different surface
-abundances is accretion of planetary material after birth.
-Instabilities may develop in a multi-planet system due to its chaotic nature
-which may lead to planet engulfment or ejection by the host star
-(\todo{needs references}).
-%TODO: kozai?
-Indeed, it is an important goal of many exoplanet studies
-to detect chemical signatures of planet formation or accretion,
-distinguish them from Galactic chemical evolution, and
-connect them to theories of evolution of planetary systems.
-One approach that is free from confusion with Galactic chemical evolution
-is to compare two almost identical stars in a wide binary system.
-Assuming that the component stars were born together with identical
-initial composition, we may see a difference in their surface abundances
-if the two stars then accreted different amounts of planetary material.
-The resulting abundance difference may depend on the condensation
-temperatures of elements in the protoplanetary disks from which the accreted
-planets formed, as their compositions depend on the radial temperature gradient
-in the disk.
-%TODO: cautions on condensation temperature
-% 1. it is just a proxy
-% 2. it is **equlibrium** condensation temperature
 
 In Figure~\ref{fig:relabun_tcrank}, we show the abundance difference
 between \bizarreone\ and \sunanalog\ ordered by the rank of \Tcondens\
@@ -464,6 +392,29 @@ This $\Tcondens$-dependent trend of $\Delta\elemH{X}$,
 combined with the enhanced $\elem{Li}$ abundance ($A(\elem{Li}) = 2.75$),
 strongly suggests that accretion of rocky material has occured in \bizarreone.
 
+We interpret the condensation temperature dependent
+difference of elemental abundance between the two stars
+as evidence for accretion of rocky planetary material in \bizarreone.
+Instabilities may develop in a multi-planet system due to its chaotic nature
+which may lead to planet engulfment or ejection by the host star
+(\todo{needs references}).
+%TODO: kozai?
+
+
+One approach that is free from confusion with Galactic chemical evolution
+is to compare two almost identical stars in a wide binary system.
+Assuming that the component stars were born together with identical
+initial composition, we may see a difference in their surface abundances
+if the two stars then accreted different amounts of planetary material.
+The resulting abundance difference may depend on the condensation
+temperatures of elements in the protoplanetary disks from which the accreted
+planets formed, as their compositions depend on the radial temperature gradient
+in the disk.
+%TODO: cautions on condensation temperature
+% 1. it is just a proxy
+% 2. it is **equlibrium** condensation temperature
+
+
 How much mass of rocky material is needed to explain an increment of
 $\approx 0.2$~dex?
 We carry out simple toy calculations of expected $\Delta\elemH{X}$
@@ -476,7 +427,6 @@ under these simplifying assumptions:
   \item The surface abundance of the star has been altered only by the
     accretion event(s).
 \end{itemize}
-
 We take the solar abundances, $\elemH{X}$, of element \elem{X}
 (\citealt{Asplund:2009aa}) which can be converted to mass fraction as
 \begin{equation}
@@ -618,5 +568,6 @@ participating in the {\it Gaia} Multilateral Agreement.
 
 
 
+\input{kk.tex}
 
 \end{document}
