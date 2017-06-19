@@ -21,6 +21,9 @@ ref: ref.local.bib
 	${RM} ref.bib; 
 	bibexport -a -o ref.bib ref.local
 
+count: ms.tex
+	texcount ms.tex
+
 clean:
 	${RM} $(foreach suff, ${TMP_SUFFS}, ${NAME}.${suff})
 	${RM} gitstuff.aux
