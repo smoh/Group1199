@@ -30,6 +30,7 @@
 \usepackage{hyperref}
 \hypersetup{backref,breaklinks,colorlinks,citecolor=blue}
 \usepackage{mathptmx}
+\usepackage{threeparttable}
 
 % per section figure counting
 \usepackage{chngcntr}
@@ -147,17 +148,22 @@
 % ------------------------
 \section{Summary}
 {\bf \noindent
-  Stars that are born together are expected to have same chemical compositions initially.
-  Detailed chemical abundance studies of stars in wide binaries indeed reveal nearly identical
-  chemistry in most cases\citep{Gratton:2001aa,Desidera:2004aa} as well as stars in open clusters\cite{Bovy:2016aa}.
-  However, formation and evolution of different planetary systems around each star in a wide binary
-  may eventually lead to a difference in compositions of the component stars' radiative and
-  convective layers\cite{Pinsonneault:2001aa,Chambers:2010aa}.
+  Stars that are born together are expected to have same chemical compositions
+  initially.
+  Detailed chemical abundance studies of stars in wide binaries indeed reveal
+  nearly identical chemistry in most
+  cases\citep{Gratton:2001aa,Desidera:2004aa} as well as stars in open
+  clusters\cite{Bovy:2016aa}.
+  However, formation and evolution of different planetary systems around each
+  star in a wide binary may eventually lead to a difference in compositions of
+  the component stars' radiative and convective
+  layers\cite{Pinsonneault:2001aa,Chambers:2010aa}.
   Wide binary systems of two twin-like stars are particularly useful
   as they are not subject to confusion with Galactic chemical evolution.
   A handful of wide binaries that show small differences in their surface
   chemical abundances have been reported so far
-  \cite{Mack:2014aa,Mack:2016aa,Saffe:2015aa,Teske:2013aa,Teske:2015aa,Teske:2016aa,Teske:2016ab,Biazzo:2015aa,Ramirez:2015aa}.
+  \cite{Mack:2014aa,Mack:2016aa,Saffe:2015aa,Teske:2013aa,
+    Teske:2015aa,Teske:2016aa,Teske:2016ab,Biazzo:2015aa,Ramirez:2015aa}.
   However, a convincing example is yet to be found.
   Here we report a comoving pair of bright sun-like stars, HD~240430 and HD~240429,
   with a significant difference ($\approx 0.2$~dex) in their chemical
@@ -198,27 +204,63 @@
 \end{figure}
 
 \begin{table*}[htpb]
-  \caption{Astrometric and spectroscopic measurements.}
-  \label{tab:t1}
   \centering
-  \begin{tabular}{ccc}
+  \begin{threeparttable}
+  \caption{Astrometric and spectroscopic measurements of the pair\label{tab:t1}}
+\begin{tabular}{ccccc}
 \hline\hline
-Name & HD 240429 & HD 240430 \\
+                        &                & \sunanalog\            & \bizarreone\           &               \\
+Name                    & Units          & HD 240429              & HD 249439              & Uncertainties \\
 \hline
-Sp Type                                   & G2                & G0                \\
-$T_\mathrm{eff}$                          & 5878              & 5803              \\
-$\log{g}$                                 & 4.43              & 4.33              \\
-$v\sin{i}$                                & 1.1               & 2.5               \\
-$[\elem{Fe}/\elem{H}]$                    & 0.01              & 0.20              \\
-$v_r$                                     & $-21.2$           & $-21.2$           \\
-$\varpi$ \footnotemark[1]                 & $9.35 \pm 0.24$   & $9.41 \pm 0.25$   \\
-$\mu_\alpha^*$ \footnotemark[1]           & $89.25 \pm 0.66$  & $89.41 \pm 0.69$  \\
-$\mu_\delta$ \footnotemark[1]             & $-29.68 \pm 0.54$ & $-30.12 \pm 0.52$ \\
-\hline\hline 
+Sp Type                 &                & G2                     & G0                     &               \\
+R.A.\tnote{a}           & hh:mm:ss       & 23:51:55.21            & 23:52:09.42            &               \\
+Dec.\tnote{a}           & dd:mm:ss       & 59:42:48.16            & 59:42:26.08            &               \\
+2MASS $J$\tnote{a}      & mag            & $8.593 \pm 0.023$      & $8.415 \pm 0.026$      &               \\
+$T_\mathrm{eff}$        & K              & 5878                   & 5803                   & 25            \\
+$\log{g}$               &                & 4.43                   & 4.33                   & 0.028         \\
+$v\sin{i}$              & \kms\          & 1.1                    & 2.5                    &               \\
+$[\elem{Fe}/\elem{H}]$  &                & 0.01                   & 0.20                   & 0.010         \\
+Age\tnote{b}            & Gyr            & $4.00_{-1.56}^{+1.51}$ & $4.28_{-1.03}^{+1.11}$ &               \\
+$v_r$                   & \kms\          & $-21.2$                & $-21.2$                & 0.2           \\
+$\varpi$\tnote{a}       & mas            & $9.35 \pm 0.24$        & $9.41 \pm 0.25$        &               \\
+$\mu_\alpha^*$\tnote{a} & mas\,yr$^{-1}$ & $89.25 \pm 0.66$       & $89.41 \pm 0.69$       &               \\
+$\mu_\delta$\tnote{a}   & mas\,yr$^{-1}$ & $-29.68 \pm 0.54$      & $-30.12 \pm 0.52$      &               \\
+\hline 
+\multicolumn{5}{c}{$T_c < 1200$~K} \\
+\hline 
+$A(\elem{Li})$\tnote{c} &                & $2.25$                 & $2.75$                 &               \\
+$\elemH{C}$             &                & $0.00$                 & $0.09$                 & 0.026         \\
+$\elemH{N}$             &                & $-0.06$                & $-0.01$                & 0.042         \\
+$\elemH{O}$             &                & $0.01$                 & $0.09$                 & 0.036         \\
+$\elemH{Na}$            &                & $-0.06$                & $-0.04$                & 0.014         \\
+$\elemH{Mn}$            &                & $-0.03$                & $0.00$                 & 0.020         \\
+\hline 
+\multicolumn{5}{c}{$T_c > 1200$~K} \\
+\hline 
+$\elemH{Mg}$            &                & $0.01$                 & $0.19$                 & 0.012         \\
+$\elemH{Al}$            &                & $0.01$                 & $0.21$                 & 0.028         \\
+$\elemH{Si}$            &                & $0.00$                 & $0.16$                 & 0.008         \\
+$\elemH{Ca}$            &                & $0.02$                 & $0.23$                 & 0.014         \\
+$\elemH{Ti}$            &                & $0.02$                 & $0.20$                 & 0.012         \\
+$\elemH{V}$             &                & $0.02$                 & $0.20$                 & 0.034         \\
+$\elemH{Cr}$            &                & $0.01$                 & $0.17$                 & 0.014         \\
+$\elemH{Fe}$            &                & $0.01$                 & $0.20$                 & 0.010         \\
+$\elemH{Ni}$            &                & $-0.01$                & $0.21$                 & 0.014         \\
+$\elemH{Y}$             &                & $0.04$                 & $0.26$                 & 0.030         \\
+
 \end{tabular}
+\begin{tablenotes}
+\item [a] From \tgas.
+\item [b] Derived in this work by isochrone fitting using the Yale-Yonsei model
+  isochrones\cite{2013ApJ...776...87S}.
+\item [c] Absolute abundances from Myles \etal, in prep.
+\item All values are from \citet{2016ApJS..225...32B} unless otherwise noted.
+\end{tablenotes}
+\end{threeparttable}
 \end{table*}
 
 
+% general description of the pair and measurements
 \sunanalog\ and \bizarreone\ were identified as a candidate comoving star pair
 in our recent search for comoving stars using the proper motions and parallaxes
 from the {\it Tycho-Gaia Astrometric Solution} catalog (hereafter \tgas), a
@@ -228,16 +270,17 @@ The pair has also been previously recognized as a visual double star system
 in Washington Double Star catalog\cite{2001AJ....122.3466M}.
 The two stars have spectral types G0 and G2 both similar to the Sun (G2).
 In a separate effort to study detailed chemical abundances of potential
-planet-hosting stars, high resolution, high signal-to-noise ratio spectra of
+planet-hosting stars, high resolution ($R=\lambda/\Delta\lambda\approx 70000$),
+high signal-to-noise ratio (typically $>200$ per pixel in continuum) spectra of
 both stars were obtained using the HIRES spectrograph on the Keck-I
 telescope\cite{2016ApJS..225...32B}. 
-The spectral resolution is $R=\lambda/\Delta\lambda\approx 70000$ and the
-wavelength coverage is $5164$--$7799$~\AA.
-A typical signal-to-noise ratio in the spectral continuum is $>200$~per pixel.
+The wavelength coverage is $5164$--$7799$~\AA.
 The resulting measurements include elemental abundances for 15 chemical species
 (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as well as stellar
 parameters and high precision ($\sigma\approx0.2$~\kms) radial velocities.
 
+% likely origin given its proximity in phase space
+% TODO reference dxdv figure here
 The projected separation between the pair is 1.9 arcmin\ ($\approx 0.01$~pc),
 and the 3D separation is $\approx 0.6$~pc.
 Although selected based only on their astrometry, the two stars
@@ -247,6 +290,8 @@ As the separation is smaller than the Jacobi radius (1.2~pc) in the solar
 neighborhood for a 2~\msun\ binary system\cite{Jiang:2010aa}, \bizarreone\ and
 \sunanalog\ are likely a bound wide binary system that formed coevally.
 
+% coevality based on stellar parameters
+% TODO reference supplement discussion on age here?
 Their stellar parameters also indicate that they are coeval with an age of $\sim 4$~Gyr.
 We use the distances (inferred from \gaia\ parallaxes), $V$-band magnitudes,
 and $B-V$ colors to obtain bolometric luminosities of the two stars\cite{2003AJ....126..778V}.
@@ -257,50 +302,44 @@ The best-fit isochrone ages of \sunanalog\ and \bizarreone\ are
 $4.00_{-1.56}^{+1.51}$~Gyr and $4.28_{-1.03}^{+1.11}$~Gyr, respectively,
 consistent with them being coeval.
 
-However, one of the stars, \bizarreone\, is significantly more metal
-rich than the other (by 0.2~dex $\approx 60\%$; \figname~\ref{fig:abundances}).
-Moreover, not all elements are equally enhanced:
-the abundances of \bizarreone\ show selective under-enhancement in
-\elem{C}, \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}
-relative to \elem{Fe} and other refractory elements.
-%
-The validity of the measured abundance differences is further demonstrated
-in \figname~\ref{fig:spec1} and \ref{fig:spec2} where we show
-segments of the spectra and models of the two stars
-used to measure their abundances.
-As expected from their reported metallicity difference ($\Delta\feh \approx 0.2$),
-the ratio of data and model between the two stars show significant
-residuals of almost all metal line features, largely dominated by \elem{Fe}.
-However, for lines of elements that are not as enhanced in \bizarreone\,
-the residuals are much smaller in amplitude.
+% metallicity and abundance difference
+However, one of the stars, \bizarreone\, is significantly more metal rich than
+the other (by 0.2~dex $\approx 60\%$; \figname~\ref{fig:abundances}).
+Moreover, not all elements are equally enhanced: the abundances of \bizarreone\
+show selective under-enhancement in \elem{C}, \elem{N}, \elem{O}, \elem{Na},
+and \elem{Mn} relative to \elem{Fe} and other refractory elements.
+As expected from their measured metallicity difference, the ratio of data and
+model between the two stars show significant residuals of almost all metal line
+features, largely dominated by \elem{Fe}.
+However, for lines of elements that are not as enhanced in \bizarreone\, the
+residuals are much smaller in amplitude demonstrating the validity of the
+measured abundance differences (see
+Figure~\ref{fig:spec1} and \ref{fig:spec2}).
 
+% novelty
 The observed difference in metallicity and abundances are genuinely rare and
 unexpected.
 None of the other four twin-like ($\Delta T_\mathrm{eff} \lesssim 100$~K) wide
-binary pairs examined using spectra of comparable quality and the same
+binary pairs examined using spectra of similar quality and the same
 consistent measurement pipeline shows discrepancies in abundances between the
 stars at this level\cite{2016ApJS..225...32B} (see Figure~\ref{fig:deltaXH}).
-The maximum metallicity difference observed in the other pairs is $\Delta\feh = 0.03$~dex
-with $1\sigma$ statistical uncertainties in \feh\ of $0.01$~dex.
-This is consistent with similar studies of metallicity and abundance differences
-in wide binaries\cite{Gratton:2001aa,Desidera:2004aa}.
-The difference of $\approx 0.2$~dex is also the largest among a handful of
-wide binaries that do show metallicity and abundance differences with varying
+The maximum metallicity difference observed in the other pairs is $\Delta\feh =
+0.03$~dex with $1\sigma$ statistical uncertainties in \feh\ of $0.01$~dex.
+This is consistent with similar studies of metallicity and abundance
+differences in wide binaries\cite{Gratton:2001aa,Desidera:2004aa}.
+The difference of $\approx 0.2$~dex is also the largest among a handful of wide
+binaries that do show metallicity and abundance differences with varying
 significance\cite{Mack:2014aa,Mack:2016aa,Saffe:2015aa,
   Teske:2013aa,Teske:2015aa,Teske:2016aa,Teske:2016ab,Biazzo:2015aa,Ramirez:2015aa}
 (see Figure~\ref{fig:relabun_tcrank}).
 
-%As shown in \figname~\ref{fig:deltaXH},
-%the differences in other pairs for all elements except \elem{N} and \elem{O},
-%which are also the most uncertain (\tablename~\ref{tab:kk}),
-%are less than $0.05$~dex, making \bizarreone-\sunanalog\ pair a significant outlier.
-
+% high Li
 Both stars have high surface \elem{Li} abundances considering
 their ages of $\sim 4$~Gyr.
 The surface lithium abundance in a sun-like star decreases with its age due to
 mixing induced by convection or rotation, which brings the lithium into the
 interior ($T>2.5 \times 10^{6}$~K) where it will be destroyed by proton capture
-burning.
+burning. %TODO: REFERENCE
 The \elem{Li} doublet at $6707.6$~\AA, which is usually too weak to be
 detectable at this age even for high signal-to-noise spectra, is clearly
 visible in the spectra of both stars (see \figname~\ref{fig:spec2}).
@@ -381,12 +420,11 @@ provides an overall good match to the observed $\Delta\elemH{X}$,
 suggesting that the refractory-enhanced star, \bizarreone\,
 accreted $20~\mearth$ more of rocky planetary material than \sunanalog.
 
-The element \elem{Li} is worth special attention in the context of the
-accretion scenario.
-Because Li is present in either carbonaceous chondrites or bulk Earth with
-a concentration of $1-1.5$~ppm in mass (\cite{mcdonough2001composition}),
-but is depleted quickly within the first couple of Gyrs on the surface of a
-Sun-like star, accretion of either material at later times will significantly
+The accretion scenario can naturally explain the anomalously high
+surface \elem{Li} abundance in \bizarreone.
+Because \elem{Li} is strongly depleted in old sun-like stars yet
+present in bulk Earth with a concentration of $1.1$~ppm\cite{2003TrGeo...2..547M},
+late-time accretion of rocky planetary material will significantly
 replenish the lithium on the star's surface.
 For the present-day Sun, the accretion of $20~\mearth$ of bulk Earth-like
 material would result in $\Delta\elemH{Li} \approx 1.6$~dex (which
@@ -565,6 +603,10 @@ $\elemH{Y}$                               & $0.04$            & $0.26$          
 \end{figure}
 
 
+%As shown in \figname~\ref{fig:deltaXH},
+%the differences in other pairs for all elements except \elem{N} and \elem{O},
+%which are also the most uncertain (\tablename~\ref{tab:kk}),
+%are less than $0.05$~dex, making \bizarreone-\sunanalog\ pair a significant outlier.
 
 \begin{figure}[htpb]
   \centering
@@ -610,11 +652,11 @@ $\elemH{Y}$                               & $0.04$            & $0.26$          
     not dominated by \elem{Fe}.
     We mark elements that give rise to strong absorption lines.
     The feature in the third column of the second row is a strong \elem{Li}
-    line that was not modeled by \citealt{2016ApJS..225...32B}; this line was
-    studied in a separate work (\citealt{jmlithium}).
+    line that was studied in Myles \etal, in prep.
     Note that the lines of \elem{Na} and \elem{O}, which are under-enhanced
     in \bizarreone\ relative to \elem{Fe} or other refractory elements,
-    show weaker residuals.
+    show noticeably weaker residuals compared to neighboring lines of
+    refractory elements.
   }
   \label{fig:spec2}
 \end{figure}
@@ -685,7 +727,8 @@ If we define
 then the likelihood is
 \begin{equation}
   \vec{\hat y} \sim \mathcal{N}(\vec{y}, \mat{C})
-\end{equation} where $\mat{C}$ is the covariance matrix.
+\end{equation} where $\mat{C}$ is the covariance matrix, and $\mathcal{N}$ is
+normal (Gaussian) distribution.
 We adopt a uniform space density prior for the distance and an isotropic
 Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$
 \begin{eqnarray}
@@ -698,14 +741,14 @@ p(v) &=& \frac{1}{\sqrt{2\pi}\,\sigma_v} \,
   \exp\left[-\frac{1}{2} \, \frac{v^2}{\sigma_v^2} \right] \quad .
 \end{eqnarray}
 %
-For each of the two stars, we use \project{emcee}
-(\citealt{2013PASP..125..306F}) to generate posterior samples in $(r, v_\alpha,
-v_\delta, v_r)$ by running 64 walkers for 4608 steps and discarding the first
+For each of the two stars, we use \project{emcee}\cite{2013PASP..125..306F}
+to generate posterior samples in $(r, v_\alpha, v_\delta, v_r)$
+by running 64 walkers for 4608 steps and discarding the first
 512 steps as the burn-in period.
 For each sample, we convert the heliocentric phase-space coordinates into
 Galactocentric coordinates assuming that the Sun's position and velocity are
 $\vec x_\odot = (-8.3,\,0,\,0)~{\rm kpc}$ and $\vec v_\odot =
-(-11.1,\,244,\,7.25)~\kms$ \citep[e.g.,][]{Schonrich:2010, Schonrich:2012}.
+(-11.1,\,244,\,7.25)~\kms$\cite{Schonrich:2010, Schonrich:2012}.
 
 \figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
 Galactocentric phase-space coordinates for the two stars.
@@ -787,8 +830,13 @@ not likely due to chemical inhomogeneity in the birth cloud.
 
 
 We estimate how much mass of rocky material is needed to explain an increment of
-$\approx 0.2$~dex in refractory elements.
-We carry out simple toy calculations of expected $\Delta\elemH{X}$
+$\approx 0.2$~dex in refractory elements observed in \bizarreone\
+relative to \sunanalog.
+Because \sunanalog\ is a solar-twin star in that its $T_\mathrm{eff}$, \logg,
+and \feh\ is very close to those of the Sun ($\Delta T_\mathrm{eff} \approx XX$,
+$\delta\logg \approx XX$, and $\Delta\feh \approx 0$),
+we may approximate the pre-accretion abundances of \bizarreone\ with the Sun.
+The expected $\Delta\elemH{X}$
 in a Sun-like star's atmosphere by adding certain mass of bulk Earth composition
 under these simplifying assumptions:
 \begin{itemize}
