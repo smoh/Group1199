@@ -24,6 +24,9 @@ ref: ref.local.bib
 count: ms.tex
 	texcount ms.tex
 
+coverletter.pdf: coverletter.tex
+	${LATEX} coverletter.tex
+
 clean:
 	${RM} $(foreach suff, ${TMP_SUFFS}, ${NAME}.${suff})
 	${RM} gitstuff.aux
