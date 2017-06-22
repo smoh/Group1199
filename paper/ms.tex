@@ -100,7 +100,7 @@
 \title{
 \vspace{-2cm}
   Kronos \& Krios: Evidence for accretion of rocky planets in a comoving pair of G dwarfs
-  % \vspace{-1cm}
+  \vspace{-0.5cm}
 }
 
 \author{
@@ -111,19 +111,21 @@
   David N. Spergel$^{1,3}$,\,
   Justin Myles$^{2}$
 }
+\date{\small\today}
 
 \begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
 \maketitle
 
 % affiliations
+\vspace{-1cm}
 {\small\noindent
-  $^*$To whom correspondence should be addressed: \texttt{semyeong@astro.princeton.edu} \\
   $^1$Department of Astrophysical Sciences, Princeton University, 4 Ivy Lane, Princeton, NJ 08544, USA \\
   $^2$Department of Astronomy, Yale University, 260 Whitney Ave, New Haven, CT 06511, USA \\
   $^3$Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Ave, New York, NY 10010, USA \\
   $^4$Center for Data Science, New York University, 60 Fifth Ave, New York, NY 10011, USA \\
   $^5$Center for Cosmology and Particle Physics, Department of Physics, New York University, 726 Broadway, New York, NY 10003, USA \\
   $^6$Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, D-69117 Heidelberg \\
+  $^*$To whom correspondence should be addressed: \texttt{semyeong@astro.princeton.edu}
 }
 
 %% \author{Keith A. Hawkins}
@@ -296,11 +298,11 @@ Their stellar parameters also indicate that they are coeval with an age of $\sim
 We use the distances (inferred from \gaia\ parallaxes), $V$-band magnitudes,
 and $B-V$ colors to obtain bolometric luminosities of the two stars\cite{2003AJ....126..778V}.
 We then combine the luminosities with $T_\mathrm{eff}$, \elemH{Fe}, \elemH{Si}
-in order interpolate the mass, age, radius, and $\log(g)$ of each star
+in order interpolate the age, mass, and radius of each star
 in a grid of Yale-Yonsei model isochrones\cite{2013ApJ...776...87S}.
 The best-fit isochrone ages of \sunanalog\ and \bizarreone\ are
 $4.00_{-1.56}^{+1.51}$~Gyr and $4.28_{-1.03}^{+1.11}$~Gyr, respectively,
-consistent with them being coeval.
+consistent with them being coeval (see Figure~\ref{fig:yyisofitting}).
 
 % metallicity and abundance difference
 However, one of the stars, \bizarreone\, is significantly more metal rich than
@@ -339,7 +341,7 @@ their ages of $\sim 4$~Gyr.
 The surface lithium abundance in a sun-like star decreases with its age due to
 mixing induced by convection or rotation, which brings the lithium into the
 interior ($T>2.5 \times 10^{6}$~K) where it will be destroyed by proton capture
-burning. %TODO: REFERENCE
+burning. %TODO: REFERENCE?
 The \elem{Li} doublet at $6707.6$~\AA, which is usually too weak to be
 detectable at this age even for high signal-to-noise spectra, is clearly
 visible in the spectra of both stars (see \figname~\ref{fig:spec2}).
@@ -351,7 +353,7 @@ among all measured elements.
 
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=0.95\linewidth]{toycalc.png}
+  \includegraphics[width=0.95\linewidth]{deltaxh_tcrank.pdf}
   \caption{
     Comparing the observed abundance difference vs. \Tcondens\ rank
     to the expected change in solar surface abundance after adding $20$~\mearth\ of
@@ -368,12 +370,15 @@ among all measured elements.
     The element \elem{Li} is off the plot and indicated with a red arrow
     (see text for details).
   }
-  \label{fig:toycalc}
+  \label{fig:deltaxh_tcrank}
 \end{figure}
 
-We show the abundance difference between \bizarreone\ and \sunanalog\ ordered
+The abundance differences show a strong increasing trend with condensation
+temperature of elements.
+In Figure~\ref{fig:deltaxh_tcrank},
+we show the abundance difference between \bizarreone\ and \sunanalog\ ordered
 by each element's equilibrium \Tcondens\ in solar system composition
-gas\citet{2003ApJ...591.1220L} in Figure~\ref{fig:toycalc}.
+gas\citet{2003ApJ...591.1220L}.
 The five under-enhanced elements in \bizarreone\
 relative to \sunanalog\ are the five most volatile in all elements measured.
 The difference in \elem{Mn} ($\Tcondens = 1158$~K) and
@@ -384,10 +389,10 @@ to \sunanalog\ and the very high surface \elem{Li} abundance ($A(\elem{Li}) =
 2.75$) of \bizarreone\ as evidence for accretion of rocky (refractory-rich)
 planetary material in \bizarreone.
 In a multi-planet system, dynamical instabilities triggered by planet-planet
-scattering\cite{} or encounters\cite{Malmberg:2011aa} with a field star can
-lead some planets to be ejected or accreted onto its host star.
-If one of the two stars in a wide binary accreted refractory-rich (rocky) planets
-more than the other, the accretion may imprint a strong \Tcondens\-dependent
+scattering\cite{} or encounters with a field star\cite{Malmberg:2011aa} can
+lead to planet ejection or accretion.
+If one of the two stars in a wide binary accreted more refractory-rich (rocky) planets
+than the other, this may imprint a strong \Tcondens\-dependent
 abundance differences like those observed in \bizarreone-\sunanalog.
 
 
@@ -396,29 +401,26 @@ abundance differences like those observed in \bizarreone-\sunanalog.
 %% 2. it is **equlibrium** condensation temperature
 
 
-We estimate that accretion of $\approx 20$~\mearth\ of rocky planets
+We estimate that accretion of $\approx 15$~\mearth\ of rocky planets
 in \bizarreone\ relative to \sunanalog\ can explain the enhancement in
 refractory elements as well as the surface Li abundance.
-
-where $f_\mathrm{CZ}$ is the fraction of the star's mass in the convective envelope.
-We take the composition of bulk Earth from a chondritic model of the Earth
-(\cite{mcdonough2001composition}).
-Similar calculations have been performed by \citet{Chambers:2010aa} and
-\citet{Mack:2014aa,Mack:2016aa}.
-
-Figure~\ref{fig:toycalc} shows the expected change of surface abundances of
-metals in a Sun-like star after $20~\mearth$ of material with composition of
-bulk Earth is added.
+Because the anchor star, \sunanalog,
+is very close in its properties (\teff, \logg, \feh, age) to the Sun,
+we can use assume the Sun's photosphere abundances\cite{Asplund:2009aa} as the
+pre-accretion state of \bizarreone.
+In Figure~\ref{fig:deltaxh_tcrank}, we show the expected change in solar abundances,
+$\Delta\elemH{X}$, after adding $15$~\mearth\ of bulk Earth
+composition\cite{2003TrGeo...2..547M}.
 A volatility trend that more volatile (low \Tcondens) elements are more
 depleted in the Earth relative to CI or other carbonaceous chondrites
-has long been known (\cite{mcdonough2001composition}).
+has long been known\cite{mcdonough2001composition}.
 This trend is presumed to be closely related to the formation of terrestrial
 planets and, in particular to the radial temperature gradient in a
 protoplanetary disk.
-The trend resulting from adding $20~\mearth$ of bulk Earth
+The trend resulting from adding $15$~\mearth\ of bulk Earth
 provides an overall good match to the observed $\Delta\elemH{X}$,
 suggesting that the refractory-enhanced star, \bizarreone\,
-accreted $20~\mearth$ more of rocky planetary material than \sunanalog.
+accreted $15$~\mearth more of rocky planetary material than \sunanalog.
 
 The accretion scenario can naturally explain the anomalously high
 surface \elem{Li} abundance in \bizarreone.
@@ -472,17 +474,17 @@ smaller than \bizarreone.
 
 %TODO: augment this paragraph
 % - more geochemical study references
-We stress that while the calculation carried out is useful in
-an order-of-magnitude sense, further investigation of each of the simplifying
-assumptions made is warranted.
-In addition, the composition of bulk Earth has some uncertainties.
-For example, the reported bulk Earth concentration of the siderphile element
-\elem{Mn}, varies from $800$ to $1700$~ppm (\cite{1998psc..book.....L}).
-While the latter value from \cite{mcdonough2001composition} has been used in
-our calculation, the former value would bring the observed $\Delta\elemH{Mn}$
-to an even closer agreement.
-Given these limitations, the level of agreement for $\Delta\elemH{X}$ {\it and}
-\elem{Li} for \bizarreone\ is remarkable.
+%We stress that while the calculation carried out is useful in
+%an order-of-magnitude sense, further investigation of each of the simplifying
+%assumptions made is warranted.
+%In addition, the composition of bulk Earth has some uncertainties.
+%For example, the reported bulk Earth concentration of the siderphile element
+%\elem{Mn}, varies from $800$ to $1700$~ppm (\cite{1998psc..book.....L}).
+%While the latter value from \cite{mcdonough2001composition} has been used in
+%our calculation, the former value would bring the observed $\Delta\elemH{Mn}$
+%to an even closer agreement.
+%Given these limitations, the level of agreement for $\Delta\elemH{X}$ {\it and}
+%\elem{Li} for \bizarreone\ is remarkable.
 
 Given that the two stars must have engulfed planets,
 it is likely that they have not destroyed all of their planets.
@@ -525,54 +527,63 @@ participating in the {\it Gaia} Multilateral Agreement.
 
 \section{Extended Data}
 
-\begin{table*}[htpb]
-  \caption{Astrometric and spectroscopic measurements.}
-  \label{tab:t2}
+\begin{figure}[htpb]
   \centering
-  \begin{tabular}{ccc}
-\hline\hline
-Name & HD 240429 & HD 240430 \\
-\hline
-Sp Type                                   & G2                & G0                \\
-$T_\mathrm{eff}$                          & 5878              & 5803              \\
-$\log{g}$                                 & 4.43              & 4.33              \\
-$v\sin{i}$                                & 1.1               & 2.5               \\
-$[\elem{Fe}/\elem{H}]$                    & 0.01              & 0.20              \\
-$v_r$                                     & $-21.2$           & $-21.2$           \\
-$\varpi$ \footnotemark[1]                 & $9.35 \pm 0.24$   & $9.41 \pm 0.25$   \\
-$\mu_\alpha^*$ \footnotemark[1]           & $89.25 \pm 0.66$  & $89.41 \pm 0.69$  \\
-$\mu_\delta$ \footnotemark[1]             & $-29.68 \pm 0.54$ & $-30.12 \pm 0.52$ \\
-\hline
-\multicolumn{3}{c}{$T_c < 1200$~K} \\
-\hline
-$A(\elem{Li})$ \footnotemark[2]           & $2.25$            & $2.75$            \\
-$\elemH{C}$                               & $0.00$            & $0.09$            \\
-$\elemH{N}$                               & $-0.06$           & $-0.01$           \\
-$\elemH{O}$                               & $0.01$            & $0.09$            \\
-$\elemH{Na}$                              & $-0.06$           & $-0.04$           \\
-$\elemH{Mn}$                              & $-0.03$           & $0.00$            \\
-\hline
-\multicolumn{3}{c}{$T_c > 1200$~K} \\
-\hline
-$\elemH{Mg}$                              & $0.01$            & $0.19$            \\
-$\elemH{Al}$                              & $0.01$            & $0.21$            \\
-$\elemH{Si}$                              & $0.00$            & $0.16$            \\
-$\elemH{Ca}$                              & $0.02$            & $0.23$            \\
-$\elemH{Ti}$                              & $0.02$            & $0.20$            \\
-$\elemH{V}$                               & $0.02$            & $0.20$            \\
-$\elemH{Cr}$                              & $0.01$            & $0.17$            \\
-$\elemH{Fe}$                              & $0.01$            & $0.20$            \\
-$\elemH{Ni}$                              & $-0.01$           & $0.21$            \\
-$\elemH{Y}$                               & $0.04$            & $0.26$            \\
-\hline\hline
-\end{tabular}
-%
-%\begin{tablenotes}
-%  \item All spectroscopic measurements except $\elem{Li}$ are from \citealt{2016ApJS..225...32B}.
-%  \footnotetext[1]{From \tgas. }
-%  \footnotetext[2]{Absolute abundance from \todo{CITE}.}
-%\end{tablenotes}
-\end{table*}
+  \includegraphics[width=0.95\linewidth]{yyisofitting.pdf}
+  \caption{Probability density function of stellar age, mass, and radius
+    from isochrone fitting using Yonsei-Yale isochrones\cite{2013ApJ...776...87S}
+    and the star's luminosity, \teff, \feh, and \elemH{Si}.
+  }
+  \label{fig:yyisofitting}
+\end{figure}
+
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.95\linewidth]{spec1.pdf}
+  \caption{Selective segments of the spectra of \sunanalog\ and \bizarreone.
+    Alternating sets of two rows show
+    the continuum-normalized data and model in the upper panel,
+    and the ratio (\bizarreone/\sunanalog) of data (gray) and model (black)
+    in the lower panel.
+  }
+  \label{fig:spec1}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=0.95\linewidth]{spec2.pdf}
+  \caption{Same as \figname~\ref{fig:spec1}
+    but for smaller portions of spectra at longer wavelengths that are
+    not dominated by \elem{Fe}.
+    We mark elements that give rise to strong absorption lines.
+    The feature in the third column of the second row is a strong \elem{Li}
+    line that was studied in Myles \etal, in prep.
+    Note that the lines of \elem{Na} and \elem{O}, which are under-enhanced
+    in \bizarreone\ relative to \elem{Fe} or other refractory elements,
+    show noticeably weaker residuals compared to neighboring lines of
+    refractory elements.
+  }
+  \label{fig:spec2}
+\end{figure}
+
+%TODO: plot styles...
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\linewidth]{orbits.pdf}
+  \end{center}
+  \caption{Left panel: Galactic orbits computed for \sunanalog\ (black) and the
+    Sun (grey).
+    For \sunanalog, the initial conditions are set to the median of the
+    posterior samples over the phase-space coordinates.
+    The orbits are computed by integrating backwards from the present-day
+    positions for $2.5$~Gyr with a time step of $0.5$~Myr using the Leapfrog
+    integration scheme implemented in \project{Gala} (\citealt{gala}).
+    Right panel: distribution of maximum $z$-heights for orbits computed from
+    all posterior samples.
+  }
+  \label{fig:orbit}
+\end{figure}
 
 \begin{figure}[htpb]
   \centering
@@ -632,54 +643,6 @@ $\elemH{Y}$                               & $0.04$            & $0.26$          
 
 
 
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.95\linewidth]{spec1.pdf}
-  \caption{Selective segments of the spectra of \sunanalog\ and \bizarreone.
-    Alternating sets of two rows show
-    the continuum-normalized data and model in the upper panel,
-    and the ratio (\bizarreone/\sunanalog) of data (gray) and model (black)
-    in the lower panel.
-  }
-  \label{fig:spec1}
-\end{figure}
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=0.95\linewidth]{spec2.pdf}
-  \caption{Same as \figname~\ref{fig:spec1}
-    but for smaller portions of spectra at longer wavelengths that are
-    not dominated by \elem{Fe}.
-    We mark elements that give rise to strong absorption lines.
-    The feature in the third column of the second row is a strong \elem{Li}
-    line that was studied in Myles \etal, in prep.
-    Note that the lines of \elem{Na} and \elem{O}, which are under-enhanced
-    in \bizarreone\ relative to \elem{Fe} or other refractory elements,
-    show noticeably weaker residuals compared to neighboring lines of
-    refractory elements.
-  }
-  \label{fig:spec2}
-\end{figure}
-
-%TODO: plot styles...
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=\linewidth]{orbits.pdf}
-  \end{center}
-  \caption{Left panel: Galactic orbits computed for \sunanalog\ (black) and the
-    Sun (grey).
-    For \sunanalog, the initial conditions are set to the median of the
-    posterior samples over the phase-space coordinates.
-    The orbits are computed by integrating backwards from the present-day
-    positions for $2.5$~Gyr with a time step of $0.5$~Myr using the Leapfrog
-    integration scheme implemented in \project{Gala} (\citealt{gala}).
-    Right panel: distribution of maximum $z$-heights for orbits computed from
-    all posterior samples.
-  }
-  \label{fig:orbit}
-\end{figure}
-
-
 \section*{Supplementary Information}
 
 \subsection*{Proximity in phase-space coordinates}
@@ -730,7 +693,7 @@ then the likelihood is
 \end{equation} where $\mat{C}$ is the covariance matrix, and $\mathcal{N}$ is
 normal (Gaussian) distribution.
 We adopt a uniform space density prior for the distance and an isotropic
-Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$
+Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$:
 \begin{eqnarray}
 p(r) &=&
   \begin{cases}
