@@ -547,7 +547,7 @@ participating in the {\it Gaia} Multilateral Agreement.
     not dominated by \elem{Fe}.
     We mark elements that give rise to strong absorption lines.
     The feature in the third column of the second row is a strong \elem{Li}
-    line that was studied in Myles \etal, in prep.
+    line that was studied separately in Myles \etal (in prep.).
     Note that the lines of \elem{Na} and \elem{O}, which are under-enhanced
     in \bizarreone\ relative to \elem{Fe} or other refractory elements,
     show noticeably weaker residuals compared to neighboring lines of
@@ -570,8 +570,8 @@ participating in the {\it Gaia} Multilateral Agreement.
     between field stars in the same catalog\cite{2016ApJS..225...32B}
     with similar metallicity difference
     ($\Delta[\elem{Fe}/\elem{H}] \approx 0.2$)
-    as violins with medians indicated by black line segments.
-    These are random pairings of single stars in from two metallicity bins,
+    as violins (shaded regions) with medians indicated by black line segments.
+    These are random pairings of single stars from two metallicity bins,
     $-0.025 < \feh < 0.025$ (160 stars) and $0.175 > \feh > 0.225$ (137 stars),
     similar to \bizarreone\ and \sunanalog.
     The difference is always taken to be
@@ -666,8 +666,9 @@ then the likelihood is
 \begin{equation}
   \vec{\hat y} \sim \mathcal{N}(\vec{y}, \mat{C})
 \end{equation} where $\mat{C}$ is the covariance matrix, and $\mathcal{N}$ is
-normal (Gaussian) distribution.
-We adopt a uniform space density prior for the distance and an isotropic
+normal (Gaussian) distribution (see also appendices of
+\citealt{2017AJ....153..257O}).
+We adopt a uniform space-density prior for the distance and an isotropic
 Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$:
 \begin{eqnarray}
 p(r) &=&
@@ -683,7 +684,7 @@ For each of the two stars, we use \project{emcee}\cite{2013PASP..125..306F}
 to generate posterior samples in $(r, v_\alpha, v_\delta, v_r)$
 by running 64 walkers for 4608 steps and discarding the first
 512 steps as the burn-in period.
-For each sample, we convert the heliocentric phase-space coordinates into
+For each sample, we convert the Heliocentric phase-space coordinates into
 Galactocentric coordinates assuming that the Sun's position and velocity are
 $\vec x_\odot = (-8.3,\,0,\,0)~{\rm kpc}$ and $\vec v_\odot =
 (-11.1,\,244,\,7.25)~\kms$\cite{Schonrich:2010, Schonrich:2012}.
@@ -691,8 +692,8 @@ $\vec x_\odot = (-8.3,\,0,\,0)~{\rm kpc}$ and $\vec v_\odot =
 \figurename~\ref{fig:dxdv} shows differences in posterior samples converted to
 Galactocentric phase-space coordinates for the two stars.
 The differences in positions and velocities are consistent with zero.
-\todo{should we instead show $|\Delta\boldsymbol{x}|$ and
-$|\Delta\boldsymbol{v}|$ computed from the 6D posterior samples?}
+% \todo{should we instead show $|\Delta\boldsymbol{x}|$ and
+% $|\Delta\boldsymbol{v}|$ computed from the 6D posterior samples?}
 
 \subsection{Stellar Ages and Coevality}
 
@@ -742,9 +743,9 @@ using \tgas\ that the two stars belong to a larger group of young stars.
 Very young stars often show signs of activity such as
 X-ray emission from magnetic activity, emission lines, or infrared excess due to
 circumstellar disks (\todo{needs refernces}).
-We have compiled GALEX, Tycho-2, 2MASS, and WISE photometry for these stars,
-and found no evidence for indications of activity in their spectral energy
-distributions.
+We have compiled GALEX, Tycho-2, 2MASS, and WISE photometry for these stars, and
+found no evidence for indications of activity or infrared excess in their
+spectral energy distributions.
 The low $v\sin(i)$ values (\tablename~\ref{tab:kk}) also argue against very
 young ages that would be inferred from the surface lithium abundances.
 Finally, we computed the Galactic orbit of the pair using the median of the
@@ -755,7 +756,8 @@ The pair's fiducial orbit has a vertical action larger than the Sun, favoring
 an older age (\todo{needs references for vertical action as age indicator}).
 We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr
 old main sequence stars, and that their unusually high \elem{Li} abundance
-requires an alternative explanation.
+requires an alternative explanation; our favored explanation being the accretion
+of rocky, Lithium-rich material.
 
 \subsection{Alternative Scenarios}
 
@@ -763,7 +765,7 @@ requires an alternative explanation.
 \label{sub:chemical_inhomogeneity_in_star_formation}
 
 Assuming that the two stars were born together, one alternative possibility to
-explain the chemical difference between the two stars is that there was
+explain the chemical differences between the two stars is that there was
 chemical inhomogeneity within the birth cloud.
 However, there is already ample evidence against such a scenario.
 First, none of the other seven similar wide binaries examined
@@ -798,16 +800,17 @@ not likely due to chemical inhomogeneity in the birth cloud.
   \label{fig:vari}
 \end{figure}
 
-We estimate how much mass of rocky material is needed to explain an increment
-of $\approx 0.2$~dex in refractory elements observed in \bizarreone\ relative
-to \sunanalog\cite{Mack:2014aa,Mack:2016aa}.
+Here we estimate how much added rocky material is needed to explain an
+increment of $\approx 0.2$~dex in refractory elements observed in \bizarreone\
+relative to \sunanalog\cite{Mack:2014aa,Mack:2016aa}.
 Because \sunanalog\ is a solar-twin star in that its $T_\mathrm{eff}$, \logg,
 and \feh\ is very close to those of the Sun ($\Delta T_\mathrm{eff} \approx XX$,
 $\delta\logg \approx XX$, and $\Delta\feh \approx 0$),
-we may approximate the pre-accretion abundances of \bizarreone\ with the Sun.
+we may approximate the pre-accretion abundances of \bizarreone\ as being
+equivalent to the sun.
 We carry out simple toy calculations of expected $\Delta\elemH{X}$
-in a Sun-like star's atmosphere by adding certain mass of bulk Earth composition
-under these simplifying assumptions:
+in a Sun-like star's atmosphere by adding a certain mass of bulk Earth
+composition under these simplifying assumptions:
 \begin{itemize}
   \item The material added is instantly and completely mixed.
   \item The atmospheric composition that we measure is identical throughout
@@ -820,9 +823,9 @@ which can be converted to mass fraction as
 \begin{equation}
   f_{X,\mathrm{photo}} = \frac{10^{\elemH{X}} m_X}{\Sigma_X 10^{\elemH{X}} m_X}
 \end{equation}
-where $m_X$ is the mass of each element in e.g., atomic mass unit.
+where $m_X$ is the mass of each element in, e.g., atomic mass unit.
 Assuming that the added material has a total mass $M_\mathrm{add}$, and the
-mass fraction in each element $f_{X,\mathrm{add}}$,
+mass fraction in each element is $f_{X,\mathrm{add}}$,
 the abundance difference is
 \begin{equation}
   \Delta\elemH{X} = \log_{10} \frac{f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star}
