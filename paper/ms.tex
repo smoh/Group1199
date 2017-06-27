@@ -724,6 +724,7 @@ The differences in positions and velocities are consistent with zero.
 % $|\Delta\boldsymbol{v}|$ computed from the 6D posterior samples?}
 
 \subsection{Stellar Ages and Coevality}
+\label{sub:age_coevality}
 
 \begin{figure}[htbp]
   \begin{center}
@@ -751,13 +752,15 @@ The differences in positions and velocities are consistent with zero.
     integration scheme implemented in \project{Gala}\cite{gala}.
     Right panel: Distribution of maximum $z$-heights for orbits computed from
     all posterior samples for \sunanalog.
+    The large $z$-height is consistent with an old ($\sim 4$~Gyr) age
+    (\sectionname~\ref{sub:age_coevality}).
   }
   \label{fig:orbit}
 \end{figure}
 
 We provide a more detailed discussion of stellar ages and coevality of
-\bizarreone-\sunanalog\ pair, especially on whether the stars may be
-very young ($\lesssim 1$~Gyr).
+\bizarreone-\sunanalog\ pair, aside from the isochrone fitting,
+especially on whether the stars may be very young ($\lesssim 1$~Gyr).
 The surface lithium abundance in a sun-like star decreases with its age due to
 mixing induced by convection or rotation, which brings the lithium into the
 interior ($T>2.5 \times 10^{6}$~K) where it will be destroyed by proton capture
@@ -772,16 +775,16 @@ This translates to a $\sim 500$~Myr difference in age.
 Given the overall higher metal abundances and the peculiar abundance patterns
 in \bizarreone, it is unclear, however, whether this higher $\elem{Li}$
 abundance means a younger age or something else.
-For example, the presence of $\elem{Li}$-rich red giant stars has been
+For example, the presence of $\elem{Li}$-rich red giant stars was
 attributed to the engulfment of substellar companions such as gas giant planets
 or brown dwarfs which may replenish $\elem{Li}$\cite{Casey:2016aa}.
 
-In fact, the surface lithium abundance is the only indication that points to
-younger ages.
-If the two stars are indeed only several hundred Myrs old at most,
-they are expected to be part of a larger comoving group of stars.
+The surface lithium abundance is the only indicator of a
+younger age.
+If the two stars were only several hundred Myrs old, then they would likely
+have been part of a larger comoving group of stars.
 However, there is no evidence in our search\cite{2017AJ....153..257O} of
-comoving pairs using \tgas\ that the two stars belong to a larger group of
+comoving pairs using \tgas\ that these stars belong to a larger group of
 young stars.
 Very young stars often show signs of activity such as
 X-ray emission from magnetic activity, emission lines, or infrared excess due to
@@ -807,9 +810,9 @@ of rocky material that has locked lithium.
 \subsubsection{Exchange Scattering}
 \label{sub:exchange_scattering}
 
-Although the data described above strongly suggests that the two stars are
-coeval, we may still consider scenarios in which the two stars are not actually
-born together.
+While the data described above strongly suggests that the two stars are
+coeval, this subsection explores the possibility that this is not a primordial
+binary.
 Two stars unrelated at birth may end up in a binary system via a binary-single
 scattering event that results in an exchange of binary members.
 In order to estimate the rate at which any binary-single
@@ -832,22 +835,23 @@ which is the case for wide binaries
 scattering with field (disk) stars.
 If we assume that field stars are made of solar mass stars with a constant
 number density $n=1$~pc$^{-3}$, and the incoming velocity of field stars is
-$10$~km\,s$^{-1}$, a lower limit to the velocity dispersions of disk stars in
-any direction, the rate of exchange scattering is
+$10$~\kms, the rate of exchange scattering is
 \begin{eqnarray}
   n \sigma_\mathrm{ex} v_i = 6.82\times 10^{-8}\,\mathrm{Gyr}^{-1}
   \frac{n}{\mathrm{pc}^{-3}} \frac{\mathrm{pc}}{a}
   \left(\frac{10~\mathrm{km}\,\mathrm{s}^{-1}}{v_i}\right)^5\,,
 \end{eqnarray}
 which is low enough to be negligible.
+This is a conservative estimate as the relative velocity of
+disk stars exceeds $10$~\kms.
 
-In fact, any exchange scattering scenario is unsatisfactory as typical
-field stars with similar metallicities as \bizarreone\ and \sunanalog\ is very
-unlikely to show the abundance difference pattern observed.
-In \figname~\ref{fig:deltaXH}, we compare the abundance difference of
+An exchange scattering scenario is unlikely to be able to explain the observed
+abundance difference pattern.
+We test this by comparing the observed abundance difference of
 \bizarreone-\sunanalog\ with the distribution of abundance differences,
-$\Delta[\elem{X}/\elem{H}]$, between random pairings of two stars with similar
-\feh\ as \bizarreone\ and \sunanalog.
+$\Delta[\elem{X}/\elem{H}]$, between pairs of two stars randomly drawn
+from two metallicity (\feh) bins similar to \bizarreone\ and \sunanalog\
+(\figname~\ref{fig:deltaXH}).
 We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
 all other elements are typically enhanced at a similar level, with some variations.
 Specifically, for a typical star with $\feh \approx 0.2$~dex, we generally
@@ -860,11 +864,11 @@ unlikely to arise from variations in Galactic chemical evolution.
 \subsubsection{Chemical Inhomogeneity in Star Formation}
 \label{sub:chemical_inhomogeneity_in_star_formation}
 
-Assuming that the two stars were born together, one alternative possibility to
-explain the chemical differences between the two stars is that there was
-chemical inhomogeneity within the birth cloud.
-However, there is already ample evidence against such a scenario.
-First, none of the other seven similar wide binaries examined
+In this subsection, we explore the hypothesis that the chemical inhomogeneity
+within the birth cloud is the source of the \bizarreone-\sunanalog\ abundance
+anomalies.
+There is ample evidence against this scenario.
+None of the other seven similar wide binaries examined
 with the same measurement pipeline\cite{2016ApJS..225...32B}
 show the same level of differences in abundances.
 Though there is generally a larger spread in $\elem{C}$, $\elem{N}$ and
