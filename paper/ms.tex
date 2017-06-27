@@ -85,7 +85,7 @@
 \newcommand{\absdvtan}{\ensuremath{|\Delta\vec v_\mathrm{t}|}}
 \newcommand{\estimates}{\ensuremath{\{\hat{\varpi_i},\hat{\mu_{\alpha,i}},\hat{\mu_{\delta,i}},\hat{v_{r,i}}\}}}
 
-\newcommand{\todo}[1]{{TODO: #1}}
+\newcommand{\todo}[1]{{\color{red}TODO: #1}}
 
 \renewcommand\tablename{Table}
 
@@ -264,10 +264,11 @@ $\elemH{Y}$             &                & $0.04$                 & $0.26$      
 
 % general description of the pair and measurements
 \sunanalog\ and \bizarreone\ were identified as a candidate comoving star pair
-in our recent search for comoving stars using the proper motions and parallaxes
-from the {\it Tycho-Gaia Astrometric Solution} catalog (hereafter \tgas), a
-component of the first data release of the astrometric space mission \gaia\cite{2016A&A...595A...2G}
-(the astrometric measurements are listed in \tablename~\ref{tab:t1}).
+in our recent search\cite{2017AJ....153..257O} for comoving stars using the
+proper motions and parallaxes from the {\it Tycho-Gaia Astrometric Solution}
+catalog (hereafter \tgas), a component of the first data release of the
+astrometric space mission \gaia\cite{2016A&A...595A...2G} (the astrometric
+measurements are listed in \tablename~\ref{tab:t1}).
 The pair has also been previously recognized as a visual double star system
 in the Washington Double Star catalog\cite{2001AJ....122.3466M}.
 The two stars have spectral types G0 and G2, both similar to the Sun (G2).
@@ -418,7 +419,7 @@ its convective zone\cite{Pinsonneault:2001aa}.
 It has long been known that more volatile (low \Tcondens) elements are more
 depleted in the Earth relative to CI or other carbonaceous
 chondrites\cite{mcdonough2001composition} that are thought to reflect the
-elemental composition of the proto-solar nebula. \todo{Check end of last sentence}
+elemental composition of the proto-solar nebula.
 This trend is presumed to be closely related to the formation of terrestrial
 planets and, in particular to the radial temperature gradient in a
 protoplanetary disk.
@@ -509,6 +510,17 @@ Data Processing and Analysis Consortium (DPAC,
 \url{http://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC
 has been provided by national institutions, in particular the institutions
 participating in the {\it Gaia} Multilateral Agreement.
+% 2MASS
+This publication makes use of data products from the Two Micron All Sky Survey,
+which is a joint project of the University of Massachusetts and the Infrared
+Processing and Analysis Center/California Institute of Technology, funded by
+the National Aeronautics and Space Administration and the National Science
+Foundation.
+% all-WISE
+This publication makes use of data products from the Wide-field Infrared Survey
+Explorer, which is a joint project of the University of California, Los
+Angeles, and the Jet Propulsion Laboratory/California Institute of Technology,
+funded by the National Aeronautics and Space Administration.
 % software
 %\software{
 %  %The data and code used in this project is available from
@@ -612,13 +624,13 @@ participating in the {\it Gaia} Multilateral Agreement.
   \includegraphics[width=0.95\linewidth]{TcRank_deltaXH_concise.pdf}
   \caption{Comparison to other pairs that show abundance differences.
     %TODO
-    Abundance differences of the \bizarreone-\sunanalog\ pair
-    ranked by the condensation temperature of elements for solar composition gas
-    from \citet{2003ApJ...591.1220L}.
+    Abundance differences of the \bizarreone-\sunanalog\ pair ranked by the
+    condensation temperature of elements for solar composition
+    gas\cite{2003ApJ...591.1220L}.
     The condensation temperature may be read from the gray line and right y-axis.
     We show three wide binary systems selected from the literature:
-    HD~20782/1 (\citet{Mack:2014aa}, $\feh\approx0$),
-    XO-2N/S\cite{Biazzo:2015aa} ($\feh\approx0.35$)),
+    HD~20782/1\cite{Mack:2014aa} ($\feh\approx0$),
+    XO-2N/S\cite{Biazzo:2015aa} ($\feh\approx0.35$),
     and WASP-94AB\cite{Teske:2016aa} ($\feh\approx0.3$).
     Locations of elements with at least one measurement from any study
     are indicated by a vertical line and its symbol.
@@ -683,8 +695,7 @@ then the likelihood is
 \begin{equation}
   \vec{\hat y} \sim \mathcal{N}(\vec{y}, \mat{C})
 \end{equation} where $\mat{C}$ is the covariance matrix, and $\mathcal{N}$ is
-normal (Gaussian) distribution (see also appendices of
-\citealt{2017AJ....153..257O}).
+normal (Gaussian) distribution\cite{2017AJ....153..257O}.
 We adopt a uniform space-density prior for the distance and an isotropic
 Gaussian for any velocity component, $v$, with a dispersion $\sigma_v=25~\kms$:
 \begin{eqnarray}
@@ -714,30 +725,44 @@ The differences in positions and velocities are consistent with zero.
 
 \subsection{Stellar Ages and Coevality}
 
-%TODO: plot styles...
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=0.65\linewidth]{sed.pdf}
+  \end{center}
+  \caption{Spectral energy distributions of \bizarreone\ and \sunanalog.
+    We compiled the photometric measurements from
+    \project{Tycho-2}\cite{2000A&A...355L..27H},
+    \project{2MASS}\cite{2006AJ....131.1163S}, and
+    \project{WISE}\cite{2010AJ....140.1868W}.
+  }
+  \label{fig:sed}
+\end{figure}
+
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=\linewidth]{orbits.pdf}
   \end{center}
-  \caption{Left panel: Galactic orbits computed for \sunanalog\ (black) and the
+  \caption{Left panel: Galactic orbits computed for \sunanalog\ (blue) and the
     Sun (grey).
-    For \sunanalog, the initial conditions are set to the median of the
+    For \sunanalog, the initial condition is set to the median of the
     posterior samples over the phase-space coordinates.
     The orbits are computed by integrating backwards from the present-day
     positions for $2.5$~Gyr with a time step of $0.5$~Myr using the Leapfrog
-    integration scheme implemented in \project{Gala} (\citealt{gala}).
-    Right panel: distribution of maximum $z$-heights for orbits computed from
-    all posterior samples.
+    integration scheme implemented in \project{Gala}\cite{gala}.
+    Right panel: Distribution of maximum $z$-heights for orbits computed from
+    all posterior samples for \sunanalog.
   }
   \label{fig:orbit}
 \end{figure}
 
-
+We provide a more detailed discussion of stellar ages and coevality of
+\bizarreone-\sunanalog\ pair, especially on whether the stars may be
+very young ($\lesssim 1$~Gyr).
 The surface lithium abundance in a sun-like star decreases with its age due to
 mixing induced by convection or rotation, which brings the lithium into the
 interior ($T>2.5 \times 10^{6}$~K) where it will be destroyed by proton capture
 burning.
-Thus, surface lithium abundance is an indicator of stellar ages.
+Thus, surface lithium abundance can be an indicator of stellar ages.
 The absolute $\elem{Li}$ abundance of $2.25$~dex for \sunanalog\ implies an age
 of $\lesssim 1$~Gyr according to the theoretical models tuned to explain the
 solar lithium abundance and rotational profile\cite{2005Sci...309.2189C}.
@@ -755,28 +780,82 @@ In fact, the surface lithium abundance is the only indication that points to
 younger ages.
 If the two stars are indeed only several hundred Myrs old at most,
 they are expected to be part of a larger comoving group of stars.
-However, as we mention above, there is no evidence in our search of comoving pairs
-using \tgas\ that the two stars belong to a larger group of young stars.
+However, there is no evidence in our search\cite{2017AJ....153..257O} of
+comoving pairs using \tgas\ that the two stars belong to a larger group of
+young stars.
 Very young stars often show signs of activity such as
 X-ray emission from magnetic activity, emission lines, or infrared excess due to
 circumstellar disks (\todo{needs refernces}).
 We have compiled GALEX, Tycho-2, 2MASS, and WISE photometry for these stars, and
 found no evidence for indications of activity or infrared excess in their
-spectral energy distributions.
+spectral energy distributions (\figname~\ref{fig:sed}).
 The low $v\sin(i)$ values (\tablename~\ref{tab:kk}) also argue against very
 young ages that would be inferred from the surface lithium abundances.
 Finally, we computed the Galactic orbit of the pair using the median of the
 posterior sample over the phase space coordinates of \sunanalog, in a Milky
-Way-like gravitational potential (similar to \texttt{MWPotential2014} from
-\cite{Bovy:2015}) using \project{Gala} (\cite{gala}).
+Way-like gravitational potential\cite{Bovy:2015} using \project{Gala}\cite{gala}.
 The pair's fiducial orbit has a vertical action larger than the Sun, favoring
-an older age (\todo{needs references for vertical action as age indicator}).
+an older age (\figname~\ref{fig:orbit}).
+%TODO:APW needs references for vertical action as age indicator
 We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr
 old main sequence stars, and that their unusually high \elem{Li} abundance
 requires an alternative explanation; our favored explanation being the accretion
-of rocky, Lithium-rich material.
+of rocky material that has locked lithium.
 
 \subsection{Alternative Scenarios}
+
+\subsubsection{Exchange Scattering}
+\label{sub:exchange_scattering}
+
+Although the data described above strongly suggests that the two stars are
+coeval, we may still consider scenarios in which the two stars are not actually
+born together.
+Two stars unrelated at birth may end up in a binary system via a binary-single
+scattering event that results in an exchange of binary members.
+In order to estimate the rate at which any binary-single
+event will produce a wide binary system such as \sunanalog\ and \bizarreone,
+we may consider the rate at which this wide binary will scatter with a field star to
+result in an exchange reaction.
+The cross-section of exchange scattering for a binary with semi-major axis $a$ is
+\cite{Hut:1983ab,Hut:1983aa}
+\begin{eqnarray}
+  \sigma_\mathrm{ex} = \frac{640}{81} \pi a^{2} \left(\frac{v_i}{v_c}\right)^{-6}
+  \label{eq:crosssection}
+\end{eqnarray}
+where $v_i$ is the incoming velocity, and $v_c$ is the critical velocity,
+defined as
+\begin{eqnarray}
+  v_c^2 = G \frac{m_1 m_2 (m_1 + m_2 + m_3)}{m_3 (m_1 + m_2)} \frac{1}{a}\,\,.
+\end{eqnarray}
+\eqname~\ref{eq:crosssection} is appropriate when $v_i/v_c \gg 1$,
+which is the case for wide binaries
+scattering with field (disk) stars.
+If we assume that field stars are made of solar mass stars with a constant
+number density $n=1$~pc$^{-3}$, and the incoming velocity of field stars is
+$10$~km\,s$^{-1}$, a lower limit to the velocity dispersions of disk stars in
+any direction, the rate of exchange scattering is
+\begin{eqnarray}
+  n \sigma_\mathrm{ex} v_i = 6.82\times 10^{-8}\,\mathrm{Gyr}^{-1}
+  \frac{n}{\mathrm{pc}^{-3}} \frac{\mathrm{pc}}{a}
+  \left(\frac{10~\mathrm{km}\,\mathrm{s}^{-1}}{v_i}\right)^5\,,
+\end{eqnarray}
+which is low enough to be negligible.
+
+In fact, any exchange scattering scenario is unsatisfactory as typical
+field stars with similar metallicities as \bizarreone\ and \sunanalog\ is very
+unlikely to show the abundance difference pattern observed.
+In \figname~\ref{fig:deltaXH}, we compare the abundance difference of
+\bizarreone-\sunanalog\ with the distribution of abundance differences,
+$\Delta[\elem{X}/\elem{H}]$, between random pairings of two stars with similar
+\feh\ as \bizarreone\ and \sunanalog.
+We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
+all other elements are typically enhanced at a similar level, with some variations.
+Specifically, for a typical star with $\feh \approx 0.2$~dex, we generally
+expect $[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
+\cite{Battistini:2015aa,Bensby:2003aa}, making the low
+[\elem{Na}/\elem{Fe}] and [\elem{Mn}/\elem{Fe}] seen in \bizarreone\ very
+unlikely to arise from variations in Galactic chemical evolution.
+
 
 \subsubsection{Chemical Inhomogeneity in Star Formation}
 \label{sub:chemical_inhomogeneity_in_star_formation}
@@ -800,6 +879,7 @@ This is consistent with similar previous studies\cite{Gratton:2001aa,Desidera:20
 Thus, a difference of $\approx 0.2$~dex seen in \bizarreone-\sunanalog\ pair is
 not likely due to chemical inhomogeneity in the birth cloud.
 
+
 \subsection{Estimating the accreted masses}
 
 \begin{figure}[htpb]
@@ -815,7 +895,7 @@ not likely due to chemical inhomogeneity in the birth cloud.
   \label{fig:vari}
 \end{figure}
 
-Here we estimate how much added rocky material is needed to explain an
+We estimate how much added rocky material is needed to explain an
 increment of $\approx 0.2$~dex in refractory elements observed in \bizarreone\
 relative to \sunanalog\cite{Mack:2014aa,Mack:2016aa}.
 Because \sunanalog\ is a solar-twin star in that its $T_\mathrm{eff}$, \logg,
