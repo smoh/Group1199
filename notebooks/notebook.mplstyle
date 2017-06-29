@@ -22,7 +22,7 @@ lines.markeredgewidth : 0
 
 mathtext.default : regular
 
-font.family : serif
+font.family : sans-serif
 
 legend.scatterpoints : 1
 legend.numpoints : 1
