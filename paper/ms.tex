@@ -20,7 +20,9 @@
 \usepackage[letterpaper,margin=1in]{geometry}
 
 \usepackage{setspace}
-\onehalfspacing
+\doublespacing
+\usepackage{lineno}
+\linenumbers
 \usepackage{microtype}  % ALWAYS!
 \usepackage{amsmath,amssymb}
 \usepackage[sort&compress,super]{natbib}
@@ -220,7 +222,7 @@ Dec.\tnote{a}           & dd:mm:ss       & 59:42:48.16            & 59:42:26.08 
 2MASS $J$\tnote{a}      & mag            & $8.593 \pm 0.023$      & $8.415 \pm 0.026$      &               \\
 $T_\mathrm{eff}$        & K              & 5878                   & 5803                   & 25            \\
 $\log{g}$               &                & 4.43                   & 4.33                   & 0.028         \\
-$v\sin{i}$              & \kms\          & 1.1                    & 2.5                    &               \\
+$v\sin{i}$              & \kms\          & 1.1                    & 2.5                    & 0.5           \\
 $[\elem{Fe}/\elem{H}]$  &                & 0.01                   & 0.20                   & 0.010         \\
 Age\tnote{b}            & Gyr            & $4.00_{-1.56}^{+1.51}$ & $4.28_{-1.03}^{+1.11}$ &               \\
 $v_r$                   & \kms\          & $-21.2$                & $-21.2$                & 0.2           \\
@@ -230,7 +232,7 @@ $\mu_\delta$\tnote{a}   & mas\,yr$^{-1}$ & $-29.68 \pm 0.54$      & $-30.12 \pm 
 \hline
 \multicolumn{5}{c}{$T_c < 1200$~K} \\
 \hline
-$A(\elem{Li})$\tnote{c} &                & $2.25$                 & $2.75$                 &               \\
+$A(\elem{Li})$\tnote{c} &                & $2.25$                 & $2.75$                 & 0.05          \\
 $\elemH{C}$             &                & $0.00$                 & $0.09$                 & 0.026         \\
 $\elemH{N}$             &                & $-0.06$                & $-0.01$                & 0.042         \\
 $\elemH{O}$             &                & $0.01$                 & $0.09$                 & 0.036         \\
@@ -281,6 +283,12 @@ The resulting measurements include elemental abundances for 15 chemical species
 (C, N, O, Na, Mg, Al, Si, Ca, Ti, V, Cr, Mn, Fe, Ni, Y) as well as stellar
 parameters and high precision ($\sigma\approx0.2$~\kms) radial velocities
 (Table~\ref{tab:t1}).
+The abundances are noted as \elemH{X}, defined as the log ratio of number
+density of element \elem{X} to \elem{H} relative to the solar value
+($\elemH{X} = \log_{10} ((n_X / n_H) / (n_X / n_H)_\odot)$).
+Using the same spectra, lithium lines were modelled in Myles \etal, in prep.
+For lithium, we use the absolute abundance defined as $A(\elem{Li}) = 12 +
+\log_{10} (n_\elem{Li}/n_\elem{H})$.
 
 % likely origin given its proximity in phase space
 The projected separation between the pair is 1.9 arcmin\ ($\approx 0.01$~pc),
@@ -296,7 +304,7 @@ neighborhood for a 2~\msun\ binary system\cite{Jiang:2010aa}, \bizarreone\ and
 Their stellar parameters also indicate that they are coeval with an age of $\sim 4$~Gyr.
 We use the distances (inferred from \gaia\ parallaxes), $V$-band magnitudes,
 and $B-V$ colors to obtain bolometric luminosities of the two stars\cite{2003AJ....126..778V}.
-We then combine the luminosities with $T_\mathrm{eff}$, \elemH{Fe}, and
+We then combine the luminosities with effective temperature, \elemH{Fe}, and
 \elemH{Si} in order to interpolate the age, mass, and radius of each star
 using a grid of (Yale-Yonsei) model isochrones\cite{2013ApJ...776...87S}.
 The best-fit isochrone ages of \bizarreone\ and \sunanalog\ are
