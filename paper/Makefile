@@ -18,14 +18,11 @@ ${NAME}.pdf: ${NAME}.tex ref.bib kk.tex
 	( grep "Rerun to get" ${NAME}.log && ${LATEX} ${NAME} ) || echo "Done."
 
 ref: ref.local.bib
-	${RM} ref.bib; 
+	${RM} ref.bib;
 	bibexport -a -o ref.bib ref.local
 
 count: ms.tex
 	texcount ms.tex
-
-coverletter.pdf: coverletter.tex
-	${LATEX} coverletter.tex
 
 clean:
 	${RM} $(foreach suff, ${TMP_SUFFS}, ${NAME}.${suff})
