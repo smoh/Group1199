@@ -70,7 +70,7 @@
 \newcommand{\absdvtan}{\ensuremath{|\Delta\vec v_\mathrm{t}|}}
 \newcommand{\estimates}{\ensuremath{\{\hat{\varpi_i},\hat{\mu_{\alpha,i}},\hat{\mu_{\delta,i}},\hat{v_{r,i}}\}}}
 
-\newcommand{\todo}[1]{{\color{blue}TODO: #1}}
+\newcommand{\todo}[1]{{\color{blue}TODO: #1\\}}
 
 \renewcommand\tablename{Table}
 
@@ -79,7 +79,7 @@
 \title{
   Kronos \& Krios:
   Evidence for accretion of a massive, rocky planetary system
-  in a comoving pair of G dwarfs
+  in a comoving pair of solar-type stars
 }
 
 \author[0000-0001-7790-5308]{Semyeong Oh}
@@ -110,25 +110,18 @@
   Princeton, NJ 08544, USA}
 \affil{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Ave,
   New York, NY 10010, USA}
-
-% \author{Keith A. Hawkins}
-% \affil{Department of Astronomy, Columbia University, 550 W 120th St, New York, NY 10027, USA}
-
-% \author{Nathan W. C. Leigh}
-% \affil{Department of Astrophysics, American Museum of Natural History, Central Park West and 79th St, New York, NY 10024, USA}
-
 \author{Justin Myles} % TODO: need ORCID
 \affil{Department of Astronomy, Yale University, 260 Whitney Ave, New Haven, CT 06511, USA}
 
 \begin{abstract}
-  We report and discuss the discovery of a comoving pair of bright G
+  We report and discuss the discovery of a comoving pair of bright solar-type
   stars, HD~240430 and HD~240429, with a significant difference in their
   chemical abundances.
   The two stars have an estimated separation of $\approx 0.6$~pc at a distance of
   $r\approx 100~\pc$ with nearly identical three-dimensional velocities,
   %($|\Delta \bs{v}| < XX~\kms$ with 95\% confidence),
   as inferred from \gaia\ \tgas\ parallaxes and proper motions, and
-  high-resolution radial velocity measurements.
+  high-precision radial velocity measurements.
   Stellar parameters determined from high-resolution Keck HIRES spectra
   indicate that both stars are $\sim 4$~Gyr old,
   yet both stars show very high surface \elem{Li} abundance for this age.
@@ -259,17 +252,20 @@ In \sectionname~\ref{sec:discussion} we discuss possible interpretations of
 the abundance difference between the pair.
 We summarize our discussions in \sectionname~\ref{sec:summary}.
 
-\subsection{Review of Detailed Chemical Abundance Studies of Wide Binary Stars}
+\subsection{
+  Review of Detailed Chemical Abundance Studies of Stars in Comoving Pairs}
 \label{sub:review}
 
 Anticipating the forthcoming discussion, we review and summarize a handful of
-wide binary systems that have been studied in
-their detailed chemical abundances so far with high-resolution spectroscopy.
+wide binary systems that have been studied in their detailed chemical
+abundances so far with high-resolution spectroscopy.
 These systems are HD~20782/HD~20781, HD~80606/HD~80607, XO-2N/XO-2S, HAT-P-1,
 WASP-94A/WASP94-B, and HD~133131A/HD~133131B.
 We focus on key characteristics of stars and planets, and interpretations of
 any trend in $\Delta\elemH{X}$ with \Tcondens.
-(\todo{smoh: discussion of HD~1333131AB and 16 Cyg is missing, but will be added})
+
+\todo{might as well note no orbits ever established at these separations}
+\todo{smoh: discussion of HD~1333131AB and 16 Cyg is missing, but will be added}
 
 {\bf HD~20782/HD~20781:}
 Two common proper motion G dwarf stars (G2/G9.5) with a projected separation of
@@ -283,8 +279,8 @@ Neptune-mass planets within 0.3~AU with moderately high eccentricity
   been reported by \citealt{2017arXiv170505153U} that HD~20781 hosts four
   planets between $M\sin(i)\approx 0.006-0.04$~\mjupiter\ with $e \le 0.11$
   within $\approx 0.35$~AU.}
-The measured abundances of 15 elements in the two stars are consistent
-(\citealt{Mack:2014aa}).
+The measured abundances of 15 elements between the two stars are consistent
+with each other (\citealt{Mack:2014aa}).
 However, \citealt{Mack:2014aa} argued that there is a moderately significant
 ($\sim 2\sigma$) positive slope of $\approx 10^{-5}$~dex\,K$^{-1}$ with
 increasing \Tcondens\ for $\Tcondens>900$~K elements (namely, Na, Mn, Cr, Si,
@@ -295,14 +291,14 @@ $10-20$~\mearth\ or \elem{H}-depleted rocky material during giant planet
 migration.
 
 {\bf HAT-P-1:}
-A pair of G0 stars separated by 11\arcsec\ with $\feh\approx0.15$ has
+This pair of G0 stars separated by 11\arcsec\ with $\feh\approx0.15$ has
 different planetary systems:
 the secondary star is known to host one transiting giant planet
 while no planet has been discovered around the primary star.
 The two stars are identical
 in metallicities and abundances for 23 elements measured with
 the mean error of $0.013$~dex (\citealt{Liu:2014aa}).
-Thus it seems that the presence of close-in giant planet does not necessarily
+Thus, it seems that the presence of close-in giant planet does not necessarily
 lead to atmospheric pollution of its host star.
 
 {\bf HD~80606/HD~80607:}
@@ -312,7 +308,7 @@ common proper motion G5 stars with super-solar metallicity ($\feh \approx
 HD~80607 which has no detected planets (\citealt{Saffe:2015aa,Mack:2016aa}).
 
 {\bf XO-2N/XO-2S:}
-A pair of G9 stars with super-solar metallicity ($\feh \gtrsim 0.35$)
+This pair of G9 stars with super-solar metallicity ($\feh \gtrsim 0.35$)
 has received much attention due to possibly the most robust and significant
 difference between the component stars.
 XO-2N hosts a giant planet while XO-2S is known to host two giant planets with
