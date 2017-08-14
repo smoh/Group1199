@@ -21,7 +21,7 @@
 \usepackage{microtype}  % ALWAYS!
 \usepackage{amsmath,amssymb,natbib}
 \usepackage[flushleft]{threeparttable}
-\hypersetup{backref,breaklinks,colorlinks,urlcolor=cbblue,linkcolor=cbblue,citecolor=black}
+\hypersetup{backref,breaklinks,colorlinks,urlcolor=cbblue,linkcolor=cbblue,citecolor=gray}
 \graphicspath{{figures/}}
 \bibliographystyle{aasjournal}
 
@@ -455,19 +455,20 @@ and granulation between the stars were considered, but none was favored.
   \label{fig:deltaXH}
 \end{figure}
 
+\todo{add microturb vel to tab 1}
 
 \sunanalog\ and \bizarreone\ were identified as a
 candidate comoving star pair in our recent search for comoving stars using the
 proper motions and parallaxes from the \tgas\ catalog, a component of \gaia\ \dr\
 (the astrometric measurements are listed in \tablename~\ref{tab:kk}).
 We refer the readers to this previous work (\citealt{2017AJ....153..257O}) for a
-full explanation of the methodology behind this search and only briefly describe
-the method here.
+full explanation of the methodology behind this search and only include
+a brief description here.
 For a given pair, we compute a marginalized likelihood ratio between the
-hypotheses (1) that a given pair of stars share the same 3D velocity vector, and
-(2) that they have independent 3D velocity vectors, both given only observations
-of two components of the velocities (parallaxes and proper motions).
-We then select a sample of high-confidence comoving star pairs by making a
+hypotheses (1) that a given pair of stars share the same 3D velocity vector,
+and (2) that they have independent 3D velocity vectors, using only the
+astrometric measurements from \tgas\ (parallaxes and proper motions).
+We then select a sample of high-confidence comoving pairs by making a
 conservative cut on this likelihood ratio.
 In the resulting catalog of comoving pairs (\citealt{2017AJ....153..257O}),
 the pair presented in this paper was assigned a group id of 1199,
@@ -480,8 +481,9 @@ We have checked that we do not find any possible additional comoving companions
 by lowering the likelihood ratio cut for the stars around this pair.
 
 In a separate effort to study detailed chemical abundances of potential
-planet-hosting stars, \citet{2016ApJS..225...32B} obtained and analyzed high resolution
-spectra of both stars using the HIRES spectrograph on the Keck~I telescope.
+planet-hosting stars, high-resolution spectra of both stars were obtained using
+the HIRES spectrograph on the Keck~I telescope, and analyzed
+\citep{2016ApJS..225...32B}.
 The spectral resolution is $R\approx 70000$ and the wavelength coverage is
 $5164$--$7799$~\AA.
 A typical signal-to-noise ratio in the spectral continuum is $>200$~per pixel.
