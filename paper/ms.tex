@@ -71,6 +71,7 @@
 \newcommand{\estimates}{\ensuremath{\{\hat{\varpi_i},\hat{\mu_{\alpha,i}},\hat{\mu_{\delta,i}},\hat{v_{r,i}}\}}}
 
 \newcommand{\todo}[1]{{\color{blue}TODO: #1\\}}
+\newcommand*{\askjmb}[1]{{\bf #1}}
 
 \renewcommand\tablename{Table}
 
@@ -107,12 +108,12 @@
   New York, NY 10011, USA}
 \affil{Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, D-69117 Heidelberg}
 
-\author{David N. Spergel} % TODO: need ORCID
+\author{David N. Spergel}
 \affil{Department of Astrophysical Sciences, Princeton University, 4 Ivy Lane,
   Princeton, NJ 08544, USA}
 \affil{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Ave,
   New York, NY 10010, USA}
-\author{Justin Myles} % TODO: need ORCID
+\author{Justin Myles}
 \affil{Department of Astronomy, Yale University, 260 Whitney Ave, New Haven, CT 06511, USA}
 
 \begin{abstract}
@@ -163,71 +164,75 @@
 \section{Introduction} % (fold)
 \label{sec:introduction}
 
-Wide binary stars are valuable tools for studying star and planet formation as well
-as Galactic dynamics and chemical evolution.
+Wide binary stars are valuable tools for studying star and planet formation as
+well as Galactic dynamics and chemical evolution.
 In the context of studying the evolution of the Milky Way, they are useful for
 two main reasons.
 First, because wide binaries are weakly bound systems that may be tidally
 disrupted by, e.g., field stars, molecular clouds, or the Galactic tidal field,
 their statistics can be informative of the Galactic mass distribution.
 For example, the separation distribution of halo binaries has been used to
-constrain the mass of massive compact halo objects (\citealt{Yoo:2004aa}).
-On the other hand, they are also prime targets to test the chemical tagging
-hypothesis that stars from the same birthplace may be traced back using detailed
-chemical abundance patterns as birth ``tag''s (\citealt{2002ARA&A..40..487F}).
-A multiple-star system of any size that we believe are born together can serve
-this purpose, with massive open clusters at one extreme.
-Wide binaries are at the other extreme in that we may be less confident of the
-coevality of individual systems but they are much more abundant than larger
-systems like open clusters, rendering their statistics a meaningful indication
-of whether the hypothesis works.
+constrain the mass of massive compact halo objects
+(\citealt{Yoo:2004aa,Quinn:2009,Allen:2014}).
+They can also be used to test the ``chemical tagging'' hypothesis that stars
+from the same birthplace may be traced back using detailed chemical abundance
+patterns as birth tags (\citealt{2002ARA&A..40..487F}).
+While any multiple-star system including massive open clusters can be used to
+test the hypothesis, wide binaries have the advantage of being extremely
+abundant, rendering their statistics a meaningful indication of whether the
+hypothesis works.
 
-Wide binaries with similar or very different planetary architectures around the
-component stars have been used to connect a host star's chemistry to its
-planetary system.
-A differential analysis may reveal chemical signatures related to planet
-formation or accretion without any regard to Galactic chemical evolution as
-long as the two stars are assumed to be born together with identical
+Binary stars that form from the same birth cloud start with nearly identical
 composition.
-For close-in giant planets, it has been established that the planet-metallicity
-relation is primordial, and that the enhanced metallicity in giant
-planet-hosting stars likely promotes the formation of giant planets by
-increasing the availability of small particle condensates that form
-planetesimals (\citealt{Fischer:2005aa}).
+A differential analaysis of the chemical composition of binary stars can reveal
+their history through the chemical signatures related to planet formation or
+accretion regardless of the Galactic chemical evolution.
+\askjmb{
+For example, \citealt{Fischer:2005aa} showed that the higher metallicity in
+stars hosting close-in giant planets compared to those without likely promotes
+the formation of giant planets by increasing the availability of small particle
+condensates that form planetesimals.
+}
 On the other hand, if host stars are polluted after their birth by rocky
 planetary material with high refractory-to-volatile ratio, the convective
 envelope of the stars may be enhanced in refractory elements (e.g., \elem{Fe})
-compared to their initial state.
+compared to their initial state (e.g., \citealt{Pinsonneault:2001aa}).
 Thus, differences in planet formation or accretion in two otherwise identical
 stars may imprint differences in chemical abundances that depend on the
 condensation temperature (\Tcondens).
 
-Several systems in which at least one star hosts at least one planet
-have been studied so far with high resolution spectroscopy in this context
+High resolution spectroscopic studies of binary star systems hosting at least
+one planet
 (\citealt{Teske:2013aa,Mack:2014aa,Liu:2014aa,Teske:2015aa,Saffe:2015aa,
-  Ramirez:2015aa,Biazzo:2015aa,Mack:2016aa,Teske:2016aa,Teske:2016ab}).
-The results and interpretations of these studies are varied:
+  Ramirez:2015aa,Biazzo:2015aa,Mack:2016aa,Teske:2016aa,Teske:2016ab})
+have yielded varied results:
 while some systems appear to have undetectable differences
 (see also \citealt{Desidera:2004aa,Gratton:2001aa}), other
 studies have reported a \Tcondens-dependent difference in abundance
 with higher-\Tcondens\ elements showing larger differences.
-The increasing abundance difference with condensation temperature has been
-attributed both to more yet-undiscovered rocky planets around the relatively
-refractory-poor star and to late time accretion of refractory-rich planetary
-material (\citealt{Ramirez:2015aa,Biazzo:2015aa}).
+A possible explanation for the increasing abundance difference with
+condensation temperature is that more yet-undiscovered rocky planets formed
+around the relatively refractory-poor star
+(\citealt{Ramirez:2015aa,Biazzo:2015aa}).
+Alternatively, late time accretion of refractory-rich planetary material to the
+relatively refractory-rich star can also produce the trend.
 The observed differences are $\lesssim 0.1$~dex even in the most dramatic case,
 and often at $\approx 0.05$~dex level making them challenging to detect even
-with a careful analysis of high-resolution high signal-to-noise ratio spectra.
-% maybe want to point out the former interpretation roots back to melendez+09
-% and some doubt to that interpretation...
+with a careful analysis of high-resolution, high signal-to-noise ratio spectra,
+and differential analyses of two stars that are very similar in their
+stellar parameters.
 
-So far the strongest evidence for accretion of planetary material by a host
-star comes from spectral analysis of polluted white dwarfs (WDs).
+Spectral analysis of polluted white dwarfs (WDs) currently provides the
+strongest evidence for accretion of planetary material by a host star
+(\citealt{2003ApJ...596..477Z,2010ApJ...722..725Z,2014A&A...566A..34K};
+see \citealt{2016NewAR..71....9F} for review).
 Because the gravitational settling times of elements heavier than \elem{He} in
-atmosphere is much shorter than the WD cooling time, detection of metals likely
-indicates the presence of a reservoir of dusty material around the WD.
-Indeed, many of the polluted WDs host a dusty debris disk detected
-in the infrared.
+atmosphere is much shorter than the WD cooling time
+(\citealt{1986ApJS...61..197P}), detection of metals likely indicates the
+presence of a reservoir of dusty material around the WD.
+Indeed, many of the polluted WDs host a dusty debris disk detected in the
+infrared (\citealt{1987Natur.330..138Z,1990ApJ...357..216G,2005ApJ...635L.161R,
+  2009ApJ...694..805F,2006ApJ...646..474K}).
 Some of the most dramatically polluted WDs show
 surface abundances closely matched by rocky planetary material
 with, e.g., bulk Earth composition, strongly arguing
@@ -238,10 +243,14 @@ have been detected by \project{Kepler} adding further support to the picture
 (\citealt{2015Natur.526..546V}).
 
 Here, we report and discuss the discovery of a comoving pair of G stars,
-HD~240430 and HD~240429, with unusual chemical abundance differences
-that strongly suggest accretion of planetary material by the two stars.
+HD~240430 and HD~240429, with unusual chemical abundance differences that
+strongly suggest accretion of rocky planetary material by one of the two stars,
+HD~240430.
 Throughout the \documentname, we nickname the two stars \bizarreone\
 (HD~240430) and \sunanalog\ (HD~240429).
+In Greek mythology, Kronos and Krios were sons of Uranos and Gaia.
+Kronos notoriously devoured all of his children (except Zeus)
+to prevent the prophecy that one day he will be overthrown by them.
 We use the following convention for chemical abundances of stars: \elemH{X} is
 the log ratio of number density of element \elem{X} to \elem{H} relative to the
 solar value.
@@ -456,8 +465,6 @@ and granulation between the stars were considered, but none was favored.
   }
   \label{fig:deltaXH}
 \end{figure}
-
-\todo{add microturb vel to tab 1}
 
 \sunanalog\ and \bizarreone\ were identified as a
 candidate comoving star pair in our recent search for comoving stars using the
