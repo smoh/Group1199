@@ -69,6 +69,7 @@
 \newcommand{\eye}{\mathbb{I}}
 \newcommand{\absdvtan}{\ensuremath{|\Delta\vec v_\mathrm{t}|}}
 \newcommand{\estimates}{\ensuremath{\{\hat{\varpi_i},\hat{\mu_{\alpha,i}},\hat{\mu_{\delta,i}},\hat{v_{r,i}}\}}}
+\newcommand{\maccreted}{\ensuremath{15~\mearth}}
 
 \newcommand{\todo}[1]{{\color{blue}TODO: #1\\}}
 \newcommand*{\askjmb}[1]{{\bf #1}}
@@ -131,16 +132,18 @@
   ($\Tcondens>1200$~K) elements by $\approx 0.2$~dex but not as large
   an enhancement of (moderately) volatile elements ($\Tcondens<1200$~K; \elem{C},
   \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}).
+  % TODO: Hmmm...
   This is the largest and the most significant chemical difference found in
   a wide binary pair yet.
-  Additionally, it shows anomalously high surface lithium abundance
-  ($A(\elem{Li}=2.75$), higher by $0.5$~dex than its companion.
+  Additionally, it shows an anomalously high surface lithium abundance
+  ($A(\elem{Li})=2.75$), higher by $0.5$~dex than its companion.
   The proximity in phase-space and ages between the two stars suggests that
   they formed together with the same composition, at odds with the observed
   differences in metallicity and abundance patterns.
-  We therefore suggest that the star HD~240430, ``Kronos'', recently accreted
-  $\approx 20$~\mearth\ of rocky material after birth selectively enhancing the
-  refractory elements in its surface and convective envelope.
+  We therefore suggest that the star HD~240430, ``Kronos'', accreted
+  \maccreted\ of rocky material after birth selectively enhancing the
+  refractory elements as well as lihtium in its surface and convective
+  envelope.
 \end{abstract}
 
 \keywords{
@@ -180,7 +183,7 @@ hypothesis works.
 
 Binary stars that form from the same birth cloud start with nearly identical
 composition.
-A differential analaysis of the chemical composition of binary stars can reveal
+A differential analysis of the chemical composition of binary stars can reveal
 their history through the chemical signatures related to planet formation or
 accretion regardless of the Galactic chemical evolution.
 \askjmb{
@@ -198,17 +201,17 @@ stars may imprint differences in chemical abundances that depend on the
 condensation temperature (\Tcondens).
 
 High resolution spectroscopic studies of binary star systems hosting at least
-one planet
-(\citealt{Teske:2013aa,Mack:2014aa,Liu:2014aa,Teske:2015aa,Saffe:2015aa,
+one planet (\citealt{2011ApJ...740...76R,2014ApJ...790L..25T,Teske:2013aa,
+  Mack:2014aa,Liu:2014aa,Teske:2015aa,Saffe:2015aa,
   Ramirez:2015aa,Biazzo:2015aa,Mack:2016aa,Teske:2016aa,Teske:2016ab})
 have yielded varied results:
 while some systems appear to have undetectable differences
 (see also \citealt{Desidera:2004aa,Gratton:2001aa}), other
 studies have reported a \Tcondens-dependent difference in abundance
 with higher-\Tcondens\ elements showing larger differences.
-A possible explanation for the increasing abundance difference with
-condensation temperature is that more yet-undiscovered rocky planets formed
-around the relatively refractory-poor star
+A possible explanation for the difference is that
+forming more gas giants or rocky planets leads to
+an overall or \Tcondens-dependent depletion
 (\citealt{Ramirez:2015aa,Biazzo:2015aa}).
 Alternatively, late time accretion of refractory-rich planetary material to the
 relatively refractory-rich star can also produce the trend.
@@ -217,6 +220,9 @@ and often at $\approx 0.05$~dex level making them challenging to detect even
 with a careful analysis of high-resolution, high signal-to-noise ratio spectra,
 and differential analyses of two stars that are very similar in their
 stellar parameters.
+We refer the readers to Appendix~\ref{app:review} for a review of
+a handful of individual pairs studied in their detailed chemical abundances
+(see also \citealt{2016arXiv161104064M}).
 
 Spectral analysis of polluted white dwarfs (WDs) currently provides the
 strongest evidence for accretion of planetary material by a host star
@@ -255,152 +261,10 @@ The absolute abundance of \elem{X} is $A(\elem{X}) = 12 + \log_{10}
 \elem{X}.
 In \sectionname~\ref{sec:data} we present the astrometric and spectroscopic data
 about the two stars relevant to the present discussion.
-In \sectionname~\ref{sec:discussion} we discuss possible interpretations of
-the abundance difference between the pair.
+In \sectionname~\ref{sec:discussion} we discuss possible interpretations of the
+abundance difference between the pair.
 We summarize our discussions in \sectionname~\ref{sec:summary}.
 
-\subsection{
-  Review of Detailed Chemical Abundance Studies of Stars in Comoving Pairs}
-\label{sub:review}
-
-Anticipating the forthcoming discussion, we review and summarize a handful of
-wide binary systems that have been studied in their detailed chemical
-abundances so far with high-resolution spectroscopy.
-These systems are HD~20782/HD~20781, HD~80606/HD~80607, XO-2N/XO-2S, HAT-P-1,
-WASP-94A/WASP94-B, and HD~133131A/HD~133131B.
-We focus on key characteristics of stars and planets, and interpretations of
-any trend in $\Delta\elemH{X}$ with \Tcondens.
-
-\todo{smoh: discussion of HD~1333131AB and 16 Cyg is missing, but will be added}
-
-{\bf 16 Cygni A/B:}
-The chemical composition of this well know pair of solar-type stars (G1.5/G3)
-has been studied many times.
-The hotter star 16 Cyg A has no detected planets, but a M dwarf companion $\sim
-70$~AU away in projected separation which is probably physically associated
-(\citealt{2002ApJ...581..654P}), and may have affected planet formation process
-around the star (\citealt{1996ApJ...458..312J,2005MNRAS.363..641M}).
-The other star, 16 Cyg B, hosts a giant planet on an eccentric orbit ($e=0.63$,
-\citealt{1997ApJ...483..457C}).
-While past measurements of metallicity and abundance difference between the two stars
-claimed conflicting results (\citealt{2001ApJ...553..405L,2011ApJ...737L..32S}),
-recent studies using high quality spectra consistently reported that
-A is more metal rich than B by $\approx 0.04 \pm 0.005$~dex.
-However, there is still a disagreement between studies on
-whether abundance differences shows a correlation with $\Tcondens$ as well as
-its interpretation.
-
-{\bf HD~20782/HD~20781:}
-Two common proper motion G dwarf stars (G2/G9.5) with a projected separation of
-$\sim9000$~AU (corresponding to 4.2\arcmin\ sky separation) and solar metallicity
-host close-in giant planets.
-HD~20782 hosts a Jupiter-mass planet on a very eccentric ($e\approx 0.97$)
-orbit with a pericenter distance of 1.4~AU while HD~20781 hosts two
-Neptune-mass planets within 0.3~AU with moderately high eccentricity
-($e\sim0.1-0.3$).\footnote{
-  The two stars were monitored by \project{HARPS} campaign, and it has recently
-  been reported by \citealt{2017arXiv170505153U} that HD~20781 hosts four
-  planets between $M\sin(i)\approx 0.006-0.04$~\mjupiter\ with $e \le 0.11$
-  within $\approx 0.35$~AU.}
-The measured abundances of 15 elements between the two stars are consistent
-with each other (\citealt{Mack:2014aa}).
-However, \citealt{Mack:2014aa} argued that there is a moderately significant
-($\sim 2\sigma$) positive slope of $\approx 10^{-5}$~dex\,K$^{-1}$ with
-increasing \Tcondens\ for $\Tcondens>900$~K elements (namely, Na, Mn, Cr, Si,
-Fe, Mg, Co, Ni, V, Ca, Ti, Al, Sc leaving out C and O of their measurements) in
-the abundances of each star {\it individually}.
-They suggest that this slope is evidence that the stars accreted
-$10-20$~\mearth\ or \elem{H}-depleted rocky material during giant planet
-migration.
-
-{\bf HAT-P-1:}
-This pair of G0 stars separated by 11\arcsec\ with $\feh\approx0.15$ has
-different planetary systems:
-the secondary star is known to host one transiting giant planet
-while no planet has been discovered around the primary star.
-The two stars are identical
-in metallicities and abundances for 23 elements measured with
-the mean error of $0.013$~dex (\citealt{Liu:2014aa}).
-Thus, it seems that the presence of close-in giant planet does not necessarily
-lead to atmospheric pollution of its host star.
-
-{\bf HD~80606/HD~80607:}
-Similar to HAT-P-1, no significant chemical difference is found between two
-common proper motion G5 stars with super-solar metallicity ($\feh \approx
-0.35$): HD~80606 which hosts a very eccentric ($e\approx0.94$) giant planet and
-HD~80607 which has no detected planets (\citealt{Saffe:2015aa,Mack:2016aa}).
-
-{\bf XO-2N/XO-2S:}
-This pair of G9 stars with super-solar metallicity ($\feh \gtrsim 0.35$)
-has received much attention due to possibly the most robust and significant
-difference between the component stars.
-XO-2N hosts a giant planet while XO-2S is known to host two giant planets with
-masses $0.26 \mjupiter$ and $1.37 \mjupiter$ on moderately eccentric ($\approx
-0.15$) orbits at $<0.5$~AU.
-%TODO: check following with Biazzo+
-All measured elements including \elem{Fe} are enhanced in XO-2N relative to
-XO-2S, and the difference shows a significant correlation with \Tcondens\
-(\citealt{Teske:2015aa,Ramirez:2015aa,Biazzo:2015aa} although see also
-\citealt{Teske:2013aa}).
-At low \Tcondens, volatile elements differ by $0.015$~dex while the range of
-difference spans upto $0.1$~dex at $\Tcondens>1600$~K.
-
-\citealt{Ramirez:2015aa} argued that the {\it depletion} of volatile elements
-in XO-2S relative to XO-2N is plausibly due to the presence of {\it more} gas
-giant planets around XO-2S, following a similar interpretation of
-\citealt{Melendez:2009aa} of the trend between solar twins and the Sun.
-In this scenario, forming planets in the protoplanetary disk are supposed to
-``lock'' heavier elements to the core of gas giant planets as well as some
-volatile elements in their envelopes. Then, the host star will accrete {\it
-  gas} depleted in metals compared to their protostellar condition.
-By tuning the metal content ($Z/X$) of gas giant planets and when the accretion
-of gas occurs in terms of how much mass is in the convective envelope of the
-host star, they can match the mass difference of gas giant planets around each
-star, which is at least $1~\mjupiter$.
-On the positive correlation of $\Delta\elemH{X}$ with \Tcondens,
-\citealt{Ramirez:2015aa} estimated that $20~\mearth$ of equal-part mixture of
-Earth and CM chondrite-like material can explain the trend either as refractory
-{\it depletion} in XO-2S due to {\it more} rocky planets around XO-2S, or
-refractory enhancement in XO-2N by late time accretion in which case the
-opposite would be true.
-
-{\bf WASP-94A/B:}
-Each star in a pair of F8 and F9 stars with super-solar metallicity
-($\feh\approx 0.3$) hosts a hot Jupiter.
-The planet around WASP-94A is transiting with a misaligned, probably retrograde
-circular ($e<0.13$) orbit, while that hosted by WASP-94B is a little more
-massive by $\sim 0.15$~\mjupiter\ and closer in, aligned with the host star.
-WASP-94A shows a depletion of $0.02$~dex in volatile and moderately volatile
-elements ($\Tcondens < 1200$~K) and an enhancement of $0.01$~dex in refractory
-elements ($\Tcondens>1200$~K) relative to WASP-94B, with a claimed median
-uncertainty of $0.006$~dex among all elements
-resulting in a statistically significant non-zero slope between
-$\Delta\elemH{X}$ and $\Tcondens$ (\citealt{Teske:2016aa}).\footnote{
-  %TODO: double check the following statement
-  Note that the condensation
-  temperature $\Tcondens$ used is for solar system composition
-  gas, which can differ from that of higher metallicity gas.}
-Multiple possibilities related to the formation and evolution
-of planetary systems around each star as well as causes unrelated to planets
-such as dust cleansing during the fully convective phase or different rotation
-and granulation between the stars were considered, but none was favored.
-
-{\bf $\zeta^1/\zeta^2$ Reticuli (HD 20807/HD 20766):}
-With a projected separation of $\approx 3700$~AU, both solar-type stars in this pair have
-no detected planets.
-However, $\zeta^2$ hosts a debris disk detected via infrared excess
-(\citealt{2008ApJ...674.1086T}) as well as direct imaging
-(\citealt{2010A&A...518L.131E}).
-Both stars have super-solar metallicity of $\approx 0.2$~dex.
-A differential abundance analysis using high-resolution spectra
-shows that $\zeta^1$ is more metal rich than $\zeta^2$ by $\sim 0.02 \pm 0.003$~dex,
-and that there is a positive slope between the abundance differences of 24 species
-and $\Tcondens$.
-A possible explanation proposed is that the relative lack of refractory elements
-in $\zeta^2$ is because they are locked up in rocky bodies
-that make up its debris disk (\citealt{2016A&A...588A..81S}).
-
-{\bf HD~133131A/B:}
 
 \section{Data}
 \label{sec:data}
@@ -708,51 +572,57 @@ Our favored scenario is discussed in the last subsection,
 \subsection{Stellar Ages \& Coevality}
 \label{sub:ages}
 
-The fact that the two stars share nearly identical space motion
-at a separation of $< 1$~pc strongly supports that the pair is coeval.
-We therefore consider other age indicators apart from their phase-space
-coordinates to assess the ages and coevality of the two stars.
-First, given the precise measurements of $\log(g)$ and $T_\mathrm{eff}$,
-we can constrain the ages of the two stars by
-comparing these values to theoretical isochrones.
-We perform isochrone fitting to these values using the Yale-Yonsei model
-isochrones (\citealt{2013ApJ...776...87S}).
-The input data are $\log(g)$, $T_\mathrm{eff}$, \feh,
-parallaxes, $B$-band magnitudes, and their errors.
-The best-fit isochrone ages of \sunanalog\ and \bizarreone\ are
-$4.00_{-1.56}^{+1.51}$~Gyr and $4.28_{-1.03}^{+1.11}$~Gyr, respectively,
+Apart from their closeness in phase-space coordinates,
+we can constrain the ages of the two stars
+given the precise measurements of $\log(g)$ and $T_\mathrm{eff}$
+by comparing these values to theoretical isochrones.
+We use the distances (inferred from \gaia\ parallaxes), $V$-band magnitudes,
+and $B-V$ colors to obtain bolometric luminosities of the two stars
+(\citealt{2003AJ....126..778V}).
+We then combine the luminosities with effective temperature, \elemH{Fe}, and
+\elemH{Si} in order to interpolate the age, mass, and radius of each star using
+a grid of Yale-Yonsei model isochrones (\citealt{2013ApJ...776...87S}).
+The best-fit isochrone ages of \bizarreone\ and \sunanalog\ are
+$4.28_{-1.03}^{+1.11}$~Gyr and $4.00_{-1.56}^{+1.51}$~Gyr, respectively,
 consistent with them being coeval.
 
-The surface lithium abundance in a sun-like star decreases with its age due to
+{\bf
+The surface lithium abundance in a Sun-like star decreases with its age due to
 mixing induced by convection or rotation, which brings the lithium into the
 interior ($T>2.5 \times 10^{6}$~K) where it will be destroyed by proton capture
 burning.
-Thus, surface lithium abundance is an indicator of stellar ages.
-The absolute $\elem{Li}$ abundance of $2.25$~dex for \sunanalog\ implies an age
-of $\lesssim 1$~Gyr according to the theoretical models tuned to explain the
-solar lithium abundance and rotational profile (\citealt{2005Sci...309.2189C}).
-The lithium abundance of \bizarreone\, $2.74$~dex, shows the largest difference
-among all measured elements.
-This translates to a $\sim 500$~Myr difference in age.
+Thus, surface lithium abundance can be an indicator of stellar ages,
+especially whether the star is very young ($\lesssim 1$~Gyr).
+The absolute $\elem{Li}$ abundance of solar-type stars also correlates steeply
+with the effective temperature (e.g., \citealt{Chen2001,2012ApJ...756...46R}).
+Generally, cooler stars with larger convective envelope have lower \elem{Li}
+abundance.
+The absolute $\elem{Li}$ abundance of $2.25$~dex for \sunanalog\
+is typical for its \teff.
+On the other hand, the lithium abundance ($A(\elem{Li}) = 2.75$) of \bizarreone,
+which has lower \teff\ than \sunanalog, is not only higher than that of
+\sunanalog\ but also much higher compared to other field stars of similar \teff.
 Given the overall higher metal abundances and the peculiar abundance patterns
 in \bizarreone, it is unclear, however, whether this higher $\elem{Li}$
 abundance means a younger age or something else.
-For example, the presence of $\elem{Li}$-rich red giant stars has been
-attributed to the engulfment of substellar companions such as gas giant planets
-or brown dwarfs which may replenish $\elem{Li}$ (\citealt{Casey:2016aa}).
+For example, \citealt{Casey:2016aa} attributes the presence of $\elem{Li}$-rich
+red giant stars to the engulfment of substellar companions such as gas giant
+planets or brown dwarfs which may replenish $\elem{Li}$.
+}
 
-In fact, the surface lithium abundance is the only indication that points to
-younger ages.
-If the two stars are indeed only several hundred Myrs old at most,
-they are expected to be part of a larger comoving group of stars.
-However, as we mention above, there is no evidence in our search of comoving pairs
-using \tgas\ that the two stars belong to a larger group of young stars.
+The surface lithium abundance of \bizarreone\ is the only indicator of a
+younger age.
+If the two stars were only several hundred Myrs old, then
+they may have been part of a larger comoving group of stars.
+However, as we mention above, there is no evidence in our search of comoving
+pairs using \tgas\ that the two stars belong to a larger group of young stars.
 Very young stars often show signs of activity such as
 X-ray emission from magnetic activity, emission lines, or infrared excess due to
-circumstellar disks (\todo{needs refernces}).
+circumstellar disks (\citealt{1999ARA&A..37..363F,1987ApJ...312..788A}).
 We have compiled GALEX, Tycho-2, 2MASS, and WISE photometry for these stars,
 and found no evidence for indications of activity in their spectral energy
 distributions.
+%
 The low $v\sin(i)$ values (\tablename~\ref{tab:kk}) also argue against very
 young ages that would be inferred from the surface lithium abundances.
 Finally, we computed the Galactic orbit of the pair using the median of the
@@ -760,18 +630,18 @@ posterior sample over the phase space coordinates of \sunanalog, in a Milky
 Way-like gravitational potential (similar to \texttt{MWPotential2014} from
 \citealt{Bovy:2015}) using \project{Gala} (\citealt{gala}).
 The pair's fiducial orbit has a vertical action larger than the Sun, favoring
-an older age (\todo{needs references for vertical action as age indicator}).
+an older age (\citealt{Wielen:1977,Aumer:2016}).
 We therefore conclude that the two stars are most likely coeval, $\sim 4$~Gyr
-old main sequence stars, and that their unusually high \elem{Li} abundance
-requires an alternative explanation.
+old main sequence stars, and that the unusually high \elem{Li} abundance of
+\bizarreone\ requires an alternative explanation.
 
 
 \subsection{Exchange Scattering}
 \label{sub:exchange_scattering}
 
-Although the data described above strongly suggests that the two stars are
-coeval, we may still consider scenarios in which the two stars are not actually
-born together.
+While the data described above strongly suggests that the two stars are coeval,
+this subsection explores the possibility that this pair is not a primordial
+binary.
 Two stars unrelated at birth may end up in a binary system via a binary-single
 scattering event that results in an exchange of binary members.
 In order to estimate the rate at which any binary-single
@@ -793,22 +663,22 @@ defined as
 scattering with field (disk) stars.
 If we assume that field stars are made of solar mass stars with a constant
 number density $n=1$~pc$^{-3}$, and the incoming velocity of field stars is
-$10$~km\,s$^{-1}$, a lower limit to the velocity dispersions of disk stars in
-any direction, the rate of exchange scattering is
+$10$~km\,s$^{-1}$, the rate of exchange scattering is
 \begin{eqnarray}
   n \sigma_\mathrm{ex} v_i = 6.82\times 10^{-8}\,\mathrm{Gyr}^{-1}
   \frac{n}{\mathrm{pc}^{-3}} \frac{\mathrm{pc}}{a}
   \left(\frac{10~\mathrm{km}\,\mathrm{s}^{-1}}{v_i}\right)^5\,,
 \end{eqnarray}
-which is low enough to be negligible.
+low enough to be negligible.
 
-In fact, any exchange scattering scenario is unsatisfactory as typical
-field stars with similar metallicities as \bizarreone\ and \sunanalog\ is very
-unlikely to show the abundance difference pattern observed.
-In \figname~\ref{fig:deltaXH}, we compare the abundance difference of
-\bizarreone-\sunanalog\ with the distribution of abundance differences,
-$\Delta[\elem{X}/\elem{H}]$, between random pairings of two stars with similar
-\feh\ as \bizarreone\ and \sunanalog.
+An exchange scattering scenario is unlikely to be able to explain
+the observed abundance difference pattern of \bizarreone\ and \sunanalog.
+We test this by randomly drawing pairs of stars in the sample of
+\citealt{2016ApJS..225...32B} from two \feh\ bins at $\feh = 0 \pm 0.025$
+and $\feh = 0.2 \pm 0.025$, each similar to \sunanalog\ and \bizarreone.
+In \figname~\ref{fig:deltaXH}, we compare the observed abundance difference of
+\bizarreone-\sunanalog\ with the distribution of abundance differences
+from 300 random pairs.
 We see that when a star is enhanced in $\elem{Fe}$ by $0.2$~dex,
 all other elements are typically enhanced at a similar level, with some variations.
 Specifically, for a typical star with $\feh \approx 0.2$~dex, we generally
@@ -817,16 +687,18 @@ expect $[\elem{Na}/\elem{Fe}] > 0$ and $[\elem{Mn}/\elem{Fe}] > -0.1$
 [\elem{Na}/\elem{Fe}] and [\elem{Mn}/\elem{Fe}] seen in \bizarreone\ very
 unlikely to arise from variations in Galactic chemical evolution.
 
-\todo{HOGG: to provide some theoretical account adding to the above empirical evidence.}
-
 \subsection{Chemical Inhomogeneity in Star Formation}
 \label{sub:chemical_inhomogeneity_in_star_formation}
 
-Assuming that the two stars were born together, one possibility to
-explain the chemical difference is that there was chemical inhomogeneity within
-the birth cloud.
-However, there is already ample evidence against such a scenario.
-First, none of the other seven similar wide binaries examined in
+In this subsection, we explore the hypothesis that chemical inhomogeneity
+within the birth cloud is the source of the observed abundance difference.
+There is ample evidence against this scenario as most wide binaries show in
+\feh\ less than $0.02$~dex (\citealt{Desidera:2004aa,Gratton:2001aa}.
+In the cases in which a significant difference is detected
+with high-precision abundance measurements (see \sectionname~\ref{app:review}),
+the difference is typically $\sim 0.05$~dex.
+Consistent with these results,
+none of the other seven similar wide binaries examined in
 \citealt{2016ApJS..225...32B} show the same level of differences in abundances.
 Though there is generally a larger spread in $\elem{C}$, $\elem{N}$ and
 $\elem{O}$, and some pairs show a difference in particular elements as large as
@@ -835,34 +707,27 @@ The median and maximum \feh\ difference between component stars in the other
 seven pairs is $0.02$~dex and $0.09$~dex, respectively.
 The differences are even smaller (maximum $\Delta\feh = 0.03$~dex) if we
 compare only twin-like ($\Delta T_\mathrm{eff} \lesssim 100$~K) pairs
-(\figname~\ref{fig:deltaXH}).
-This is consistent with the findings of \citealt{Desidera:2004aa}, who examined
-23 wide binaries of late F to K dwarfs, and found most pairs show a difference
-in \feh\ less than $0.02$~dex and none larger than $0.07$~dex.
-Similarly, \citealt{Gratton:2001aa} found that four out of six equal mass
-binaries have the same chemical composition with $\gtrsim 0.01$~dex
-uncertainties.
+(\figname~\ref{fig:deltaXH}, black lines).
 Thus, a difference of $\approx 0.2$~dex seen in \bizarreone-\sunanalog\ pair is
-not likely due to chemical inhomogeneity in the birth cloud.
+unlikely to be due to chemical inhomogeneity in the birth cloud.
 
 \begin{figure}[htpb]
   \centering
-  \includegraphics[width=0.95\linewidth]{toycalc.png}
+  \includegraphics[width=0.95\linewidth]{deltaxh_tcrank.pdf}
   \caption{
-    Comparing the observed abundance difference vs. \Tcondens\ rank
-    to the expected change in solar surface abundance after adding $20$~\mearth\ of
-    material with bulk Earth composition (\citealt{mcdonough2001composition}).
-    The assumed mass fraction in the convective zone is $0.03$.
-    All metals are ranked by their \Tcondens\ for solar composition gas,
-    and the condensation temperature may be read from the gray line and right y-axis,
-    same as in \figname~\ref{fig:relabun_tcrank}.
-    Locations of the elements measured for \bizarreone-\sunanalog\ pair are
-    indicated by a vertical line and its symbol.
+    Comparing the observed abundance difference (blue circles) to the expected
+    change in solar surface abundance after adding \maccreted\ of material
+    with bulk Earth composition (\citealt{2003TrGeo...2..547M}; black open and
+    filled circles).
+    The assumed mass fraction in the convective zone is $0.02$.
+    All astronomical metals are ordered by their \Tcondens\ for solar
+    composition gas on the $x$-axis.
+    For the predictions, we highlight elements measured for \bizarreone-\sunanalog\ pair
+    in filled circles, while those without a measurement are left open.
     The close match with the observed abundance difference in \bizarreone-\sunanalog\ pair
     suggests that the abundance difference may be due to accretion of
-    $20$~\mearth\ of rocky planetary material.
-    The element \elem{Li} is off the plot and indicated with a red arrow
-    (see text for details).
+    $15$~\mearth\ of rocky planetary material.
+    The element \elem{Li} is off the plot and indicated in the inset.
   }
   \label{fig:toycalc}
 \end{figure}
@@ -872,10 +737,9 @@ not likely due to chemical inhomogeneity in the birth cloud.
 
 Another possibility that two coeval stars may end up with different surface
 abundances is accretion of planetary material after birth.
-Instabilities may develop in a multi-planet system due to its chaotic nature
-which may lead to planet engulfment or ejection by the host star
-(\todo{needs references}).
-%TODO: kozai?
+In a multi-planet system, dynamical instabilities triggered by planet-planet
+scattering\cite{1996Sci...274..954R,1996Natur.384..619W} or encounters with a
+field star\cite{Malmberg:2011aa} can lead to planet ejection or accretion.
 Indeed, it is an important goal of many exoplanet studies
 to detect chemical signatures of planet formation or accretion,
 distinguish them from Galactic chemical evolution, and
@@ -902,13 +766,13 @@ The difference seen in \bizarreone-\sunanalog\ is
 compared to HD~20781/2, XO-2N/S, WASP-94A/B in \figname~\ref{fig:relabun_tcrank}.
 The metallicity difference of $\approx 0.2$~dex observed in this pair
 is larger than the differences seen in any other pairs studied so far.
-Strikingly, the five under-enhanced elements in \bizarreone\
+The five under-enhanced elements in \bizarreone\
 relative to \sunanalog\ are the five most volatile in all elements measured.
 The difference in \elem{Mn} ($\Tcondens = 1158$~K) and
 \elem{Cr} ($\Tcondens = 1296$~K) suggests a break in $\Tcondens \approx 1200$~K.
 This $\Tcondens$-dependent trend of $\Delta\elemH{X}$,
 combined with the enhanced $\elem{Li}$ abundance ($A(\elem{Li}) = 2.75$),
-strongly suggests that accretion of rocky material has occured in \bizarreone.
+strongly suggests that accretion of rocky material has occurred in \bizarreone.
 
 How much mass of rocky material is needed to explain an increment of
 $\approx 0.2$~dex?
@@ -934,17 +798,18 @@ mass fraction in each element $f_{X,\mathrm{add}}$,
 the abundance difference is
 \begin{equation}
   \Delta\elemH{X} = \log_{10} \frac{f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star}
-    + f_{X,\mathrm{add}}\,M_\mathrm{add}}
+    + f_{X,\mathrm{acc}}\,M_\mathrm{acc}}
     {f_{X,\mathrm{photo}}\,f_\mathrm{CZ}\,M_\mathrm{star}}
 \end{equation}
 where $f_\mathrm{CZ}$ is the fraction of the star's mass in the convective envelope.
-We take the composition of bulk Earth from a chondritic model of the Earth
-(\citealt{mcdonough2001composition}).
-Similar calculations have been performed by \citet{Chambers:2010aa} and
+We assume $f_\mathrm{CZ} = 0.02$ (\citealt{2013ApJ...776...87S}),
+and take the composition of bulk Earth from a chondritic model of the Earth
+(\citealt{2003TrGeo...2..547M}).
+Similar calculations have been performed by e.g., \citet{Chambers:2010aa},
 \citet{Mack:2014aa,Mack:2016aa}.
 
 Figure~\ref{fig:toycalc} shows the expected change of surface abundances of
-metals in a Sun-like star after $20~\mearth$ of material with composition of
+metals in a Sun-like star after \maccreted\ of material with composition of
 bulk Earth is added.
 A volatility trend that more volatile (low \Tcondens) elements are more
 depleted in the Earth relative to CI or other carbonaceous chondrites
@@ -952,81 +817,68 @@ has long been known (\citealt{mcdonough2001composition}).
 This trend is presumed to be closely related to the formation of terrestrial
 planets and, in particular to the radial temperature gradient in a
 protoplanetary disk.
-The trend resulting from adding $20~\mearth$ of bulk Earth
+The trend resulting from adding \maccreted\ of bulk Earth
 provides an overall good match to the observed $\Delta\elemH{X}$,
 suggesting that the refractory-enhanced star, \bizarreone\,
-accreted $20~\mearth$ more of rocky planetary material than \sunanalog.
+accreted \maccreted\ more of rocky planetary material than \sunanalog.
 
 What about \elem{Li}?
 The element \elem{Li} is worth special attention in the context of the
 accretion scenario.
-Because Li is present in either carbonaceous chondrites or bulk Earth with
-a concentration of $1-1.5$~ppm in mass (\citealt{mcdonough2001composition}),
-but is depleted quickly within the first couple of Gyrs on the surface of a
-Sun-like star, accretion of either material at later times will significantly
-replenish the lithium on the star's surface.
-For the present-day Sun, the accretion of $20~\mearth$ of bulk Earth-like
-material would result in $\Delta\elemH{Li} \approx 1.6$~dex (which
-is indicated as an upward arrow in \figname~\ref{fig:toycalc}).
-Incidentally, the star under examination, \bizarreone, has an age (informed by
-stellar parameters) very close to the Sun ($4.28_{-1.03}^{+1.11}$~Gyr).
-Thus, as long as we believe the Sun's present-day surface \elem{Li} abundance
-to be ordinary, the accretion of $20$~\mearth\ by \bizarreone\ is consistent with $1.6$~dex
-enhancement in its \elem{Li}.
-This is exactly what we find: the \elem{Li} abundance of \bizarreone\ is
+Because Li is present in either carbonaceous chondrites or bulk Earth with a
+concentration of $1-1.5$~ppm in mass (\citealt{2003TrGeo...2..547M}), but
+is depleted quickly within the first couple of Gyrs on the surface of a
+Sun-like star (\askjmb{CITE?}), accretion of either material at later times
+will significantly replenish the lithium on the star's surface.
+For the present-day Sun ($A(\elem{Li}) = 1.05$), the accretion of \maccreted\ of
+bulk Earth-like material would result in $\Delta\elemH{Li} \approx 1.65$~dex
+(see the inset of \figname~\ref{fig:toycalc}).
+This closely matches what we find: the \elem{Li} abundance of \bizarreone\ is
 $A(\elem{Li}) = 2.75$ (Table~\ref{tab:kk}, \citealt{jmlithium})
-approximately $1.65$~dex higher than the solar value of $1.1$~dex
-(\todo{needs reference}).
-Furthermore, this implies that the accretion event should have happened very
-recently, or at least within the \elem{Li} depletion time ($\lesssim 1$~Gyr).
+approximately $1.7$~dex higher than the solar value.
 
-What about \sunanalog?
-Considering its age of $4.00_{-1.56}^{+1.51}$~Gyr, \sunanalog\ is also enhanced
-in \elem{Li} compared to other stars of similar ages by $\approx 1$~dex.
-This enhancement puts an upper limit on the accreted mass to be
-$\approx 4$~\mearth\ assuming \elem{Li} concentration of $1.1$~ppm
-(\citealt{mcdonough2001composition}).
-Unlike \bizarreone, we cannot know the pre-accretion abundances of
-\sunanalog.\footnote{
-  Strictly speaking, we can never know the pre-accretion abundances
-  for \bizarreone\ either.
-  We only have an {\it approximate} idea that this is not far from a solar-twin
-  star \sunanalog, and because the deviation from this ``anchor'' star is
-  large, it is reasonable to consider accretion by the Sun.
-  In reality, \sunanalog\ may as well have had its own accretion history,
-  which indeed seems to be the case according to its \elem{Li} abundance.
-}
-However, we note that the span of abundance difference between highly volatile
-elements (\elem{C}, \elem{N}, \elem{O}, \elem{Na}) and refractory elements such
-as \elem{Fe} expected from accreting $4$~\mearth\ to the Sun is $\approx
-0.05$~dex.
-This is comparable to the abundance difference between N, Na and Fe in
-\sunanalog.
-It is also interesting that \sunanalog\ shows a deficit in the same volatile
-and moderately volatile elements (\elem{C}, \elem{N}, \elem{O}, \elem{Na}, and
-\elem{Mn}) relative to Fe as in \bizarreone.
-Thus, we conclude that \sunanalog\ is also likely to have had a similar
-accretion event, but the amount of accretion was at least 5 time
-smaller than \bizarreone.
-
-%TODO: augment this paragraph
-% - more geochemical study references
 We stress that while the calculation carried out is useful in
 an order-of-magnitude sense, further investigation of each of the simplifying
 assumptions made is warranted.
 In addition, the composition of bulk Earth has some uncertainties.
-For example, the reported bulk Earth concentration of the siderphile element
-\elem{Mn}, varies from $800$ to $1700$~ppm (\citealt{1998psc..book.....L}).
-While the latter value from \citealt{mcdonough2001composition} has been used in
-our calculation, the former value would bring the observed $\Delta\elemH{Mn}$
-to an even closer agreement.
+For example, the reported bulk Earth concentration of the siderophile element
+\elem{Mn}, varies from $800$ to $\approx 2000$~ppm
+(\citealt{1998psc..book.....L,mcdonough2001composition,2003TrGeo...2..547M})
+mainly due to the uncertainty of the Earth's core composition.
 Given these limitations, the level of agreement for $\Delta\elemH{X}$ {\it and}
 \elem{Li} for \bizarreone\ is remarkable.
+
+The fractional mass in the convective zone of solar-type stars
+decrease dramatically in the first Gyr,
+and then stays nearly constant at $\approx 2$~\% (\citealt{2013ApJ...776...87S}).
+Because the accreted mass $M_\mathrm{acc}$ is proportional to $f_\mathrm{CZ}$,
+given the large metallicity enhancement ($\approx 0.2$~dex),
+the accretion must have happened after a thin convective envelop is established.
+Otherwise, the accreted mass would be unreasonably high.
+Thus, it is plausible that a dynamical process after the planet formation ended
+is responsible for pushing rocky planets in.
+
+{\bf
+Finally, we mention that if the hypothesized accretion is
+\askjmb{recent (HOW RECENT?)},
+detection of $^6 \elem{Li}$ provides a strong test for this
+scenario.
+This isotope of \elem{Li} is destroyed at even lower temperatures than
+$^7\elem{Li}$, and theoretically expected to be absent
+(\citealt{1997ARA&A..35..557P}).
+However, an accretion of rocky material could have replenished $^6 \elem{Li}$.
+Because $^6\elem{Li}$ lines are slightly longer in wavelengths,
+presence of $^6\elem{Li}$ increases the asymmetry of \elem{Li} $6707.6$ feature.
+This is a very subtle effect that requires a careful modelling effort
+and a higher signal-to-noise, higher resolution spectra
+(see e.g., \citealt{Israelian:2001,2002MNRAS.335.1005R}).
+Such investigation was not warranted by the current data (\citealt{jmlithium}).
+}
 
 \section{Summary}
 \label{sec:summary}
 
-We report the discovery of a comoving pair of bright
+We report and discuss the discovery of a comoving pair of bright
 solar-type stars HD~240430 and HD~240429 (G0 and G2) with very different
 metallicities ($\Delta\feh \approx 0.2$~dex), and condensation temperature
 (\Tcondens)-dependent abundance differences.
@@ -1034,26 +886,30 @@ The more metal-rich of the two stars, HD~240430 (\bizarreone), shows enhancement
 all ten elements with $\Tcondens > 1200$~K including \elem{Fe}, while under
 enhanced in the five elements, \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and
 \elem{Mn} with $\Tcondens < 1200$~K relative to HD~240429 (\sunanalog).
-The two stars also have anomalously high surface \elem{Li} abundance compared
-to their ages of $\sim 4$~Gyr.
+It also has an anomalously high surface \elem{Li} abundance for its age of
+$\sim 4$~Gyr, and its effective temperature very close to that of the Sun.
 We consider that the comoving pair may have formed from two stars of different
-birth origins in a exchange scattering event, or that there may be chemical
-inhomogeneity in the birth cloud, and find both unlikely.
+birth origins in a exchange scattering event
+(\sectionname~\ref{sub:exchange_scattering}), or that there may be chemical
+inhomogeneity in the birth cloud
+(\sectionname~\ref{sub:chemical_inhomogeneity_in_star_formation}) to find
+both unlikely.
 
 In order to explain the $\Tcondens$-dependent enhancement and high \elem{Li}
-abundance, we consider accretion of planetary material as the cause.
-We argue that a recent accretion of $20$~\mearth\ of bulk Earth
-composition to \bizarreone\ can explain the enhancement in both refractory
-elements and lithium.
-For \sunanalog\ which also has high surface \elem{Li} abundance given its age,
-we put an upper limit of $\approx 4$~\mearth\ on the accreted mass
-based on the \elem{Li} concentration of carbonaceous chondrites and bulk Earth.
-While the case is not as clear as \bizarreone\ without a chemical reference star,
-the range of abundances from volatile to refractory elements is
-similar to that expected from $\approx 4$~\mearth\ accretion of bulk Earth.
-It is unclear what triggered the accretions to both stars.
-One possibility is that a fly-by field star may have
-perturbed the planetary systems of both stars.
+abundance of \bizarreone, we consider accretion of planetary material as the
+cause (\sectionname~\ref{sub:accretion}).
+We argue that an accretion of \maccreted\ of bulk Earth composition to
+\bizarreone\ after its thin convective zone is in place can explain the
+enhancement in both refractory elements and lithium.
+What triggered the planet engulfment in the two comoving stars remains unclear.
+One possibility is that a fly-by interaction with a field star could have
+triggered eccentricity excitation of outer planets around each star, which may
+have propagated inward through planet-planet scattering, leading to the
+accretion of inner rocky planets (\citealt{Zakamska:2004aa,Malmberg:2011aa}).
+If this is the case, there may be surviving, highly-eccentric giant planets.
+The two stars have not been included in any publicly released data from planet
+search programs, however, outer eccentric planets are potentially detectable
+with future data releases of the \gaia\ mission.
 
 The two stars have not been included in any publicly released data from planet
 search programs.
@@ -1108,5 +964,154 @@ funded by the National Aeronautics and Space Administration.
   and \texttt{pandas} (\citealt{pandas}).}
 
 \bibliography{ref}
+
+\appendix
+\section{
+  Review of Detailed Chemical Abundance Studies of Stars in Comoving Pairs}
+\label{app:review}
+
+We review and summarize a handful of
+wide binary systems that have been studied in their detailed chemical
+abundances so far with high-resolution spectroscopy.
+These systems are HD~20782/HD~20781, HD~80606/HD~80607, XO-2N/XO-2S, HAT-P-1,
+WASP-94A/WASP94-B, and HD~133131A/HD~133131B.
+We focus on key characteristics of stars and planets, and interpretations of
+any trend in $\Delta\elemH{X}$ with \Tcondens.
+
+{\bf 16 Cygni A/B:}
+The chemical composition of this well know pair of solar-type stars (G1.5/G3)
+has been studied many times.
+The hotter star 16 Cyg A has no detected planets, but a M dwarf companion $\sim
+70$~AU away in projected separation which is probably physically associated
+(\citealt{2002ApJ...581..654P}), and may have affected planet formation process
+around the star (\citealt{1996ApJ...458..312J,2005MNRAS.363..641M}).
+The other star, 16 Cyg B, hosts a giant planet on an eccentric orbit ($e=0.63$,
+\citealt{1997ApJ...483..457C}).
+While past measurements of metallicity and abundance difference between the two
+stars claimed conflicting results
+(\citealt{2001ApJ...553..405L,2011ApJ...737L..32S}), recent studies using high
+quality spectra (\citealt{2011ApJ...740...76R,2014ApJ...790L..25T})
+consistently reported that A is more metal rich than B by $\approx 0.04 \pm
+0.005$~dex.
+However, there is still a disagreement between studies on
+whether abundance differences shows a correlation with $\Tcondens$ as well as
+its interpretation.
+
+{\bf HD~20782/HD~20781:}
+Two common proper motion G dwarf stars (G2/G9.5) with a projected separation of
+$\sim9000$~AU (corresponding to 4.2\arcmin\ sky separation) and solar metallicity
+host close-in giant planets.
+HD~20782 hosts a Jupiter-mass planet on a very eccentric ($e\approx 0.97$)
+orbit with a pericenter distance of 1.4~AU while HD~20781 hosts two
+Neptune-mass planets within 0.3~AU with moderately high eccentricity
+($e\sim0.1-0.3$).\footnote{
+  The two stars were monitored by \project{HARPS} campaign, and it has recently
+  been reported by \citealt{2017arXiv170505153U} that HD~20781 hosts four
+  planets between $M\sin(i)\approx 0.006-0.04$~\mjupiter\ with $e \le 0.11$
+  within $\approx 0.35$~AU.}
+The measured abundances of 15 elements between the two stars are consistent
+with each other (\citealt{Mack:2014aa}).
+However, \citealt{Mack:2014aa} argued that there is a moderately significant
+($\sim 2\sigma$) positive slope of $\approx 10^{-5}$~dex\,K$^{-1}$ with
+increasing \Tcondens\ for $\Tcondens>900$~K elements (namely, Na, Mn, Cr, Si,
+Fe, Mg, Co, Ni, V, Ca, Ti, Al, Sc leaving out C and O of their measurements) in
+the abundances of each star {\it individually}.
+They suggest that this slope is evidence that the stars accreted
+$10-20$~\mearth\ or \elem{H}-depleted rocky material during giant planet
+migration.
+
+{\bf HAT-P-1:}
+This pair of G0 stars separated by 11\arcsec\ with $\feh\approx0.15$ has
+different planetary systems:
+the secondary star is known to host one transiting giant planet
+while no planet has been discovered around the primary star.
+The two stars are identical
+in metallicities and abundances for 23 elements measured with
+the mean error of $0.013$~dex (\citealt{Liu:2014aa}).
+Thus, it seems that the presence of close-in giant planet does not necessarily
+lead to atmospheric pollution of its host star.
+
+{\bf HD~80606/HD~80607:}
+Similar to HAT-P-1, no significant chemical difference is found between two
+common proper motion G5 stars with super-solar metallicity ($\feh \approx
+0.35$): HD~80606 which hosts a very eccentric ($e\approx0.94$) giant planet and
+HD~80607 which has no detected planets (\citealt{Saffe:2015aa,Mack:2016aa}).
+
+{\bf XO-2N/XO-2S:}
+This pair of G9 stars with super-solar metallicity ($\feh \gtrsim 0.35$)
+has received much attention due to possibly the most robust and significant
+difference between the component stars.
+XO-2N hosts a giant planet while XO-2S is known to host two giant planets with
+masses $0.26 \mjupiter$ and $1.37 \mjupiter$ on moderately eccentric ($\approx
+0.15$) orbits at $<0.5$~AU.
+%TODO: check following with Biazzo+
+All measured elements including \elem{Fe} are enhanced in XO-2N relative to
+XO-2S, and the difference shows a significant correlation with \Tcondens\
+(\citealt{Teske:2015aa,Ramirez:2015aa,Biazzo:2015aa} although see also
+\citealt{Teske:2013aa}).
+At low \Tcondens, volatile elements differ by $0.015$~dex while the range of
+difference spans upto $0.1$~dex at $\Tcondens>1600$~K.
+
+\citealt{Ramirez:2015aa} argued that the {\it depletion} of volatile elements
+in XO-2S relative to XO-2N is plausibly due to the presence of {\it more} gas
+giant planets around XO-2S, following a similar interpretation of
+\citealt{Melendez:2009aa} of the trend between solar twins and the Sun.
+In this scenario, forming planets in the protoplanetary disk are supposed to
+``lock'' heavier elements to the core of gas giant planets as well as some
+volatile elements in their envelthe metal content ($Z/X$) of gas giant planets and when the accretion
+of gas occurs in terms of how much mass is in the convective envelope of the
+host star, they can match the mass difference of gas giant planets around each
+star, which is at least $1~\mjupiter$.
+On the positive correlation of $\Delta\elemH{X}$ with \Tcondens,
+\citealt{Ramirez:2015aa} estimated that $20~\mearth$ of equal-part mixture of
+Earth and CM chondrite-like material can explain the trend either as refractory
+{\it depletion} in XO-2S due to {\it more} rocky planets around XO-2S, or
+refractory enhancement in XO-2N by late time accretion in which case the
+opposite would be true.
+
+{\bf WASP-94A/B:}
+Each star in a pair of F8 and F9 stars with super-solar metallicity
+($\feh\approx 0.3$) hosts a hot Jupiter.
+The planet around WASP-94A is transiting with a misaligned, probably retrograde
+circular ($e<0.13$) orbit, while that hosted by WASP-94B is a little more
+massive by $\sim 0.15$~\mjupiter\ and closer in, aligned with the host star.
+WASP-94A shows a depletion of $0.02$~dex in volatile and moderately volatile
+elements ($\Tcondens < 1200$~K) and an enhancement of $0.01$~dex in refractory
+elements ($\Tcondens>1200$~K) relative to WASP-94B, with a claimed median
+uncertainty of $0.006$~dex among all elements
+resulting in a statistically significant non-zero slope between
+$\Delta\elemH{X}$ and $\Tcondens$ (\citealt{Teske:2016aa}).\footnote{
+  %TODO: double check the following statement
+  Note that the condensation
+  temperature $\Tcondens$ used is for solar system composition
+  gas, which can differ from that of higher metallicity gas.}
+Multiple possibilities related to the formation and evolution
+of planetary systems around each star as well as causes unrelated to planets
+such as dust cleansing during the fully convective phase or different rotation
+and granulation between the stars were considered, but none was favored.
+
+{\bf $\zeta^1/\zeta^2$ Reticuli (HD 20807/HD 20766):}
+With a projected separation of $\approx 3700$~AU, both solar-type stars in this pair have
+no detected planets.
+However, $\zeta^2$ hosts a debris disk detected via infrared excess
+(\citealt{2008ApJ...674.1086T}) as well as direct imaging
+(\citealt{2010A&A...518L.131E}).
+Both stars have super-solar metallicity of $\approx 0.2$~dex.
+A differential abundance analysis using high-resolution spectra
+shows that $\zeta^1$ is more metal rich than $\zeta^2$ by $\sim 0.02 \pm 0.003$~dex,
+and that there is a positive slope between the abundance differences of 24 species
+and $\Tcondens$.
+A possible explanation proposed is that the relative lack of refractory elements
+in $\zeta^2$ is because they are locked up in rocky bodies
+that make up its debris disk (\citealt{2016A&A...588A..81S}).
+
+{\bf HD~133131A/B:}
+For this metal-poor ($\feh\approx -0.3$), old ($\sim 9.5$~Gyr) pair of
+solar-type stars, high-precision radial velocity monitoring recently revealed
+several planets (\citealt{Teske:2016ab}): star A hosts two eccentric giant
+planets at $\approx 1.4$ and $\approx 5$~AU while star star B hosts a longer
+period giant planet at $\approx 6.5$~AU.
+\citealt{Teske:2016ab} measured a deficit of $0.03 \pm 0.017$~dex in
+refractory elements in A relative two B without any conclusive interpretation.
 
 \end{document}
