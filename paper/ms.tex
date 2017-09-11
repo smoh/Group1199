@@ -72,7 +72,6 @@
 \newcommand{\maccreted}{\ensuremath{15~\mearth}}
 
 \newcommand{\todo}[1]{{\color{blue}TODO: #1\\}}
-\newcommand{\apw}[1]{{\color{purple}APW asks: #1}}
 \newcommand*{\askjmb}[1]{{\bf #1}}
 
 \renewcommand\tablename{Table}
@@ -122,7 +121,8 @@
   We report and discuss the discovery of a comoving pair of bright solar-type
   stars, HD~240430 and HD~240429, with a significant difference in their
   chemical abundances.
-  The two stars have an estimated 3D separation of $\approx 0.6$~pc ($\approx 0.01$~pc tangentially) at a distance of
+  The two stars have an estimated 3D separation of $\approx 0.6$~pc
+  ($\approx 0.01$~pc projected) at a distance of
   $r\approx 100~\pc$ with nearly identical three-dimensional velocities,
   %($|\Delta \bs{v}| < XX~\kms$ with 95\% confidence),
   as inferred from \gaia\ \tgas\ parallaxes and proper motions, and
@@ -212,11 +212,12 @@ studies have reported a \Tcondens-dependent difference in abundance
 with higher-\Tcondens\ elements showing larger differences.
 A possible explanation for the difference is that
 forming more gas giants or rocky planets leads to
-an overall or \Tcondens-dependent depletion of higher-\Tcondens\ elements that
-eventually accrete onto the host star
+an overall or \Tcondens-dependent depletion of high-\Tcondens\ elements in
+gas that eventually accretes onto the host star
 (\citealt{Ramirez:2015aa,Biazzo:2015aa}).
-Alternatively, late time accretion of refractory-rich planetary material to the
-relatively refractory-rich star can also produce the trend \apw{do you mean "relatively refractory-poor star" instead?}.
+Alternatively, late time accretion of refractory-rich planetary material can
+also produce the trend by enhancing the abundance of high-\Tcondens\ elements
+in one of the two stars instead.
 The observed differences are $\lesssim 0.1$~dex even in the most dramatic case,
 and often closer to $\approx 0.05$~dex, making them challenging to detect even
 with a careful analysis of high-resolution, high signal-to-noise ratio spectra,
@@ -951,7 +952,6 @@ Explorer, which is a joint project of the University of California, Los
 Angeles, and the Jet Propulsion Laboratory/California Institute of Technology,
 funded by the National Aeronautics and Space Administration.
 
-%TODO: corner.py
 %TODO: data/code available
 \software{
   %The data and code used in this project is available from
@@ -959,6 +959,7 @@ funded by the National Aeronautics and Space Administration.
   %software license.
   This research utilized:
   \texttt{Astropy} (\citealt{Astropy-Collaboration:2013}),
+  \texttt{corner.py} (\citealt{corner}),
   \texttt{emcee} (\citealt{2013PASP..125..306F}),
   \texttt{IPython} (\citealt{Perez:2007}),
   \texttt{matplotlib} (\citealt{Hunter:2007}),
