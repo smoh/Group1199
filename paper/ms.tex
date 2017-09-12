@@ -72,6 +72,7 @@
 \newcommand{\maccreted}{\ensuremath{15~\mearth}}
 
 \newcommand{\todo}[1]{{\color{blue}TODO: #1\\}}
+\newcommand{\apw}[1]{{\color{purple}APW asks: #1}}
 \newcommand*{\askjmb}[1]{{\bf #1}}
 
 \renewcommand\tablename{Table}
@@ -109,7 +110,7 @@
   New York, NY 10011, USA}
 \affil{Max-Planck-Institut f\"ur Astronomie, K\"onigstuhl 17, D-69117 Heidelberg}
 
-\author{David N. Spergel}
+\author[0000-0002-5151-0006]{David N. Spergel}
 \affil{Department of Astrophysical Sciences, Princeton University, 4 Ivy Lane,
   Princeton, NJ 08544, USA}
 \affil{Center for Computational Astrophysics, Flatiron Institute, 162 Fifth Ave,
@@ -121,7 +122,7 @@
   We report and discuss the discovery of a comoving pair of bright solar-type
   stars, HD~240430 and HD~240429, with a significant difference in their
   chemical abundances.
-  The two stars have an estimated separation of $\approx 0.6$~pc at a distance of
+  The two stars have an estimated 3D separation of $\approx 0.6$~pc ($\approx 0.01$~pc tangentially) at a distance of
   $r\approx 100~\pc$ with nearly identical three-dimensional velocities,
   %($|\Delta \bs{v}| < XX~\kms$ with 95\% confidence),
   as inferred from \gaia\ \tgas\ parallaxes and proper motions, and
@@ -129,20 +130,20 @@
   Stellar parameters determined from high-resolution Keck HIRES spectra
   indicate that both stars are $\sim 4$~Gyr old.
   The more metal-rich of the two, HD~240430, shows an enhancement of refractory
-  ($\Tcondens>1200$~K) elements by $\approx 0.2$~dex but not as large
-  an enhancement of (moderately) volatile elements ($\Tcondens<1200$~K; \elem{C},
+  ($\Tcondens>1200$~K) elements by $\approx 0.2$~dex and a marginal
+  enhancement of (moderately) volatile elements ($\Tcondens<1200$~K; \elem{C},
   \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}).
   % TODO: Hmmm...
   This is the largest and the most significant chemical difference found in
   a wide binary pair yet.
-  Additionally, it shows an anomalously high surface lithium abundance
+  Additionally, HD~240430 shows an anomalously high surface lithium abundance
   ($A(\elem{Li})=2.75$), higher by $0.5$~dex than its companion.
   The proximity in phase-space and ages between the two stars suggests that
   they formed together with the same composition, at odds with the observed
   differences in metallicity and abundance patterns.
   We therefore suggest that the star HD~240430, ``Kronos'', accreted
-  \maccreted\ of rocky material after birth selectively enhancing the
-  refractory elements as well as lihtium in its surface and convective
+  \maccreted\ of rocky material after birth, selectively enhancing the
+  refractory elements as well as lithium in its surface and convective
   envelope.
 \end{abstract}
 
@@ -176,7 +177,7 @@ constrain the mass of massive compact halo objects
 They can also be used to test the ``chemical tagging'' hypothesis that stars
 from the same birthplace may be traced back using detailed chemical abundance
 patterns as birth tags (\citealt{2002ARA&A..40..487F}).
-While any multiple-star system including massive open clusters can be used to
+While any multiple-star system, including massive open clusters, can be used to
 test the hypothesis, wide binaries have the advantage of being extremely
 abundant, rendering their statistics a meaningful indication of whether the
 hypothesis works.
@@ -185,10 +186,10 @@ Binary stars that form from the same birth cloud start with nearly identical
 composition.
 A differential analysis of the chemical composition of binary stars can reveal
 their history through the chemical signatures related to planet formation or
-accretion regardless of the Galactic chemical evolution.
+accretion regardless of Galactic chemical evolution.
 \askjmb{
-For example, \citealt{Fischer:2005aa} showed that the higher metallicity in
-stars hosting close-in giant planets compared to those without likely promotes
+For example, \citealt{Fischer:2005aa} showed that higher metallicity
+stars more likely host close-in giant planets, which likely promotes
 the formation of giant planets by increasing the availability of small particle
 condensates that form planetesimals.
 }
@@ -211,12 +212,13 @@ studies have reported a \Tcondens-dependent difference in abundance
 with higher-\Tcondens\ elements showing larger differences.
 A possible explanation for the difference is that
 forming more gas giants or rocky planets leads to
-an overall or \Tcondens-dependent depletion
+an overall or \Tcondens-dependent depletion of higher-\Tcondens\ elements that
+eventually accrete onto the host star
 (\citealt{Ramirez:2015aa,Biazzo:2015aa}).
 Alternatively, late time accretion of refractory-rich planetary material to the
-relatively refractory-rich star can also produce the trend.
+relatively refractory-rich star can also produce the trend \apw{do you mean "relatively refractory-poor star" instead?}.
 The observed differences are $\lesssim 0.1$~dex even in the most dramatic case,
-and often at $\approx 0.05$~dex level making them challenging to detect even
+and often closer to $\approx 0.05$~dex, making them challenging to detect even
 with a careful analysis of high-resolution, high signal-to-noise ratio spectra,
 and differential analyses of two stars that are very similar in their
 stellar parameters.
@@ -553,7 +555,7 @@ the observed abundance differences of $\approx 0.2$~dex.
 \label{sec:discussion}
 
 We discuss the possible origins of the peculiar abundance differences of
-\bizarreone-\sunanalog.
+\bizarreone\ \& \sunanalog.
 We first discuss the ages and coevality of the stars in this pair, and consider
 both possibilities in which the two stars are or are not coeval.
 Our favored scenario is discussed in the last subsection,
@@ -596,7 +598,7 @@ especially whether the star is very young ($\lesssim 1$~Gyr).
 The absolute $\elem{Li}$ abundance of solar-type stars also correlates steeply
 with the effective temperature (e.g., \citealt{Chen2001,2012ApJ...756...46R}).
 Generally, cooler stars with larger convective envelope have lower \elem{Li}
-abundance.
+abundances.
 The absolute $\elem{Li}$ abundance of $2.25$~dex for \sunanalog\
 is typical for its \teff.
 On the other hand, the lithium abundance ($A(\elem{Li}) = 2.75$) of \bizarreone,
@@ -738,8 +740,8 @@ unlikely to be due to chemical inhomogeneity in the birth cloud.
 Another possibility that two coeval stars may end up with different surface
 abundances is accretion of planetary material after birth.
 In a multi-planet system, dynamical instabilities triggered by planet-planet
-scattering\cite{1996Sci...274..954R,1996Natur.384..619W} or encounters with a
-field star\cite{Malmberg:2011aa} can lead to planet ejection or accretion.
+scattering (\citealt{1996Sci...274..954R,1996Natur.384..619W}) or encounters with a
+field star (\citealt{Malmberg:2011aa}) can lead to planet ejection or accretion.
 Indeed, it is an important goal of many exoplanet studies
 to detect chemical signatures of planet formation or accretion,
 distinguish them from Galactic chemical evolution, and
@@ -776,11 +778,11 @@ strongly suggests that accretion of rocky material has occurred in \bizarreone.
 
 How much mass of rocky material is needed to explain an increment of
 $\approx 0.2$~dex?
-We carry out simple toy calculations of expected $\Delta\elemH{X}$
-in a Sun-like star's atmosphere by adding certain mass of bulk Earth composition
+We carry out simple toy calculations of the expected $\Delta\elemH{X}$
+in a Sun-like star's atmosphere by adding a certain mass of bulk Earth composition
 under these simplifying assumptions:
 \begin{itemize}
-  \item The material added is instantly and completely mixed.
+  \item The material added is instantly and completely mixed through the star's convective zone.
   \item The atmospheric composition that we measure is identical throughout
     the star's radiative and convective zone.
   \item The surface abundance of the star has been altered only by the
@@ -790,9 +792,9 @@ under these simplifying assumptions:
 We take the solar abundances, $\elemH{X}$, of element \elem{X}
 (\citealt{Asplund:2009aa}) which can be converted to mass fraction as
 \begin{equation}
-  f_{X,\mathrm{photo}} = \frac{10^{\elemH{X}} m_X}{\Sigma_X 10^{\elemH{X}} m_X}
+  f_{X,\mathrm{photo}} = \frac{10^{\elemH{X}} \, m_X}{\Sigma_X 10^{\elemH{X}} \, m_X}
 \end{equation}
-where $m_X$ is the mass of each element in e.g., atomic mass unit.
+where $m_X$ is the mass of each element in, e.g., atomic mass unit.
 Assuming that the accreted material has a total mass $M_\mathrm{acc}$, and the
 mass fraction in each element $f_{X,\mathrm{acc}}$,
 the abundance difference is
@@ -805,17 +807,17 @@ where $f_\mathrm{CZ}$ is the fraction of the star's mass in the convective envel
 We assume $f_\mathrm{CZ} = 0.02$ (\citealt{2013ApJ...776...87S}),
 and take the composition of bulk Earth from a chondritic model of the Earth
 (\citealt{2003TrGeo...2..547M}).
-Similar calculations have been performed by e.g., \citet{Chambers:2010aa},
+Similar calculations have been performed by, e.g., \citet{Chambers:2010aa},
 \citet{Mack:2014aa,Mack:2016aa}.
 
 Figure~\ref{fig:toycalc} shows the expected change of surface abundances of
 metals in a Sun-like star after \maccreted\ of material with composition of
 bulk Earth is added.
-A volatility trend that more volatile (low \Tcondens) elements are more
+A volatility trend such that more volatile (low \Tcondens) elements are more
 depleted in the Earth relative to CI or other carbonaceous chondrites
 has long been known (\citealt{mcdonough2001composition}).
 This trend is presumed to be closely related to the formation of terrestrial
-planets and, in particular to the radial temperature gradient in a
+planets and, in particular, to the radial temperature gradient in a
 protoplanetary disk.
 The trend resulting from adding \maccreted\ of bulk Earth
 provides an overall good match to the observed $\Delta\elemH{X}$,
@@ -827,7 +829,7 @@ The element \elem{Li} is worth special attention in the context of the
 accretion scenario.
 Because Li is present in either carbonaceous chondrites or bulk Earth with a
 concentration of $1-1.5$~ppm in mass (\citealt{2003TrGeo...2..547M}), but
-is depleted quickly within the first couple of Gyrs on the surface of a
+is depleted quickly within a few gigayears on the surface of a
 Sun-like star (\askjmb{CITE?}), accretion of either material at later times
 will significantly replenish the lithium on the star's surface.
 For the present-day Sun ($A(\elem{Li}) = 1.05$), the accretion of \maccreted\ of
@@ -883,8 +885,8 @@ solar-type stars HD~240430 and HD~240429 (G0 and G2) with very different
 metallicities ($\Delta\feh \approx 0.2$~dex), and condensation temperature
 (\Tcondens)-dependent abundance differences.
 The more metal-rich of the two stars, HD~240430 (\bizarreone), shows enhancement in
-all ten elements with $\Tcondens > 1200$~K including \elem{Fe}, while under
-enhanced in the five elements, \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and
+all ten elements with $\Tcondens > 1200$~K including \elem{Fe}, while
+under-enhanced in the five elements, \elem{C}, \elem{N}, \elem{O}, \elem{Na}, and
 \elem{Mn} with $\Tcondens < 1200$~K relative to HD~240429 (\sunanalog).
 It also has an anomalously high surface \elem{Li} abundance for its age of
 $\sim 4$~Gyr, and its effective temperature very close to that of the Sun.
@@ -896,8 +898,8 @@ inhomogeneity in the birth cloud
 both unlikely.
 
 In order to explain the $\Tcondens$-dependent enhancement and high \elem{Li}
-abundance of \bizarreone, we consider accretion of planetary material as the
-cause (\sectionname~\ref{sub:accretion}).
+abundance of \bizarreone, we consider the accretion of planetary material as the
+most plausible cause (\sectionname~\ref{sub:accretion}).
 We argue that an accretion of \maccreted\ of bulk Earth composition to
 \bizarreone\ after its thin convective zone is in place can explain the
 enhancement in both refractory elements and lithium.
