@@ -15,7 +15,7 @@ for figfile in $list_of_figures; do
   cp $figfile $target_dir;
 done
 
-paperfiles=$(git ls-tree --name-only HEAD | grep -v ".gitignore\|Makefile\|figures\|*.sh")
+paperfiles=$(git ls-tree --name-only HEAD | grep -v ".gitignore\|Makefile\|figures\|.*.sh")
 for f in $paperfiles; do
   echo "copying $f to $target_dir";
   cp $f $target_dir;

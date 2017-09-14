@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-### https://raw.github.com/github/gitignore/13f15a38f3132ea780ca8c3d237a6c3405a6ca69/TeX.gitignore
-
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -203,12 +200,7 @@ celerybeat-schedule
 venv/
 ENV/
 
-# Spyder project settings
-.spyderproject
-
-# Rope project settings
-.ropeproject
->>>>>>> 37334f8201fb9a68909c7137e75bba7f6e6f68dd
 ref.local.bib
 coverletter.pdf
 firstcirculation
+submission*
