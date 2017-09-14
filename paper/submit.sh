@@ -15,16 +15,11 @@ for figfile in $list_of_figures; do
   cp $figfile $target_dir;
 done
 
-paperfiles=$(git ls-tree --name-only HEAD | grep -v ".gitignore\|Makefile\|figures|*.sh")
+paperfiles=$(git ls-tree --name-only HEAD | grep -v ".gitignore\|Makefile\|figures\|*.sh")
 for f in $paperfiles; do
   echo "copying $f to $target_dir";
   cp $f $target_dir;
 done
 
-echo "compress all files in $submission to $submission.tar.gz? [yn]"
-select yn in "y" "n"; do
-  case $yn in
-      Yes ) tar -czvf "$target_dir.tar.gz" $target_dir/*; break;;
-      No ) exit;;
-  esac
-done
+echo "compress all files in $submission to $submission.tar.gz"
+tar -czvf "$target_dir.tar.gz" $target_dir/*;
