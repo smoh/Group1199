@@ -34,3 +34,5 @@ submit: ${NAME}.pdf
 	tar -czvf archive.tar.gz $$(git ls-tree --name-only HEAD | grep -v ".gitignore\|Makefile\|figures") -C ./figures/ $$(cd figures && git ls-files)
 	echo "archive.tar.gz created"
 
+report.pdf : report.md
+	pandoc --variable=geometry:margin=1in --variable=fontsize:12pt -o report.pdf report.md
