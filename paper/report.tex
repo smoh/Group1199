@@ -1,0 +1,352 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage[margin=1in]{geometry}
+
+\usepackage{quoting}
+
+\usepackage[breaklinks=true]{hyperref}
+\hypersetup{colorlinks,%
+  citecolor=blue,%
+  filecolor=blue,%
+  linkcolor=blue,%
+  urlcolor=blue}
+
+% Set font of quotation to something different.
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\sf}
+
+\usepackage{natbib}
+\usepackage{aas_macros}
+\bibliographystyle{aasjournal}
+
+% \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+ 
+\setlength{\parskip}{0.5em}
+
+\begin{document}
+
+
+\section*{Response to the referee's report}
+\label{response-to-the-referees-report}
+
+We thank the referee for his/her report and suggestions. The referee's
+concerns and suggestions are largely based on Andrews et al. 2017, which
+we do not agree with in many aspects. We have fully addressed the
+referee's concerns and discussed aspects of this work that are directly
+relevant when necessary.
+
+We think the referee may be confusing three different levels of concerns
+and is lumping them together as ``random alignments''. These are that
+this pair may not physically associated
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  because it may be an optical pair, two stars that only happen to be
+  close on sky
+\item
+  because the two stars may be only moving in the same direction on sky
+\item
+  because the two stars with such proximity in full 6D phase-space
+  coordinates are still possible from a chance pair of unassociated
+  field single stars.
+\end{enumerate}
+
+The first two concerns are already answered in the paper:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  is addressed by that the two stars have nearly identical parallaxes
+  meaning the two stars are physically close in position not just on
+  sky.
+\item
+  is addressed by that the two stars have nearly identical radial
+  velocities with 0.2 km/s precision meaning that the two stars have
+  very similar 3D velocity vector not just proper motion.
+\end{enumerate}
+
+The last concern is not the ``random alignments'' that Andrews et al.
+2017 sample suffers from at projected separation above 0.1 pc nor
+something addressed in that work.
+
+Nonetheless the last concern is valid, and we have addressed this using the Gaia
+Universe Mock Simulation, a mock end-of-mission Gaia catalog with realistic a
+Milky Way model \citep{gums}, and still find this unlikely. We have added a new
+section in Discussion, and acknowledged that such skepticism may still exist in
+Summary.
+
+We answer each of {\sf the referee's comments} in detail below.
+
+\begin{quote}
+Oh et al. calculate the likelihoods both that a pair is an associated
+binary, and that it is a random alignment (an optical pair). They use a
+model for the stellar components of the galaxy, which necessarily
+involves assumptions. Thus, their list of binaries likely contains a
+good number of false pairs, especially among those of projected
+separations larger than about 10,000 AU (Andrews et al. 2017).
+\end{quote}
+
+While this is not a point of main discussion here, we note that this
+summary of our work that the referee cites from Andrews et al. 2017 is
+incorrect. We consciously did not overextend to say that we calculate
+the likelihood that a pair is ``an associated binary'', and referred to
+the candidates we found as candidate comoving pairs throughout the paper.
+Nor do we calculate the likelihood that it is a `random alignment'.
+
+\begin{quote}
+My major concern is that the authors fail to make a convincing case for
+both stars of the studied pair being physically associated. In fact, the
+different chemical compositions can be viewed as a strong argument
+against their physical association. Both stars do have nearly identical
+proper motions and radial velocities, as well as similar parallaxes.
+However, the statistical argument presented for their physical
+association is not convincing for this particular pair.
+\end{quote}
+
+We would like to point out again that the two stars have \emph{maximum a
+posteriori} separation of 0.6 pc and \emph{3D} velocity difference
+consistent with zero. If the referee is concerned that the two stars
+merely happen to lie closely on sky (`optical pair'), this is already
+answered by the observation that the parallaxes of the two stars are
+nearly identical. If the referee is concerned that the two stars only
+happened to have nearly identical proper motions but not actually same
+velocities, this concern is already answered by the observation that
+their radial velocities measured to 0.2 km/s precision are also
+identical.
+
+\begin{quote}
+The authors state that the velocity differences are consistent with
+zero, but never mention the position differences.
+\end{quote}
+
+We point out that both the 3D and projected separation are explicitly
+mentioned in the abstract and in the beginning of paragraph 3 in the
+Data section where we discuss the similarity in their velocities.
+
+\begin{quote}
+The graph they show has a very poor spatial resolution, and cannot be
+used to establish physical nearness.
+\end{quote}
+
+We think that in fact the contrary is true: the graph shows in all 6
+dimensions how uncertain the differences in positions and velocities
+are, and how the uncertainties are correlated. The graph reflects to the
+fullest the uncertainties in parallaxes and proper motions as well as
+their covariances.
+
+\begin{quote}
+In fact, the observed parallax difference alone implies a separation (in
+the line of sight direction) of 140,275 AU, more than an order of
+magnitude larger than the projected separation of the pair (12,198 AU).
+Taking into account the parallax errors would allow even larger
+line-of-sight separations. So, a random alignment cannot be excluded.
+\end{quote}
+
+The pair indeed has a larger radial separation than the projected
+separation given current data, but we are not sure why that should
+raise the suspicion of ``random alignments'' given that the 3D
+velocities of the stars are very similar. We note that a) the 0.6 pc
+separation we mention throughout the paper is the maximum a posteriori
+estimation of separation, which corresponds to the peak of the
+maginalized $p(\Delta x)$, $p(\Delta y)$, $p(\Delta z)$, and b) the
+parallax uncertainties are not biases that goes in one direction to
+increase the separation but may also go in the other direction to
+decrease it although we do not think that our results are not contingent
+on this.
+What is presented is the best astrometric data available yet, and the span of
+this uncertainty is fully displayed in Figure 1.
+
+\begin{quote}
+As shown by Andrews et al. (2017), equal radial velocities are a
+necessary but not sufficient condition for true binarity.
+\end{quote}
+
+Here, the referee's concern is shifting from that the pair might be an
+optical pair or that only their proper motions are consistent to that it
+is still insufficient that the two stars are close in 3D separation and
+3D velocity.
+
+We do not agree that Andrews et al. showed equal radial velocities are a
+necessary but not sufficient condition of true binarity (or more
+appropriately, physical association). The basis of their claim, or what
+might have convinced the referee of this statement in their work is
+two-fold.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  The ``random pairs'' that they select by calculating \emph{the
+  probability of being a true binary} from the TGAS matched with the
+  catalog shifted by certain amount in declination and both components
+  of proper motions sometimes do have identical velocities although they
+  ought to be all ``random alignments'' (Figure 9.)
+\item
+  The contamination rate that they estimate by matching RVs is higher
+  than that by these ``random pairs'': ``Secondly, a consistent RV does
+  not guarantee binarity; even systems with RVs consistent at the
+  $3\sigma$ level may, in fact, be random alignments with similar, but
+  slightly different RVs'' (par 5 Sec 5.2 in Andrews et al. 2017)"
+\end{enumerate}
+
+We do not find any of the two a convincing argument for the statement
+as it may as well be a sign that there are shortcomings in
+either their calculation of probability that a given pair forms a `true
+binary'/`random alignment' or in the way they estimate the contamination
+rates.
+
+Because we cannot resolve the Keplerian orbits of such wide-separation comoving
+pairs (as we argue below), if the alternative explanation to the physical
+association of the two stars is that two random single stars could have ended up
+in such configuration, this {\it requires} an assumption about the structure of
+single-star-only Milky Way. This is not addressed in Andrews et al. 2017.
+
+
+\begin{quote}
+The authors need to provide an estimate of the contamination fraction
+allowed by the parallax and radial velocity differences. It would be
+illustrative to estimate the contribution of orbital motion (Gaia is
+sensitive enough) and projection effects (the declination is
+sufficiently large) to the observed differences, and to take these into
+account in estimating the probability of the two stars being an optical
+pair.
+\end{quote}
+
+A ``detection'' of orbital motion with a single-epoch astrometry of two
+stars is ill-defined to begin with.
+
+The magnitude of (3D) orbital velocity of a equal-mass binary of solar-mass
+stars for binary semi-major axis of 0.01 pc (projected separation of this pair)
+is 0.93 km/s,
+which is an upper limit to the actual magnitude as the data
+indicates that the 3D separation is likely larger as have been pointed
+out by the referee as well.
+Even if the proper motion difference is entirely from the orbital motion, some
+(unknown) inclination of the orbital plane with respect to the line-of-sight
+will only decrease the observable orbital velocity on sky.
+Figure 1 is exactly what should urge the referee to re-think the claim of
+Andrews et al. 2017 that the orbital motion can be detected for binaries with
+orbital period as large as 10\^{}6 yrs (a=).
+We note that the astrometric data in the two studies is identical.
+
+Still we have considered the referee's concern that two unassociated
+single field stars may have ended up in this close configuration in
+phase-space coordinates. Because the orbital motion of such
+wide-separation comoving pairs are not detectable, whether this
+proximity in 6D phase-space coordinates, which is a naturally expected
+outcome of coeval group of stars like wide binaries, is a very rare
+configuration to be found among unassociated field stars or not
+\emph{inevitably requires} an assumption about the Galactic distribution
+function of single stars.
+
+We used the Gaia Universe Mock Simulation (GUMS) -- a mock
+end-of-mission Gaia catalog with realistic Milky Way model \citep{gums}.
+
+\begin{itemize}
+\item Among 67795 primary stars with roughly solar-mass and solar-age ($0.9~M_\odot< M <
+  1.1~M_\odot$, $3~\mathrm{Gyr}<\mathrm{Age} < 5~\mathrm{Gyr}$) within $r<300$~pc, we find 0
+  pairings that results in $\Delta \mu_\alpha^* < 2$~mas/yr, $\Delta
+  \mu_\delta<2$~mas/yar and $\Delta v_r < 1$~km/s.
+\item TODO
+\item TODO
+\end{itemize}
+
+%TODO We further emphasize that this is ...
+
+
+Finally, we note that the projection effects are not soley dependent on the
+declination as the referee (and Andrews et al.) seem to imply.
+% detail maybe..
+
+\begin{quote}
+Without a convincing argument for both stars being physically associated
+the discussion about chemical abundance differences becomes largely
+irrelevant.
+\end{quote}
+
+Hopefully, we have addressed all three levels of the referee's concern.
+
+%TODO: quote section verbatim
+
+\begin{quote}
+The (evolutionary) ages of both stars are also similar, but have a large
+uncertainty. Their similarity is not a convincing argument for true
+binarity.
+In fact, the rotational velocities of both stars are very different,
+which would argue for Kronos being younger than Krios. Although Li
+abundances are a complicated matter, the surface Li abundance also
+points to a younger age for Kronos. In summary, I cannot recommend
+publication of the paper in its present form. I remain unconvinced about
+the physical association of these stars. Perhaps the authors could
+provide further arguments in favor of their true binarity (see eg.
+Halbwachs 1986, Poveda et al. 2009), and thus make relevant the
+interesting discussion about the abundance differences.
+\end{quote}
+
+%TODO
+
+\section*{Minor concerns}\label{minor-concerns}
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  The authors should be reminded that the IAU is the agency responsible
+  for nomenclature of astronomical objects. They do refer to Kronos and
+  Krios as ``nicknames'', but actually use them as names throughout the
+  paper, as well as in the title. Using HD 240430/29 in the title makes
+  the stars readily accessible in the astronomical databases, not so
+  Kronos and Krios.
+\end{enumerate}
+\end{quote}
+
+Thanks for reminding us but we will leave them as are. It is not our intention
+to enforce the names in any way outside this publication. We refer to them as HD
+identifiers in the abstract, introduction and summary as well as in keywords,
+and we do no think the searchability of this work suffers.
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Please define the entries in Table 1. Lower-case pi is often used for
+  the radial galactocentric coordinate. Please include the separation
+  (in arcsec) and the position angle.
+\end{enumerate}
+\end{quote}
+
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  The pair is also listed in Halbwachs (1986)
+\end{enumerate}
+\end{quote}
+
+We explicitly mention that despite the proximity 6D phase-space
+coordinates, very similar spectral types and similar ages which are
+extremely rare to arise by chance from two unassociated field stars (see
+section X), the metallicity difference of 0.2 dex may seem uncomfortably
+large to treat the two stars as coeval although an interesting,
+plausible physical explanation of planet engulfment exists. However, we
+think that what may seem as a rather exotic scenario at first is
+actually the more simple and natural explanation than resorting to that
+there happens to be two solar-type stars with such proximity in
+phase-space coordinates, and one of them happens to display a unique
+abundance pattern distinct from what is generally expected as well as
+high Lithium for its age.
+
+%
+\bibliography{ref}
+
+\end{document}

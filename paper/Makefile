@@ -34,5 +34,11 @@ submit: ${NAME}.pdf
 	tar -czvf archive.tar.gz $$(git ls-tree --name-only HEAD | grep -v ".gitignore\|Makefile\|figures") -C ./figures/ $$(cd figures && git ls-files)
 	echo "archive.tar.gz created"
 
-report.pdf : report.md
-	pandoc --variable=geometry:margin=1in --variable=fontsize:12pt -o report.pdf report.md
+#NOTE:Pandoc does not run bibtex automatically (See https://github.com/jgm/pandoc/issues/1193)
+report.pdf : report.tex
+	# pandoc --natbib --template response.latex --variable=geometry:margin=1in --variable=fontsize:12pt -s -o report.tex report.md
+	${LATEX} report
+	bibtex report
+	${LATEX} report
+	( grep "Rerun to get" report.log && ${LATEX} report ) || echo "Done."
+	( grep "Rerun to get" report.log && ${LATEX} report ) || echo "Done."
