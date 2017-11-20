@@ -42,3 +42,11 @@ report.pdf : report.tex
 	${LATEX} report
 	( grep "Rerun to get" report.log && ${LATEX} report ) || echo "Done."
 	( grep "Rerun to get" report.log && ${LATEX} report ) || echo "Done."
+
+diff.pdf: ms.pdf submission/ms.tex
+	latexdiff --disable-citation-markup -t BOLD submission/ms.tex ms.tex > diff.tex
+	${LATEX} diff
+	bibtex diff
+	${LATEX} diff
+	( grep "Rerun to get" diff.log && ${LATEX} diff ) || echo "Done."
+	( grep "Rerun to get" diff.log && ${LATEX} diff ) || echo "Done."

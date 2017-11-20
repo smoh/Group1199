@@ -25,6 +25,7 @@
 \graphicspath{{figures/}}
 \bibliographystyle{aasjournal}
 
+
 % define macros for text
 \newcommand{\project}[1]{\textsl{#1}}
 \newcommand{\acronym}[1]{{\small{#1}}}
@@ -117,9 +118,9 @@
 \affil{Department of Astronomy, Yale University, 260 Whitney Ave, New Haven, CT 06511, USA}
 
 \begin{abstract}
-  We report and discuss the discovery of a comoving pair of bright solar-type
-  stars, HD~240430 and HD~240429, with a significant difference in their
-  chemical abundances.
+  We report and discuss the discovery of a significant difference in chemical
+  abundances of a comoving pair of bright solar-type
+  stars, HD~240430 and HD~240429.
   The two stars have an estimated 3D separation of $\approx 0.6$~pc
   ($\approx 0.01$~pc projected) at a distance of
   $r\approx 100~\pc$ with nearly identical three-dimensional velocities,
@@ -133,7 +134,7 @@
   \elem{N}, \elem{O}, \elem{Na}, and \elem{Mn}).
   This is the largest metallicity difference found in a wide binary pair yet.
   Additionally, HD~240430 shows an anomalously high surface lithium abundance
-  ($A(\elem{Li})=2.75$), higher than its companion by $0.5$~dex.
+  ($A(\elem{Li})=2.75$), higher than its cooler companion by $0.5$~dex.
   The proximity in phase-space and ages between the two stars suggests that
   they formed together with the same composition, at odds with the observed
   differences in metallicity and abundance patterns.
@@ -373,8 +374,11 @@ the pair presented in this paper was assigned a group id of 1199,
 and the marginalized likelihood ratio (Bayes factor)
 between the two hypotheses is $\ln{\mathcal{L}_1/\mathcal{L}_2} = 8.52$,
 well above the adopted cut value of 6.
-The pair has also been previously recognized as a visual double star system
-in Washington Double Star catalog (\citealt{2001AJ....122.3466M}).
+While we independently identified this pair as described above,
+the pair has also been previously recognized as a common proper motion pair
+by \citealt{1986A&AS...66..131H} and listed as 
+a visual double star system
+in the Washington Double Star catalog (\citealt{2001AJ....122.3466M}).
 We have checked that we do not find any possible additional comoving companions
 by lowering the likelihood ratio cut for the stars around this pair.
 
@@ -555,15 +559,37 @@ both possibilities in which the two stars are or are not coeval.
 Our favored scenario is discussed in the last subsection,
 \sectionname~\ref{sub:accretion}.
 
-% chance pair
-%Given that their metallicities and abundance patterns are significantly
-%different, one may simply conclude that the two stars are not related (coeval)
-%but they merely happen to be comoving at such small separation ($\approx 0.6$~pc)
-%by chance.
-%The two stars are in the Galactic disk, and assuming certain velocity ellipsoid
-%at the stars' location, one may compute the probability that a star moving at
-%the mean velocity of the two stars would have a companion within $\Delta v = XX$~km/s.
-%...
+\subsection{Chance pair of unassociated single field stars?}
+\label{sub:chance_pair}
+
+Given that their metallicities and abundance patterns are significantly
+different, one may simply conclude that the two stars are not physically
+associated but they merely happen to be comoving at such a small separation
+($\approx 0.6$~pc) by chance.
+An estimate of this probability requires an assumption about the distribution
+function of single stars in the Milky Way.
+We used the Gaia Universe Mock Simulation (GUMS; \citealt{gums}), a mock
+\emph{end-of-mission} Gaia catalog with TODO model, and 
+looked for a chance pair of solar-mass ($0.9~M_\odot< M < 1.1~M_\odot$) primary
+stars ignoring any companions to the primary.
+Within 200~pc from the Sun, there are 7061 pairs
+with separation less than 2~pc among 119259 solar-mass primary stars.
+Of these pairs, we find zero with small enough differences in observed
+quantities such that
+$\Delta \mu_\alpha^* < 2$~mas\,yr$^{-1}$,
+$\Delta \mu_\delta<2$~mas\,yr$^{-1}$ and $\Delta v_r < 2$~km\,s$^{-1}$.
+These are still with generous difference budgets in both positions and
+velocities, and the actual observed differences are smaller
+(\tablename~\ref{tab:kk}).
+We find a single pair with velocity difference less than 2~km\,s$^{-1}$.
+Thus, while we cannot prove the binarity this pair by resolving its orbit,
+it seems more natural to assume that they are physically associated rather than
+a chance pair of unrelated single stars.
+This does not take into account the fact that one of the stars,
+\bizarreone, shows an unusual abundance difference pattern
+(\figname~\ref{fig:deltaXH}) and an unusually high \elem{Li} abundance,
+which would make the chance pair scenario even more unlikely.
+
 
 \subsection{Stellar Ages \& Coevality}
 \label{sub:ages}
@@ -882,11 +908,11 @@ under-enhanced in the five elements, \elem{C}, \elem{N}, \elem{O}, \elem{Na}, an
 It also has an anomalously high surface \elem{Li} abundance for its age of
 $\sim 4$~Gyr, and its effective temperature very close to that of the Sun.
 We consider that the comoving pair may have formed from two stars of different
-birth origins in an exchange scattering event
+birth origins by chance (\sectionname~\ref{sub:chance_pair}) or in an exchange scattering event
 (\sectionname~\ref{sub:exchange_scattering}), or that there may be chemical
 inhomogeneity in the birth cloud
 (\sectionname~\ref{sub:chemical_inhomogeneity_in_star_formation}) to find
-both unlikely.
+all unlikely.
 
 In order to explain the $\Tcondens$-dependent enhancement and high \elem{Li}
 abundance of \bizarreone, we consider the accretion of planetary material as the
@@ -901,6 +927,20 @@ have propagated inward through planet-planet scattering, leading to the
 accretion of inner rocky planets (\citealt{Zakamska:2004aa,Malmberg:2011aa}).
 If this is the case, there may be surviving, highly-eccentric giant planets
 potentially detectable with future data releases of the \gaia\ mission.
+
+
+% We explicitly mention that despite the proximity 6D phase-space
+% coordinates, very similar spectral types and similar ages which are
+% extremely rare to arise by chance from two unassociated field stars (see
+% section X), the metallicity difference of 0.2 dex may seem uncomfortably
+% large to treat the two stars as coeval although an interesting,
+% plausible physical explanation of planet engulfment exists. However, we
+% think that what may seem as a rather exotic scenario at first is
+% actually the more simple and natural explanation than resorting to that
+% there happens to be two solar-type stars with such proximity in
+% phase-space coordinates, and one of them happens to display a unique
+% abundance pattern distinct from what is generally expected as well as
+% high Lithium for its age.
 
 The two stars have not been included in any publicly released data from planet
 search programs.
